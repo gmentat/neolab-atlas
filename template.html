@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="@@DESCRIPTION@@">
+<link rel="canonical" href="@@CANONICAL@@">
+<link rel="icon" href="data:,">
+<title>@@TITLE@@ · Neolab Atlas</title>
+<style>
+:root{
+  --ink:#161d2b;--muted:#536177;--accent:#2855a6;--dark:#263755;--line:#e3e5ea;
+  --surface:#fff;--paper:#f7f8fa;--selection:#eaf0fd;--soft:#f1f4f9;
+  font:15px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--surface)
+}
+*{box-sizing:border-box}
+body{margin:0}
+a{color:var(--accent);text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+button,input{font:inherit;color:inherit}
+button,summary{cursor:pointer}
+:focus-visible{outline:3px solid #4a71c9;outline-offset:3px}
+[hidden]{display:none!important}
+p,h1,h2,h3,dl,dd,ul{margin:0}
+a,button,input{-webkit-tap-highlight-color:transparent}
+:target{scroll-margin-top:16px}
+.wrap{width:min(1470px,calc(100% - 80px));margin-inline:auto}
+.mast{color:var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:51px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav nav{display:flex;align-items:center;gap:5px}
+.nav nav a{padding:6px 12px;color:#485773;text-decoration:none;font-size:.88rem;white-space:nowrap}
+.nav nav a:hover,.nav nav a[aria-current]{color:var(--accent);text-decoration:underline;text-underline-offset:.32em}
+.hero{padding-block:18px 10px}
+.date{display:block;color:var(--muted);font-size:.78rem;margin-top:7px}
+h1,h2{letter-spacing:-.04em;font-weight:720}
+h1{font-size:clamp(1.9rem,3.25vw,2.75rem);line-height:1.10;margin:.16em 0 .22em}
+.hero p{color:var(--muted)}
+.panel{min-width:0}
+.toolbar-actions{display:flex;align-items:center;flex:none;gap:4px;margin-inline-start:auto}
+.toolbar-button{display:inline-grid;place-items:center;height:36px;min-width:36px;padding:0 8px;border:0;border-radius:5px;
+  background:none;color:var(--muted);font-size:.85rem;font-weight:600}
+.toolbar-button:hover,.toolbar-button[aria-expanded="true"]{background:var(--soft);color:var(--accent)}
+.search-icon{position:relative;display:block;width:13px;height:13px;margin:-3px 3px 0 0;border:1.7px solid currentColor;border-radius:50%}
+.search-icon::after{position:absolute;content:"";width:6px;height:1.7px;left:9px;top:9px;border-radius:1px;background:currentColor;transform:rotate(45deg);transform-origin:left center}
+.search-field{display:block;width:min(340px,100%);height:37px;margin:6px 0 8px auto;border:1px solid #cbd2dd;border-radius:5px;
+  background:#fff;padding:0 10px;color:var(--ink);font-size:.91rem}
+.sort-options{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:3px 6px;padding-block:7px 1px}
+.sort-option{border:0;border-radius:4px;background:none;color:var(--muted);padding:5px 8px;font-size:.8rem}
+.sort-option:hover,.sort-option[aria-pressed="true"]{background:var(--soft);color:var(--accent)}
+.sort-option[aria-pressed="true"]{font-weight:680}
+.tabs{display:flex;flex-wrap:wrap;gap:2px 18px;margin-top:6px}
+.tabs button{padding:7px 0 6px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:.85rem}
+.tabs button:hover{color:var(--accent)}
+.tabs button[aria-pressed="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:720}
+.resultbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;min-height:36px;padding:5px 0;color:var(--muted);font-size:.82rem}
+.resultbar strong{color:var(--ink)}
+.active-filters{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
+.active-filters:empty{display:none}
+.active-filter{display:inline-flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:4px;background:var(--soft);color:var(--accent);
+  padding:3px 7px;font-size:.77rem;font-weight:600;text-align:left;overflow-wrap:anywhere}
+.active-filter:hover{background:var(--selection)}
+.clear{border:0;background:none;text-decoration:underline;color:var(--accent);font-size:.82rem;padding:5px}
+.viewport{min-width:0}
+table{width:100%;min-width:840px;table-layout:fixed;border-spacing:0;text-align:left}
+col.rank{width:44px}col.lab{width:18%}col.space{width:16%}col.people{width:17%}
+col.focus{width:auto}col.signal{width:106px}col.links{width:118px}
+.innovation-view col.lab{width:17%}.innovation-view col.space{width:15%}
+.innovation-view col.focus{width:25%}.innovation-view col.signal{width:auto}.innovation-view col.links{width:123px}
+.contribution{display:block;margin-bottom:3px;font-size:.75rem;font-weight:670;color:#3b4963}
+.contribution[data-value="method"]{color:#28457c}
+.contribution[data-value="application"]{color:#58417d}
+.contribution[data-value="unproven"]{color:#6d3d15}
+button.contribution,.scope-tag{border:0;background:none;padding:0;text-align:left}
+button.contribution:hover,.scope-tag:hover,.fit-label:hover{text-decoration:underline;text-underline-offset:.16em}
+button.contribution[aria-pressed="true"],.scope-tag[aria-pressed="true"]{text-decoration:underline;text-underline-offset:.16em}
+.example,.assessment{line-height:1.38}
+.example{font-weight:650}
+.evidence-links{margin-top:4px;font-size:.8rem;line-height:1.35}
+.evidence-list{display:flex;flex-wrap:wrap;gap:3px 9px}
+.evidence-list a{font-weight:600}
+.research-details summary{display:flex;align-items:baseline;gap:7px;color:#435169;line-height:1.4;list-style:none}
+.research-details summary::-webkit-details-marker{display:none}
+.research-details summary::before{content:"";flex:0 0 5px;height:5px;align-self:flex-start;margin-top:.46em;
+  border-right:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);transform:rotate(-45deg)}
+.research-details[open] summary::before{transform:rotate(45deg)}
+.research-details summary:hover{color:var(--accent)}
+.research-details summary .founder-text{color:inherit}
+.research-details[open] summary .founder-text{-webkit-line-clamp:unset}
+.research-detail-body{margin:6px 0 0 12px}
+.research-details p{font-size:.81rem;font-weight:450;color:var(--muted);line-height:1.42}
+.research-details p+p{margin-top:4px}
+.research-details .example{font-weight:670;color:var(--ink)}
+.code-toggle[aria-pressed="true"]{background:var(--selection);color:var(--accent)}
+.innovation-view #metric-header,.innovation-view .assessment-cell{text-align:left}
+.people-cell .founder-text{font-size:.84rem}
+.mobile-people a{color:var(--muted)}
+
+.team-view col.lab{width:23%}.team-view col.space{width:20%}.team-view col.focus{width:20%}
+.team-view col.signal{width:auto}.team-view col.links{width:144px}
+.link-cells{display:flex;gap:7px;align-items:center;font-size:.78rem;font-weight:630}
+.link-cells a{white-space:nowrap}
+.link-cells a + a{color:var(--muted)}
+.signal-link{text-decoration-color:#a9b9d5}
+.signal-link:hover{text-decoration-color:currentColor}
+.missing{color:var(--muted);font-size:.8rem}
+.mobile-only{display:none}
+.team-size{font-weight:650}
+.sticky-name{position:sticky;left:0;z-index:1}
+thead .sticky-name{z-index:3}
+
+thead th{position:sticky;top:0;z-index:2;color:#43516a;background:var(--surface);font-size:.77rem;white-space:normal;padding:9px 10px;box-shadow:inset 0 -1px var(--line)}
+tbody th,tbody td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:.87rem;background:var(--surface)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+tbody tr:hover th,tbody tr:hover td{background:#f6f7fa}
+tbody th{text-align:left}
+.rank-cell{text-align:center;font-size:.83rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.lab-button{display:block;max-width:100%;border:0;background:transparent;font-weight:720;padding:0;text-align:left;line-height:1.2}
+.lab-button:hover{color:var(--accent);text-decoration:underline;text-underline-offset:.15em}
+.sub{color:var(--muted);display:block;font-size:.73rem;line-height:1.3;font-weight:450;margin-top:3px}
+.space-tags,.link-list{display:flex;gap:4px 6px;flex-wrap:wrap}
+.tag{display:inline-block;max-width:100%;border:0;background:var(--tag-bg,var(--soft));border-radius:4px;color:var(--tag-ink,#344463);
+  padding:2px 6px;font-size:.75rem;font-weight:600;line-height:1.3;text-align:left}
+.tag:hover{text-decoration:underline;text-underline-offset:.13em}
+.tag[data-value="Trading"]{--tag-bg:#ffdbc1;--tag-ink:#78310b}
+.tag[data-value="Finance"]{--tag-bg:#ffefae;--tag-ink:#614705}
+.tag[data-value="Forecasting"]{--tag-bg:#ceeef8;--tag-ink:#175364}
+.tag[data-value="World models"]{--tag-bg:#e6d9fc;--tag-ink:#573584}
+.tag[data-value="Frontier models"]{--tag-bg:#d9e4fd;--tag-ink:#234b91}
+.tag[data-value="Small models"]{--tag-bg:#d7e9f9;--tag-ink:#265477}
+.tag[data-value="Robotics"]{--tag-bg:#f9d8d8;--tag-ink:#7c3034}
+.tag[data-value="Agents"]{--tag-bg:#d5ebf5;--tag-ink:#214e63}
+.tag[data-value="Enterprise AI"]{--tag-bg:#e2e6f2;--tag-ink:#394871}
+.tag[data-value="Coding"]{--tag-bg:#ccefe4;--tag-ink:#185d4f}
+.tag[data-value="Compute and chips"]{--tag-bg:#f0dfce;--tag-ink:#65442e}
+.tag[data-value="Model efficiency"]{--tag-bg:#d9edba;--tag-ink:#3f591e}
+.tag[data-value="Training and inference"]{--tag-bg:#e1dbf6;--tag-ink:#533e7b}
+.tag[data-value="Continual learning"]{--tag-bg:#f1dcfa;--tag-ink:#6e397d}
+.tag[data-value="Math and reasoning"]{--tag-bg:#deddfb;--tag-ink:#403782}
+.tag[data-value="Decision models"]{--tag-bg:#fbdadf;--tag-ink:#783744}
+.tag[data-value="Retrieval"]{--tag-bg:#d1e7e9;--tag-ink:#275760}
+.tag[data-value="Safety and interpretability"]{--tag-bg:#f0e8cc;--tag-ink:#5c4a1d}
+.tag[data-value="Life sciences"]{--tag-bg:#cdeedd;--tag-ink:#1f5a42}
+.tag[data-value="AI for science"]{--tag-bg:#d1f1f1;--tag-ink:#23585b}
+.tag[data-value="Materials"]{--tag-bg:#e4edc2;--tag-ink:#4c551d}
+.tag[data-value="Image and video"]{--tag-bg:#f9d8ee;--tag-ink:#793b65}
+.tag[data-value="Voice and audio"]{--tag-bg:#f0ddf7;--tag-ink:#663b77}
+.tag[data-value="Unclassified"]{--tag-bg:#eff1f4;--tag-ink:#536177}
+.tag[aria-pressed="true"]{box-shadow:inset 0 0 0 2px currentColor}
+.fit-label{display:inline-block;margin-left:.42em;padding:1px 5px;border:0;border-radius:4px;
+  color:#4c4773;background:#eeedf6;font-weight:650;white-space:nowrap}
+.fit-label[data-value="Borderline"]{background:#f9eed5;color:#664c21}
+.fit-label[aria-pressed="true"]{box-shadow:inset 0 0 0 1px currentColor}
+.founder-text{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#435169;line-height:1.32}
+.numeric{text-align:right;font-variant-numeric:tabular-nums}
+.numeric a{white-space:nowrap}
+.numeric .sub{margin-top:1px}
+.empty,.footnote{padding:12px 15px;color:var(--muted);font-size:.83rem}
+.footnote{padding-inline:0}
+.empty{padding-block:32px}
+.library{margin-block:32px 40px}
+.library h2{font-size:2rem}
+.library p{color:var(--muted);margin-top:4px}
+.index{margin-top:13px}
+.index summary{color:var(--accent);font-weight:680}
+.index ul,.profile-list{list-style:none;padding:0;margin-top:8px}
+.index li{padding:5px 0;color:var(--muted);font-size:.87rem}
+.index li a{font-weight:650}
+dialog{position:fixed;inset:0 0 0 auto;margin:0;height:100dvh;max-height:none;width:min(470px,100%);max-width:100%;
+  border:0;padding:0;color:var(--ink);background:var(--surface);overflow:auto}
+dialog::backdrop{background:#111b2d59}
+.dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 23px 0}
+.dialog-head h2{font-size:1.95rem;line-height:1.08;margin-top:4px}
+.close{flex:none;width:38px;height:38px;border-radius:5px;border:0;background:transparent;font-size:1.28rem}
+.close:hover{background:var(--selection)}
+.dialog-body{padding:18px 23px 25px}
+.dialog-body .link-list{gap:4px 12px;margin-top:10px}
+.profile-link{padding:2px 0;font-size:.84rem;font-weight:630}
+.profile-link:hover{background:var(--selection)}
+.dialog-section{margin-top:19px}
+.dialog-section h3{font-size:.98rem;margin-bottom:4px}
+.dialog-body dl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:11px;margin-top:13px}
+.dialog-body dl div{min-width:0}
+.dialog-body dt{font-size:.77rem;color:var(--muted)}
+.dialog-body dd,.profile-list li{font-size:.88rem;overflow-wrap:anywhere}
+.profile-list li{padding:4px 0}
+.profile-note{font-size:.81rem;color:var(--muted);margin-top:6px}
+@media(max-width:980px){
+  .wrap{width:calc(100% - 40px)}
+  .viewport{overflow-x:auto}
+}
+@media(max-width:590px){
+  .wrap{width:calc(100% - 28px)}
+  .nav{gap:3px;align-items:flex-start;flex-direction:column;padding:10px 0 2px}
+  .nav nav{width:100%;justify-content:space-between;gap:6px}
+  .nav nav a{padding:6px 0}
+  .hero{padding-block:13px 6px}
+  .search-field{width:100%;font-size:16px}
+  .sort-options{justify-content:flex-start}
+  .tabs{gap:2px 12px}
+  .viewport{overflow:visible}
+  table{min-width:0;table-layout:fixed}
+  col.rank,col.space,col.people,col.focus,col.signal,col.links,.desktop-cell{display:none}
+  col.lab,.team-view col.lab,.innovation-view col.lab{width:auto}
+  .mobile-only{display:block}
+  .sticky-name{position:static;box-shadow:none}
+  thead .sticky-name{position:sticky;z-index:2}
+  tbody th,tbody td,thead th{padding-inline:8px}
+  tbody td{vertical-align:top}
+  .mobile-focus{margin-top:6px;font-size:.84rem;line-height:1.4}
+  .mobile-signal{margin-top:5px;font-size:.78rem;font-weight:630}
+  .mobile-signal span.sub{white-space:normal}
+  .mobile-only .space-tags{margin-top:8px}
+  .mobile-only .evidence-links,.mobile-reference{margin-top:7px;font-size:.8rem}
+  .mobile-only .research-details{margin-top:6px}
+  .mobile-only .research-details summary{font-size:.84rem;font-weight:450}
+  .mobile-only .contribution{margin-top:7px}
+  .tag{padding:4px 8px}
+  tbody th{padding-block:11px}
+}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap nav">
+    <a class="brand" href="@@DIRECTORY_HREF@@">Neolab Atlas</a>
+    <nav aria-label="Main navigation">
+      <a href="@@DIRECTORY_HREF@@"@@CURRENT_DIRECTORY@@>Directory</a>
+      <a href="@@SMALL_HREF@@"@@CURRENT_SMALL@@>Small teams &amp; solos</a>
+      <a href="#research">Method &amp; sources</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <h1 id="title">@@TITLE@@</h1>
+    <p>@@DESCRIPTION@@</p>
+    <time class="date" datetime="@@UPDATED_DATE@@">Updated @@UPDATED_LABEL@@</time>
+  </section>
+  <section class="panel" id="directory" aria-label="Lab directory">
+      <div class="tabs" id="cohorts" role="group" aria-label="Directory view">
+        <button type="button" data-cohort="all">All entries</button>@@COHORT@@
+        <button type="button" data-cohort="team">Team</button>
+        <button type="button" data-cohort="innovations">Innovations</button>
+      </div>
+      <div class="resultbar">
+        <span id="result" role="status"></span>
+        <div class="active-filters" id="active-filters" role="group" aria-label="Active filters"></div>
+        <button id="reset" class="clear" type="button" hidden>Reset filters</button>
+        <div class="toolbar-actions">
+          <button type="button" class="toolbar-button code-toggle" id="code-toggle" aria-pressed="false" hidden>With code</button>
+          <button type="button" class="toolbar-button" id="sort-toggle" aria-expanded="false" aria-controls="sort-options">Sort</button>
+          <button type="button" class="toolbar-button" id="search-toggle" aria-label="Search labs" title="Search labs"
+            aria-expanded="false" aria-controls="search"><span class="search-icon" aria-hidden="true"></span></button>
+        </div>
+      </div>
+      <div class="sort-options" id="sort-options" role="group" aria-label="Sort by" hidden></div>
+      <input class="search-field" id="search" type="search" aria-label="Search labs" placeholder="Lab, founder, topic…" autocomplete="off" hidden>
+      <div class="viewport" id="viewport" tabindex="0" role="region" aria-label="Scrollable lab results">
+        <table>
+          <colgroup><col class="rank" id="rank-width"><col class="lab"><col class="space"><col class="people" id="founders-width"><col class="focus"><col class="signal"><col class="links"></colgroup>
+          <thead><tr><th class="rank-cell desktop-cell" id="rank-header" scope="col">Rank</th><th class="sticky-name" scope="col">Lab</th><th scope="col" class="desktop-cell">Space</th><th id="founders-header" class="desktop-cell" scope="col">Founders</th><th id="context-column" class="desktop-cell" scope="col">Research focus</th><th id="metric-header" class="desktop-cell" scope="col">Signal</th><th id="links-header" class="desktop-cell" scope="col">References</th></tr></thead>
+          <tbody id="labs"></tbody>
+        </table>
+        <p id="empty" class="empty" hidden>No labs match these filters.</p>
+      </div>
+      <p class="footnote" id="method"></p>
+  </section>
+  <section class="library" id="research" aria-labelledby="research-title">
+    <h2 id="research-title">Method &amp; sources</h2>
+    <p>The directory centers on original model, architecture, and training research. Mostly and Borderline are fit labels from the October 2026 Ultimate Neolab List, which also weighs team, funding, and commercial stage. Innovations describes what each public source supports. Scope describes the type of organization. A lab can appear in several spaces. <a href="https://debarghyadas.com/neolabs/" target="_blank" rel="noopener noreferrer">Fit source</a>.</p>
+    <details id="reading" class="index"><summary>Neolab coverage and analysis</summary>
+      <div class="reading">
+        <ul>
+          <li>Leonis Capital’s September study tracked 119 labs and $94.3 billion in funding since 2024. It found revenue disclosures for 16 of the 119. <a href="https://www.leoniscap.com/research/we-finally-got-our-flying-cars-they%E2%80%99re-called-neolabs" target="_blank" rel="noopener noreferrer">Leonis study</a></li>
+          <li>Skild AI reported more than $100 million in annual recurring revenue, $50 million in recognized revenue, and over 60 paying customers in September 2026. <a href="https://www.skild.ai/blogs/skild-crosses-100m-arr" target="_blank" rel="noopener noreferrer">Skild’s announcement</a></li>
+          <li>Thinking Machines Lab sells model fine-tuning and inference through Tinker. Published examples include Bridgewater, Chroma, and Mantic. <a href="https://thinkingmachines.ai/tinker/" target="_blank" rel="noopener noreferrer">Tinker and its use cases</a></li>
+          <li><a href="https://www.theinformation.com/articles/investors-chase-neolabs-outflank-openai-anthropic" target="_blank" rel="noopener noreferrer">The Information on the early neolab wave</a> · November 2025</li>
+          <li><a href="https://radical.vc/articles/the-rise-of-the-neolab/" target="_blank" rel="noopener noreferrer">Radical Ventures on funding, founders, and research areas</a> · June 2026</li>
+          <li><a href="https://www.economist.com/business/2026/10/15/ai-neolabs-are-raising-huge-sums-most-have-little-to-show-for-it" target="_blank" rel="noopener noreferrer">The Economist on how many labs have shipped</a> · October 2026</li>
+          <li><a href="https://the-decoder.com/frontier-radar-5-if-agi-is-so-close-why-is-everyone-leaving-the-neolabs-and-their-bets/" target="_blank" rel="noopener noreferrer">The Decoder on the research bets behind 45 labs</a> · November 2026</li>
+          <li><a href="https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/" target="_blank" rel="noopener noreferrer">Menlo Ventures on where enterprise AI spending goes</a> · November 2026</li>
+          <li><a href="https://latent.space/p/cloudflare/" target="_blank" rel="noopener noreferrer">Latent Space on Cloudflare and the decision-model niche</a> · November 2026</li>
+        </ul>
+      </div>
+    </details>
+    <details id="innovation-method" class="index"><summary>How we assess innovation</summary>
+      <div class="reading">
+        <p>Each assessment credits a specific public result: a model, experiment, release, or deployment. We compare the result with the closest documented baseline or prior approach where available. A company-reported result stays attributed to the company. Funding and popularity do not influence the assessment.</p>
+        <ul>
+          <li><strong>New method</strong> · A distinct technical mechanism with a public result. Its benefit may still be limited to the test conditions.</li>
+          <li><strong>Applied advance</strong> · A working model or workflow that demonstrates a useful capability, often by adapting known methods.</li>
+          <li><strong>Research artifact</strong> · A model, dataset, benchmark, or tool that others can inspect and build on. A performance advantage may still be unknown.</li>
+          <li><strong>Unproven</strong> · A research direction or training run with too little public outcome evidence to estimate the advance.</li>
+        </ul>
+        <p>The labels describe the contribution supported by the cited evidence. Artifact links identify the exact release and what it includes, such as training code, inference code, or weights.</p>
+      </div>
+    </details>
+    <details id="team-method" class="index"><summary>Team data</summary>
+      <div class="reading">
+        <p>Team records cite announcements, author credits, competition entries, or public team pages. Dates indicate when the number was reported or the roster was checked. Credits and public rosters cover the people named in that source.</p>
+        <p>Comparable staffing and experience data are too sparse to estimate talent density across labs.</p>
+      </div>
+    </details>
+    <details id="ranking-method" class="index"><summary>Ranking method</summary>
+      <div class="reading">
+        <p>Ranks apply within the filtered results. Downloads and GitHub stars measure activity around a linked model or project. Gateway share measures activity on one platform. These signals can include repeated activity and have different coverage. They do not measure unique users or lab revenue. When two directory entries share a model account, the publisher gets credit.</p>
+        <p><a href="https://huggingface.co/docs/hub/models-download-stats" target="_blank" rel="noopener noreferrer">Hugging Face</a> ·
+          <a href="https://docs.github.com/en/rest/activity/starring" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://openrouter.ai/rankings?view=week#market-share" target="_blank" rel="noopener noreferrer">OpenRouter</a> ·
+          <a href="https://vercel.com/api/ai/leaderboard-export?dataset=labs" target="_blank" rel="noopener noreferrer">Vercel AI Gateway lab export</a>
+          (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).
+          Hugging Face and GitHub counts were checked November 18, 2026.</p>
+      </div>
+    </details>
+  </section>
+</main>
+<noscript><div class="wrap"><p>Enable JavaScript to browse and filter the directory.</p></div></noscript>
+<dialog id="profile" aria-labelledby="lab-title">
+  <div class="dialog-head"><div><span class="date" id="lab-kicker"></span><h2 id="lab-title"></h2></div><form method="dialog"><button type="submit" class="close" aria-label="Close lab details">×</button></form></div>
+  <div id="lab-details" class="dialog-body"></div>
+</dialog>
+<script type="application/json" id="data">@@DATA@@</script>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const {labs, metrics} = JSON.parse($('data').textContent);
+const sortNames = new Intl.Collator('en', {sensitivity:'base', numeric:true}).compare;
+const number = new Intl.NumberFormat('en', {maximumFractionDigits:2});
+const compact = new Intl.NumberFormat('en', {notation:'compact',maximumFractionDigits:1});
+const spaces = new Set(labs.flatMap(lab => lab.spaces));
+const contributions = {
+  method:'New method', application:'Applied advance', artifact:'Research artifact', unproven:'Unproven'
+};
+const sortOptions = [...Object.entries(metrics).map(([id, metric]) => [id, metric[0]]), ['name', 'Lab name (A–Z)']];
+const fitSource = 'https://debarghyadas.com/neolabs/';
+const params = new URLSearchParams(location.search);
+const state = {
+  space:spaces.has(params.get('space')) ? params.get('space') : '',
+  cohort:location.hash === '#innovations' ? 'innovations' : 'all',
+  contribution:'',
+  codeOnly:false,
+  metric:Object.hasOwn(metrics, 'hf') ? 'hf' : 'name',
+  fit:'',
+  scope:'',
+  query:''
+};
+let profileTrigger;
+
+function escape(value) {
+  return String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;')
+    .replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+}
+
+function external(url, label, css = '', aria = '', title = '') {
+  if (!/^https?:\/\//i.test(url || '')) return '';
+  return `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer"${css ? ` class="${css}"` : ''}${aria ? ` aria-label="${escape(aria)}"` : ''}${title ? ` title="${escape(title)}"` : ''}>${escape(label)}</a>`;
+}
+
+function filterButton(key, value, label, css) {
+  return `<button type="button" class="${css}" data-filter="${key}" data-value="${escape(value)}"
+    title="Filter by ${escape(label)}" aria-pressed="${state[key] === value}">${escape(label)}</button>`;
+}
+
+function tag(name) {
+  return filterButton('space', name, name, 'tag');
+}
+
+function includesWords(text, query) {
+  return query.trim().toLocaleLowerCase().split(/\s+/).every(word => text.includes(word));
+}
+
+function scopeMatches(lab) {
+  if (state.cohort === 'team') return Boolean(lab.team);
+  if (state.cohort === 'innovations') {
+    return (!state.contribution || lab.innovation.kind === state.contribution) &&
+      (!state.codeOnly || lab.innovation.artifacts?.some(artifact => artifact.kind === 'code'));
+  }
+  if (state.cohort === 'startup') return lab.scope === 'Research startup';
+  if (state.cohort === 'solo') return ['Solo project','Solo-led project'].includes(lab.scope);
+  if (state.cohort === 'small') return lab.scope === 'Small team' || Boolean(lab.team?.small);
+  return true;
+}
+
+function sortableValue(lab) {
+  return ['team','innovations'].includes(state.cohort) ? 0 : lab.metrics[state.metric]?.value ?? 0;
+}
+
+function formatMeasure(metric, measure) {
+  if (!measure) return '';
+  return metrics[metric]?.[2] ? number.format(measure.value) + '%' : number.format(measure.value);
+}
+
+function sourceLabel(url) {
+  const host = new URL(url).hostname;
+  if (host === 'github.com') return 'Repo';
+  if (host === 'huggingface.co') return 'Model card';
+  if (host === 'arxiv.org') return 'Paper';
+  if (host === 'www.ycombinator.com') return 'Launch';
+  return 'Research';
+}
+
+function teamSize(team) {
+  if (!team?.size) return '<span class="missing">Not documented</span>';
+  const caption = [team.date,team.basis].filter(Boolean).map(escape).join(', ');
+  return `${external(team.size_source ?? team.source,team.size,'team-size')}<span class="sub">${caption}</span>`;
+}
+
+function contributionLabel(innovation, interactive = false) {
+  const label = contributions[innovation.kind];
+  return interactive ? filterButton('contribution', innovation.kind, label, 'contribution')
+    : `<span class="contribution" data-value="${innovation.kind}">${label}</span>`;
+}
+
+function innovationSources(lab) {
+  const item = lab.innovation;
+  const artifacts = item.artifacts ?? [];
+  const sources = [
+    ...artifacts.map(artifact => [artifact.label, artifact.url]),
+    ['Evidence', item.source], ['Comparison', item.comparison],
+  ];
+  const seen = new Set();
+  const links = [];
+  for (const [label, url] of sources) {
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    links.push(external(url, label, '', `${lab.name} ${label.toLowerCase()}`));
+  }
+  return `<div class="evidence-links"><div class="evidence-list">${links.join('')}</div>
+    <span class="sub">${escape(item.evidence)}</span></div>`;
+}
+
+function researchDetails(lab) {
+  const {example, note, assessment} = lab.innovation;
+  return `<details class="research-details">
+    <summary title="Expand research details"><span class="founder-text">${escape(lab.focus || 'Research details')}</span></summary>
+    <div class="research-detail-body">
+      <p class="example">${escape(example)}</p>
+      ${note ? `<p>${escape(note)}</p>` : ''}
+      <p>${escape(assessment)}</p>
+      ${innovationSources(lab)}
+    </div>
+  </details>`;
+}
+
+function labLabel(lab) {
+  const fit = lab.fit ? filterButton('fit', lab.fit, lab.fit, 'fit-label') : '';
+  return `<span class="sub">${filterButton('scope', lab.scope, lab.scope, 'scope-tag')}${fit}</span>`;
+}
+
+function peopleCell(lab) {
+  const people = lab.people;
+  if (!people) return '<span class="missing">Not documented</span>';
+  const label = `${lab.name}, ${people.role}, ${people.names}`;
+  return `<span class="founder-text">${external(people.source,people.names,'signal-link',label,people.names)}</span>
+    ${/^Founders?$/.test(people.role) ? '' : `<span class="sub">${escape(people.role)}</span>`}`;
+}
+
+function innovationRow(lab) {
+  const item = lab.innovation;
+  const name = escape(lab.name);
+  return `<tr>
+    <th scope="row" class="sticky-name"><button type="button" class="lab-button" data-lab="${name}" aria-haspopup="dialog">${name}</button>
+      ${labLabel(lab)}
+      <div class="mobile-only">
+        ${contributionLabel(item, true)}
+        <p class="example">${escape(item.example)}</p>
+        <p class="sub mobile-focus">${escape(item.assessment)}</p>
+        <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
+        ${innovationSources(lab)}
+      </div>
+    </th>
+    <td class="desktop-cell"><div class="space-tags">${lab.spaces.map(tag).join('')}</div></td>
+    <td class="desktop-cell">${contributionLabel(item, true)}<div class="example">${escape(item.example)}</div></td>
+    <td class="desktop-cell assessment-cell"><p class="assessment">${escape(item.assessment)}</p></td>
+    <td class="desktop-cell">${innovationSources(lab)}</td>
+  </tr>`;
+}
+
+function entryRow(lab, rank) {
+  if (state.cohort === 'innovations') return innovationRow(lab);
+  const token = escape(lab.name);
+  const isTeam = state.cohort === 'team';
+  const measure = lab.metrics[state.metric];
+  const difference = measure?.previous == null ? 0 : measure.value - measure.previous;
+  const trend = Math.abs(difference) >= 0.005
+    ? `<span class="sub">${difference > 0 ? '+' : ''}${difference.toFixed(2)} pp vs prior week</span>` : '';
+  const exact = formatMeasure(state.metric, measure);
+  const visibleValue = state.metric === 'hf' && measure?.value >= 1000 ? compact.format(measure.value) : exact;
+  const signal = measure ? external(measure.url, visibleValue, 'signal-link',
+    lab.name + ' ' + metrics[state.metric][0] + ' ' + exact, exact) + trend : '—';
+  const researchLink = external(lab.evidence,sourceLabel(lab.evidence),'',lab.name + ' research source');
+  const links = researchLink +
+    (lab.x ? external(lab.x,'X','',lab.name + ' on X') :
+      external(lab.team?.links?.[0]?.[1] || lab.mentions[0]?.url,'X','',lab.name + ' additional X reference'));
+  const context = isTeam ? lab.team.people || lab.people?.names : lab.focus;
+  const mobileText = isTeam ? context || lab.team.background : lab.focus;
+  const mobileSignal = isTeam
+    ? lab.team.size ? teamSize(lab.team) : ''
+    : measure ? `${rank ? 'Rank ' + rank + '  ' : ''}${signal}` : '';
+  return `<tr>
+    ${isTeam ? '' : `<td class="rank-cell desktop-cell">${rank ?? '—'}</td>`}
+    <th scope="row" class="sticky-name"><button type="button" class="lab-button" data-lab="${token}" aria-haspopup="dialog">${token}</button>${labLabel(lab)}
+      <div class="mobile-only">
+      ${isTeam ? `<span class="sub founder-text mobile-focus">${escape(mobileText)}</span>` : researchDetails(lab)}
+      ${!isTeam && lab.people ? `<div class="sub mobile-people">${peopleCell(lab)}</div>` : ''}
+      ${mobileSignal ? `<div class="mobile-signal">${mobileSignal}</div>` : ''}
+      <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
+      ${isTeam ? '' : `<div class="mobile-reference">${researchLink}</div>`}</div>
+    </th>
+    <td class="desktop-cell"><div class="space-tags">${lab.spaces.map(tag).join('')}</div></td>
+    ${isTeam ? '' : `<td class="desktop-cell people-cell">${peopleCell(lab)}</td>`}
+    <td class="desktop-cell">${isTeam
+      ? `<span title="${escape(context)}" class="founder-text">${escape(context || 'Not documented')}</span>`
+      : researchDetails(lab)}</td>
+    ${isTeam
+      ? `<td class="desktop-cell"><span title="${escape(lab.team.background)}" class="founder-text">${escape(lab.team.background || 'Not documented')}</span></td><td class="desktop-cell">${teamSize(lab.team)}</td>`
+      : `<td class="numeric desktop-cell">${signal}</td><td class="desktop-cell"><div class="link-cells">${links || '—'}</div></td>`}
+  </tr>`;
+}
+
+function profileFact(label, value, href) {
+  if (!value) return '';
+  return `<div><dt>${escape(label)}</dt><dd>${href ? external(href,value) : escape(value)}</dd></div>`;
+}
+
+function openProfile(name, trigger) {
+  const lab = labsByName.get(name);
+  if (!lab) return;
+  profileTrigger = trigger;
+  $('lab-title').textContent = lab.name;
+  $('lab-kicker').textContent = lab.scope;
+  const links = [['site','Website'],['x','X'],['linkedin','LinkedIn'],['github','GitHub'],
+    ['hf','Hugging Face'],['community','Community'],['evidence','Research source']]
+    .map(([key, label]) => external(lab[key], label, 'profile-link', label + ' for ' + lab.name)).join('');
+  const facts = [
+    profileFact(lab.people?.role || 'Contributors', lab.people?.names || lab.team?.people,
+      lab.people?.source || lab.team?.source),
+    profileFact('Founded', lab.year),
+    profileFact('Location', lab.location),
+    profileFact('Public status', lab.status),
+    profileFact('Neolab fit', lab.fit, fitSource),
+  ];
+  const signals = Object.entries(lab.metrics).filter(([id]) => metrics[id]).map(([id, measure]) =>
+    `<li>${escape(metrics[id][0])} · ${external(measure.url, formatMeasure(id, measure))}${measure.label ? `<span class="sub">${escape(measure.label)}</span>` : ''}</li>`).join('');
+  const mentions = lab.mentions.map(post =>
+    `<li>${external(post.url, post.title)} <span class="sub">@${escape(post.author)} · ${escape(post.date)}</span></li>`).join('');
+  const team = lab.team ? `<div class="dialog-section"><h3>Team</h3>
+    ${lab.team.background ? `<p>${escape(lab.team.background)}</p>` : ''}
+    ${lab.team.size ? `<p>${teamSize(lab.team)}</p>` : ''}
+    <div class="link-list">${external(lab.team.source,'Team source','profile-link')}${(lab.team.links ?? [])
+      .map(([label,url]) => external(url,label,'profile-link')).join('')}</div></div>` : '';
+  const innovation = lab.innovation;
+  const achievement = `<div class="dialog-section"><h3>Innovation assessment</h3>
+    ${contributionLabel(innovation)}<strong class="example"> ${escape(innovation.example)}</strong>
+    ${innovation.note ? `<p>${escape(innovation.note)}</p>` : ''}
+    <p class="assessment">${escape(innovation.assessment)}</p>
+    <div class="link-list">${innovationSources(lab)}</div></div>`;
+  $('lab-details').innerHTML =
+    `<p>${escape(lab.focus || 'Research focus has yet to be classified.')}</p>
+    <div class="link-list">${lab.spaces.map(tag).join('')}</div>
+    ${links ? `<div class="link-list">${links}</div>` : ''}
+    <dl>${facts.join('')}</dl>
+    ${achievement}
+    ${team}
+    ${signals ? `<div class="dialog-section"><h3>Public signals</h3><ul class="profile-list">${signals}</ul></div>` : ''}
+    ${mentions ? `<div class="dialog-section"><h3>Further references</h3><ul class="profile-list">${mentions}</ul></div>` : ''}`;
+  const profile = $('profile');
+  profile.showModal();
+  profile.scrollTop = 0;
+}
+
+const labsByName = new Map(labs.map(lab => [lab.name, lab]));
+const labSearch = new Map(labs.map(lab => [lab.name, Object.entries(lab)
+  .filter(([key]) => key !== 'metrics')
+  .map(([,value]) => value && typeof value === 'object' ? Object.values(value).flat().join(' ') : value).join(' ').toLocaleLowerCase()]));
+
+function renderActiveFilters() {
+  const filters = [
+    ['space', state.space], ['scope', state.scope], ['fit', state.fit],
+    ['contribution', state.cohort === 'innovations' && contributions[state.contribution]],
+    ['query', $('search').hidden && state.query.trim()],
+  ].filter(([, label]) => label);
+  $('active-filters').innerHTML = filters.map(([key, label]) =>
+    `<button type="button" class="active-filter" data-clear-filter="${key}" aria-label="Clear ${key === 'query' ? 'search' : 'filter'}: ${escape(label)}">
+      <span>${escape(label)}</span><span aria-hidden="true">×</span></button>`).join('');
+  $('reset').hidden = !filters.length && !(state.cohort === 'innovations' && state.codeOnly);
+}
+
+function renderLabs() {
+  const isTeam = state.cohort === 'team';
+  const isInnovation = state.cohort === 'innovations';
+  const isProfileView = isTeam || isInnovation;
+  const candidates = labs.filter(lab =>
+    scopeMatches(lab) && (!state.scope || lab.scope === state.scope) &&
+    (!state.fit || lab.fit === state.fit) && includesWords(labSearch.get(lab.name), state.query));
+  const matching = candidates.filter(lab => !state.space || lab.spaces.includes(state.space));
+  matching.sort((a,b) => sortableValue(b) - sortableValue(a) || sortNames(a.name, b.name));
+  let lastValue = null;
+  let rank;
+  $('labs').innerHTML = matching.map((lab, index) => {
+    const value = sortableValue(lab);
+    if (value !== lastValue) rank = index + 1;
+    lastValue = value;
+    return entryRow(lab, value > 0 ? rank : null);
+  }).join('');
+  $('directory').classList.toggle('team-view',isTeam);
+  $('directory').classList.toggle('innovation-view',isInnovation);
+  $('code-toggle').hidden = !isInnovation;
+  $('code-toggle').setAttribute('aria-pressed', state.codeOnly);
+  $('sort-toggle').hidden = isProfileView;
+  if (isProfileView) setExpanded($('sort-toggle'), false);
+  for (const id of ['rank-width','rank-header','founders-width','founders-header']) {
+    $(id).hidden = isProfileView;
+  }
+  $('context-column').textContent = isTeam ? 'Founders / contributors' : isInnovation ? 'Example' : 'Research focus';
+  $('links-header').textContent = isTeam ? 'Documented team size' : isInnovation ? 'Evidence' : 'References';
+  $('metric-header').textContent = isTeam ? 'Research background' : isInnovation ? 'What it adds' : state.metric === 'hf' ? 'HF downloads (30 days)' : metrics[state.metric]?.[0] ?? 'Signal';
+  $('metric-header').classList.toggle('numeric', !isProfileView);
+  if (isProfileView || state.metric === 'name') $('metric-header').removeAttribute('aria-sort');
+  else $('metric-header').setAttribute('aria-sort', 'descending');
+  $('empty').hidden = matching.length > 0;
+  $('result').innerHTML = `<strong>${matching.length} ${matching.length === 1 ? 'entry' : 'entries'}</strong>`;
+  renderActiveFilters();
+  $('method').textContent = isTeam ? 'Team records show what each source documents. Open a lab to see the evidence.'
+    : isInnovation ? 'Each row assesses a concrete example and the limits of the public evidence.'
+    : (metrics[state.metric]?.[1] ?? 'Alphabetical order by lab name.') +
+      (state.metric === 'name' ? '' : ' Entries without a value appear after the ranked entries.');
+  if (isProfileView || state.metric !== 'name') {
+    $('method').append(' ', Object.assign(document.createElement('a'), {
+      href: isTeam ? '#team-method' : isInnovation ? '#innovation-method' : '#ranking-method',
+      textContent: isTeam ? 'Team data method' : isInnovation ? 'How we assess innovation' : 'Ranking sources'
+    }));
+  }
+  for (const button of $('cohorts').querySelectorAll('button')) {
+    button.setAttribute('aria-pressed', button.dataset.cohort === state.cohort);
+  }
+  for (const button of $('sort-options').querySelectorAll('[data-metric]')) {
+    button.setAttribute('aria-pressed', button.dataset.metric === state.metric);
+  }
+}
+
+function setExpanded(toggle, expanded) {
+  toggle.setAttribute('aria-expanded', expanded);
+  const control = $(toggle.getAttribute('aria-controls'));
+  control.hidden = !expanded;
+  if (control === search) renderActiveFilters();
+}
+
+function selectFilter(button) {
+  const {filter, value} = button.dataset;
+  state[filter] = state[filter] === value ? '' : value;
+  renderLabs();
+  return $('active-filters').querySelector(`[data-clear-filter="${filter}"]`) || $('search-toggle');
+}
+
+$('sort-options').innerHTML = sortOptions.map(([id, label]) =>
+  `<button type="button" class="sort-option" data-metric="${escape(id)}">${escape(label)}</button>`).join('');
+
+const search = $('search');
+const searchToggle = $('search-toggle');
+const sortToggle = $('sort-toggle');
+const sortControls = $('sort-options');
+searchToggle.addEventListener('click', () => {
+  const expanding = search.hidden;
+  setExpanded(searchToggle, expanding);
+  if (expanding) {
+    setExpanded(sortToggle, false);
+    search.focus();
+  }
+});
+sortToggle.addEventListener('click', () => {
+  const expanding = sortControls.hidden;
+  setExpanded(sortToggle, expanding);
+  if (expanding) {
+    setExpanded(searchToggle, false);
+    sortControls.querySelector('[aria-pressed="true"]').focus();
+  }
+});
+for (const [control, toggle] of [[search, searchToggle], [sortControls, sortToggle]]) {
+  control.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    event.preventDefault();
+    setExpanded(toggle, false);
+    toggle.focus();
+  });
+}
+
+search.addEventListener('input', () => { state.query = search.value; renderLabs(); });
+sortControls.addEventListener('click', event => {
+  const button = event.target.closest('[data-metric]');
+  if (!button) return;
+  state.metric = button.dataset.metric;
+  renderLabs();
+});
+$('cohorts').addEventListener('click', event => {
+  const button = event.target.closest('[data-cohort]');
+  if (!button) return;
+  state.cohort = button.dataset.cohort;
+  renderLabs();
+});
+$('code-toggle').addEventListener('click', () => {
+  state.codeOnly = !state.codeOnly;
+  renderLabs();
+});
+$('reset').addEventListener('click', () => {
+  Object.assign(state, {space:'', contribution:'', codeOnly:false, fit:'', scope:'', query:''});
+  search.value = '';
+  renderLabs();
+  (search.hidden ? searchToggle : search).focus();
+});
+$('active-filters').addEventListener('click', event => {
+  const button = event.target.closest('[data-clear-filter]');
+  if (!button) return;
+  const key = button.dataset.clearFilter;
+  state[key] = '';
+  if (key === 'query') search.value = '';
+  renderLabs();
+  ($('active-filters').querySelector('button') || (search.hidden ? searchToggle : search)).focus();
+});
+$('labs').addEventListener('click', event => {
+  const button = event.target.closest('button');
+  if (!button) return;
+  if (button.dataset.lab) openProfile(button.dataset.lab,button);
+  if (button.dataset.filter) selectFilter(button).focus();
+});
+$('lab-details').addEventListener('click', event => {
+  const button = event.target.closest('[data-filter="space"]');
+  if (!button) return;
+  profileTrigger = selectFilter(button);
+  $('profile').close();
+});
+$('profile').addEventListener('close', () => {
+  if (profileTrigger?.isConnected) profileTrigger.focus();
+  else searchToggle.focus();
+});
+$('profile').addEventListener('click', event => {
+  if (event.target === $('profile') && event.clientX < $('profile').getBoundingClientRect().left) $('profile').close();
+});
+
+$('method').addEventListener('click', event => {
+  const anchor = event.target.closest('a[href^="#"]');
+  if (anchor) $(anchor.getAttribute('href').slice(1)).open = true;
+});
+renderLabs();
+</script>
+</body>
+</html>

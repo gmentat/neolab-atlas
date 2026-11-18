@@ -1,0 +1,5304 @@
+{
+  "updated": "2026-11-18",
+  "metrics": {
+    "hf": [
+      "Hugging Face downloads",
+      "Top model repository’s downloads over the previous 30 days, checked Nov 18. For small-model leaderboard publishers, the linked submission is used.",
+      false
+    ],
+    "gh": [
+      "GitHub stars",
+      "Lifetime stars on the relevant linked project or the most-starred public, non-fork repo of the listed organization. Includes tools as well as models.",
+      false
+    ],
+    "requests": [
+      "Vercel requests",
+      "Mean daily share of Vercel AI Gateway requests, Nov 11–17. The average gives each day equal weight.",
+      true
+    ],
+    "spend": [
+      "Vercel spend",
+      "Mean daily share of spending on Vercel AI Gateway, Nov 11–17. The average gives each day equal weight.",
+      true
+    ],
+    "tokens": [
+      "Vercel tokens",
+      "Mean daily share of Vercel AI Gateway tokens, Nov 11–17. The average gives each day equal weight.",
+      true
+    ],
+    "imageCount": [
+      "Vercel images",
+      "Mean daily share of Vercel AI Gateway images generated, Nov 11–17. The average gives each day equal weight.",
+      true
+    ],
+    "videoCount": [
+      "Vercel videos",
+      "Mean daily share of Vercel AI Gateway videos generated, Nov 11–17. The average gives each day equal weight.",
+      true
+    ]
+  },
+  "small_teams": [
+    "0arch.io",
+    "Answer.AI",
+    "EleutherAI",
+    "Fractale",
+    "Kohaku Lab",
+    "Kyutai",
+    "Lvmin Zhang",
+    "Mnemonic Labs",
+    "Occiglot",
+    "Pleias",
+    "QFI Labs",
+    "QSI Labs",
+    "RODIN",
+    "RWKV",
+    "StentorLabs",
+    "Talkie",
+    "Tilde Research",
+    "VeroLM",
+    "WAR Enterprise",
+    "nanochat",
+    "stmonty (lePokeRed)",
+    "theyur (Dhamma Parrot)"
+  ],
+  "labs": [
+    {
+      "name": "0arch.io",
+      "scope": "Solo project",
+      "focus": "Published Kisoku, an open base-model experiment.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/0arch-io",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/0arch-io",
+      "community": "",
+      "size": "Team size undisclosed.",
+      "evidence": "https://huggingface.co/0arch-io/kisoku-1.6b",
+      "spaces": [
+        "Small models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 844,
+          "url": "https://huggingface.co/0arch-io/dolphin-v2-8b-abliterated",
+          "label": "0arch-io/dolphin-v2-8b-abliterated"
+        }
+      },
+      "team": {
+        "people": "Joseph Rodriguez",
+        "background": "Pretrained and tested Kisoku 1.6B as an individual research project.",
+        "size": "1",
+        "date": "Oct 2026",
+        "basis": "Model card and training writeup",
+        "source": "https://huggingface.co/0arch-io/kisoku-1.6b"
+      },
+      "people": {
+        "role": "Project lead",
+        "names": "Joseph Rodriguez",
+        "source": "https://huggingface.co/0arch-io/kisoku-1.6b"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card and experiments",
+        "example": "Kisoku 1.6B long-context solo run",
+        "assessment": "Documents pretraining and extension to 64K context. It demonstrates individual-scale training under constrained resources. Benchmark parity is mixed and limited to the reported comparisons.",
+        "source": "https://huggingface.co/0arch-io/kisoku-1.6b",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/0arch-io/kisoku-1.6b"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Aaru",
+      "scope": "Borderline candidate",
+      "focus": "Builds simulated populations for testing products, messages, and policies.",
+      "location": "New York, US",
+      "status": "Product",
+      "year": 2024,
+      "site": "https://aaru.com/",
+      "x": "https://x.com/aaruhq",
+      "linkedin": "https://www.linkedin.com/company/aaru-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://aaru.com/",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Cameron Fink, Ned Koh, John Kessler",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company product evidence",
+        "example": "Population simulations",
+        "assessment": "Provides a working research product for comparing scenarios. The public product material establishes an application. Predictive accuracy depends on validation for the particular population and setting.",
+        "source": "https://aaru.com/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "AGI Inc",
+      "scope": "Borderline candidate",
+      "focus": "Builds action models and software for on-device computer use.",
+      "location": "",
+      "status": "",
+      "year": 2025,
+      "site": "https://theagi.company/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://theagi.company/about",
+      "spaces": [
+        "Agents"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Div Garg, Steve Frey, Naman Garg",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company evaluation",
+        "example": "AGI-0 action models",
+        "assessment": "The company reports building its own action models and testing them on device-control tasks. The public evidence is specialized to reported benchmarks and operating conditions.",
+        "source": "https://theagi.company/about",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Answer.AI",
+      "scope": "Independent lab",
+      "focus": "Co-developed ModernBERT, an encoder architecture for longer context and efficient retrieval.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.answer.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/AnswerDotAI",
+      "hf": "https://huggingface.co/answerdotai",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.answer.ai/posts/2024-12-19-modernbert.html",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 2800212,
+          "url": "https://huggingface.co/answerdotai/ModernBERT-base",
+          "label": "answerdotai/ModernBERT-base"
+        },
+        "gh": {
+          "value": 7063,
+          "url": "https://github.com/AnswerDotAI/fasthtml",
+          "label": "AnswerDotAI/fasthtml"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jeremy Howard, Eric Ries",
+        "source": "https://www.answer.ai/posts/2023-12-12-launch.html"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Paper and weights",
+        "example": "ModernBERT, joint work with LightOn and collaborators",
+        "assessment": "Brings current attention and training techniques to an encoder with native 8,192-token context. The paper measures retrieval and classification. Credit is shared by the project team.",
+        "source": "https://arxiv.org/abs/2412.13663",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training & architecture code",
+            "url": "https://github.com/AnswerDotAI/ModernBERT"
+          },
+          {
+            "kind": "weights",
+            "label": "Base model weights",
+            "url": "https://huggingface.co/answerdotai/ModernBERT-base"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2412.13663"
+          }
+        ],
+        "note": "ModernBERT encodes a document into representations that another system can use for search or classification. The team and collaborators revisited both the encoder architecture and how much data to train it on."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Applied Compute",
+      "scope": "Established model developer",
+      "focus": "Provides model training and inference infrastructure and runs customer-specific post-training.",
+      "location": "San Francisco, US",
+      "status": "Product",
+      "year": 2025,
+      "site": "https://www.appliedcompute.com/",
+      "x": "https://x.com/appliedcompute",
+      "linkedin": "https://www.linkedin.com/company/applied-compute",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.appliedcompute.com/",
+      "spaces": [
+        "Frontier models",
+        "Enterprise AI"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Yash Patil, Rhythm Garg, Linden Li",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company case examples",
+        "example": "Model post-training with customer workflows",
+        "assessment": "The company describes custom training for customers and an open-model platform. Its public material supports applied training work. A general architecture advance is outside those examples.",
+        "source": "https://www.appliedcompute.com/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Arcee AI",
+      "scope": "Research startup",
+      "focus": "Trains open foundation models, including the Trinity mixture-of-experts family.",
+      "location": "Miami United States",
+      "status": "",
+      "year": 2023,
+      "site": "https://www.arcee.ai",
+      "x": "https://x.com/arcee_ai",
+      "linkedin": "https://www.linkedin.com/company/arcee-ai",
+      "github": "https://github.com/arcee-ai",
+      "hf": "https://huggingface.co/arcee-ai",
+      "community": "https://www.youtube.com/@ArceeAI",
+      "size": "",
+      "evidence": "https://huggingface.co/arcee-ai",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 12049,
+          "url": "https://huggingface.co/arcee-ai/Trinity-Mini",
+          "label": "arcee-ai/Trinity-Mini"
+        },
+        "gh": {
+          "value": 7475,
+          "url": "https://github.com/arcee-ai/mergekit",
+          "label": "arcee-ai/mergekit"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Mark McQuade, Jacob Solawetz, Brian Benedict",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Released models",
+        "example": "Trinity open mixture-of-experts models",
+        "assessment": "Adds independently trained open checkpoints. MoE routing has prior art. The demonstrable contribution is the resulting model and training work under the released configuration.",
+        "source": "https://huggingface.co/arcee-ai",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Arda",
+      "scope": "Borderline candidate",
+      "focus": "Builds software for industrial engineering and manufacturing workflows.",
+      "location": "",
+      "status": "",
+      "year": 2025,
+      "site": "https://arda.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://arda.ai/",
+      "spaces": [
+        "Enterprise AI"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Bob McGrew, Augustus Odena, Alex Mark, Jakob Frick",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Company product overview",
+        "example": "Manufacturing workflow software",
+        "assessment": "The public site describes tools that organize work such as design, process planning, and production. It leaves a separately attributable model or training result unestablished.",
+        "source": "https://arda.ai/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Axiom Math",
+      "scope": "Research startup",
+      "focus": "Develops models that generate and verify formal mathematical proofs in Lean.",
+      "location": "Palo Alto, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://axiommath.ai/",
+      "x": "https://x.com/axiommathai",
+      "linkedin": "https://www.linkedin.com/company/axiommath",
+      "github": "https://github.com/AxiomMath",
+      "hf": "https://huggingface.co/axiommath",
+      "community": "",
+      "size": "",
+      "evidence": "https://axiommath.ai/",
+      "spaces": [
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 199,
+          "url": "https://github.com/AxiomMath/axplorer",
+          "label": "AxiomMath/axplorer"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Carina Hong",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Verifiable proofs",
+        "example": "Lean theorem proving",
+        "assessment": "The value is producing proof artifacts a proof assistant can check. Formal verification establishes whether each proof is valid. It does not by itself establish reproducible success rates or novelty of all results.",
+        "source": "https://axiommath.ai/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Basecamp Research",
+      "scope": "Borderline candidate",
+      "focus": "Develops foundation models for therapeutic research.",
+      "location": "London, UK",
+      "status": "",
+      "year": 2019,
+      "site": "https://www.basecamp-research.com/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/basecamp-research-bcr",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.basecamp-research.com/",
+      "spaces": [
+        "Life sciences"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Glen Gowers, Oliver Vince",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company model announcement",
+        "example": "EDEN research model",
+        "assessment": "The public model announcement identifies an original research artifact and direction. Clinical impact remains a separate question that requires evidence from specific studies.",
+        "source": "https://www.basecamp-research.com/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Bioptimus",
+      "scope": "Research startup",
+      "focus": "Develops the H-Optimus foundation model family for histopathology.",
+      "location": "France",
+      "status": "",
+      "year": null,
+      "site": "https://www.bioptimus.com/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/bioptimus",
+      "github": "",
+      "hf": "https://huggingface.co/bioptimus",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.bioptimus.com/h-optimus",
+      "spaces": [
+        "Life sciences"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 72095,
+          "url": "https://huggingface.co/bioptimus/H-optimus-0",
+          "label": "bioptimus/H-optimus-0"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model cards and comparisons",
+        "example": "H-Optimus histopathology models",
+        "assessment": "Pretrained pathology image representations transfer to a range of research tasks. The public checkpoints and evaluations are the contribution. Clinical utility needs evaluation in the intended setting.",
+        "source": "https://www.bioptimus.com/h-optimus",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Cartesia",
+      "scope": "Established model developer",
+      "focus": "Develops low-latency speech models and researches state-space architectures.",
+      "location": "San Francisco, US",
+      "status": "API",
+      "year": 2023,
+      "site": "https://www.cartesia.ai/",
+      "x": "https://x.com/cartesia",
+      "linkedin": "https://www.linkedin.com/company/cartesia-ai",
+      "github": "https://github.com/cartesia-ai",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.cartesia.ai/blog/sonic",
+      "spaces": [
+        "Voice and audio",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 425,
+          "url": "https://github.com/cartesia-ai/edge",
+          "label": "cartesia-ai/edge"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founders",
+        "names": "Karan Goel, Albert Gu, Arjun Desai, Brandon Yang",
+        "source": "https://www.cartesia.ai/company"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Released product · research notes",
+        "example": "Sonic streaming text-to-speech",
+        "assessment": "A working low-latency product built around state-space model expertise. The team's contribution is the speech system and measured latency under stated conditions. State-space sequence models predate Sonic.",
+        "source": "https://www.cartesia.ai/blog/sonic",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Causal Labs",
+      "scope": "Research startup",
+      "focus": "Develops physics models for forecasting, starting with weather.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.causallabs.ai/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/causallabs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://blog.getcausal.ai/p/causal-labs-towards-causal-intelligence",
+      "spaces": [
+        "Forecasting",
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research note",
+        "example": "Physics models starting with weather forecasting",
+        "assessment": "The stated goal is a reusable model of physical systems. The initial announcement does not establish forecast skill beyond operational baselines or transfer to other domains.",
+        "source": "https://blog.getcausal.ai/p/causal-labs-towards-causal-intelligence",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Chai Discovery",
+      "scope": "Research startup",
+      "focus": "Developed Chai-1 for molecular structure prediction.",
+      "location": "San Francisco, US",
+      "status": "API",
+      "year": 2024,
+      "site": "https://www.chaidiscovery.com/",
+      "x": "https://x.com/chaidiscovery",
+      "linkedin": "https://www.linkedin.com/company/chaidiscovery",
+      "github": "https://github.com/chaidiscovery",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/chaidiscovery/chai-lab",
+      "spaces": [
+        "Life sciences",
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 2014,
+          "url": "https://github.com/chaidiscovery/chai-lab",
+          "label": "chaidiscovery/chai-lab"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Joshua Meier, Jack Dent, Matthew McPartlon, Jacques Boitreaud",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Technical report",
+        "example": "Chai-1 molecular structure prediction",
+        "assessment": "Reports a unified model and comparisons on structure prediction. The gain is scoped to the evaluations reported. The model's existence alone does not establish downstream drug-discovery impact.",
+        "source": "https://chaiassets.com/chai-1/paper/technical_report_v1.pdf",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Core Automation",
+      "scope": "Research startup",
+      "focus": "Researches alternatives to large-scale pretraining and Transformer architectures.",
+      "location": "San Francisco, US",
+      "status": "Stealth",
+      "year": 2026,
+      "site": "https://www.coreauto.com/",
+      "x": "https://x.com/CoreAutoAI",
+      "linkedin": "https://www.linkedin.com/company/core-auto",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.coreauto.com/",
+      "spaces": [
+        "Continual learning",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "background": "Team members previously led reinforcement-learning research at OpenAI and pretraining for Gemini.",
+        "source": "https://www.coreauto.com/"
+      },
+      "people": {
+        "role": "Founding team",
+        "names": "Jerry Tworek, Rohan Anil, Joanne Jang, Anmol Gulati, Julia Villagra",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical writeup",
+        "example": "Distributed training across compute islands",
+        "assessment": "Reports training a sparse mixture-of-experts model across geographically separated GPU clusters. The contribution is cross-site scheduling and communication engineering. It does not establish a new general-purpose backbone.",
+        "source": "https://www.coreauto.com/hitchhikers-guide-to-training-on-compute-islands",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Corma",
+      "scope": "Borderline candidate",
+      "focus": "Trains models for defensive cybersecurity workflows.",
+      "location": "",
+      "status": "",
+      "year": 2025,
+      "site": "https://www.corma.ai/",
+      "x": "https://x.com/CormaAI",
+      "linkedin": "https://www.linkedin.com/company/cormaai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.corma.ai/",
+      "spaces": [
+        "Safety and interpretability"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Alon Pluda, Hofit Bata",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research statement",
+        "example": "Defensive model training program",
+        "assessment": "The public description covers its modeling and deployment goals. It leaves the contribution beyond established defensive baselines open.",
+        "source": "https://www.corma.ai/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "CuspAI",
+      "scope": "Research startup",
+      "focus": "Builds AI tools and research partnerships for materials discovery.",
+      "location": "Cambridge, UK",
+      "status": "Research only",
+      "year": 2024,
+      "site": "https://cusp.ai/",
+      "x": "https://x.com/cusp_ai",
+      "linkedin": "https://www.linkedin.com/company/cusp-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://cusp.ai/",
+      "spaces": [
+        "Materials",
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Chad Edwards, Max Welling",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Company program",
+        "example": "AI Materials Foundry",
+        "assessment": "Brings industrial materials researchers into a shared discovery program. The announcement describes the collaborations and workflow. Model-level novelty needs technical comparisons.",
+        "source": "https://cusp.ai/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Decart",
+      "scope": "Adjacent",
+      "focus": "Develops Oasis, an interactive world model trained to generate environments in response to user actions.",
+      "location": "Tel Aviv, IL",
+      "status": "Product",
+      "year": 2023,
+      "site": "https://decart.ai/",
+      "x": "https://x.com/DecartAI",
+      "linkedin": "https://www.linkedin.com/company/decart-ai",
+      "github": "https://github.com/DecartAI",
+      "hf": "https://huggingface.co/decartai",
+      "community": "https://discord.com/invite/nXkcxdUY34",
+      "size": "",
+      "evidence": "https://oasis-model.github.io/",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 0,
+          "url": "https://huggingface.co/decartai/trained-sd3",
+          "label": "decartai/trained-sd3"
+        },
+        "gh": {
+          "value": 816,
+          "url": "https://github.com/DecartAI/Lucy-Edit-ComfyUI",
+          "label": "DecartAI/Lucy-Edit-ComfyUI"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Dean Leitersdorf, Moshe Shalev, Orian Leitersdorf",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Report, code and weights",
+        "example": "Oasis interactive action-to-video model",
+        "assessment": "Co-developed with Etched. Demonstrates real-time video conditioned on player input in a constrained world. Prior work includes GameNGen, so the contribution is the particular open implementation and interactive modeling tradeoff.",
+        "source": "https://oasis-model.github.io/",
+        "comparison": "https://arxiv.org/abs/2408.14837"
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Deep Cogito",
+      "scope": "Research startup",
+      "focus": "Trains models using iterated distillation and amplification.",
+      "location": "San Francisco, US",
+      "status": "Open model",
+      "year": 2024,
+      "site": "https://www.deepcogito.com/",
+      "x": "https://x.com/deepcogito",
+      "linkedin": "https://www.linkedin.com/company/deep-cogito",
+      "github": "",
+      "hf": "https://huggingface.co/deepcogito",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.deepcogito.com/",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 2069,
+          "url": "https://huggingface.co/deepcogito/cogito-v1-preview-qwen-14B",
+          "label": "deepcogito/cogito-v1-preview-qwen-14B"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Lab evaluation",
+        "example": "Cogito v2 reasoning distillation",
+        "assessment": "Provides a training signal for intermediate reasoning alongside final answers. Reported gains support the approach on selected models, with the effect sensitive to training and baseline choices.",
+        "source": "https://www.deepcogito.com/research/cogito-v2-preview",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Dream Labs",
+      "scope": "Research startup",
+      "focus": "Trains robot policies for transfer across hardware and tasks.",
+      "location": "San Francisco, CA, US",
+      "status": "",
+      "year": 2026,
+      "site": "https://dreamlabs.ai/",
+      "x": "https://x.com/dreamlabs_ai",
+      "linkedin": "https://www.linkedin.com/company/dreamlabs-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://dreamlabs.ai/research/dream-1/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Joel Jang, You Liang Tan",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report · lab evaluation",
+        "example": "Dream-1 cross-robot transfer",
+        "assessment": "The lab reports testing a trained policy on robot hardware absent from the training set. The report gives a concrete cross-embodiment result. The evidence is specific to the reported tasks and setups.",
+        "source": "https://dreamlabs.ai/research/dream-1/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Dyna Robotics",
+      "scope": "Research startup",
+      "focus": "Develops generalist robot foundation models and studies autonomous improvement.",
+      "location": "Redwood City, US",
+      "status": "Partnerships",
+      "year": 2024,
+      "site": "https://www.dyna.co/",
+      "x": "https://x.com/DynaRobotics",
+      "linkedin": "https://www.linkedin.com/company/dyna-robotics",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@Dyna-Robotics",
+      "size": "",
+      "evidence": "https://www.dyna.co/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report · lab evaluation",
+        "example": "Dyna-2 human-to-robot transfer experiment",
+        "assessment": "The report trains variants on 1,000 to one million hours of human video and tests transfer on held-out robot data. This is evidence for scaling in that setup. General robot reliability still requires deployment tests.",
+        "source": "https://www.dyna.co/dyna-2",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Eka Robotics",
+      "scope": "Research startup",
+      "focus": "Develops robot models and hardware that use force feedback during manipulation.",
+      "location": "Cambridge, MA, US",
+      "status": "",
+      "year": 2025,
+      "site": "https://ekarobotics.com/",
+      "x": "https://x.com/EkaRobotics",
+      "linkedin": "https://www.linkedin.com/company/eka-robotics",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://ekarobotics.com/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Pulkit Agrawal, Tuomas Haarnoja",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company demonstration",
+        "example": "Vision–Force–Action model",
+        "assessment": "The model uses force together with visual observations to handle tasks where contact matters. The examples show an integrated system. They leave the contribution of force sensing and training design to matched evaluations.",
+        "source": "https://ekarobotics.com/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "EleutherAI",
+      "scope": "Independent collective",
+      "focus": "Researches language-model training and released the Pythia model suite for studying training dynamics.",
+      "location": "Global",
+      "status": "",
+      "year": null,
+      "site": "https://eleuther.ai/",
+      "x": "https://x.com/EleutherAI",
+      "linkedin": "",
+      "github": "https://github.com/EleutherAI",
+      "hf": "https://huggingface.co/EleutherAI",
+      "community": "https://discord.gg/eleutherai",
+      "size": "",
+      "evidence": "https://github.com/EleutherAI/pythia",
+      "spaces": [
+        "Frontier models",
+        "Safety and interpretability"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 3028559,
+          "url": "https://huggingface.co/EleutherAI/pythia-160m",
+          "label": "EleutherAI/pythia-160m"
+        },
+        "gh": {
+          "value": 14499,
+          "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+          "label": "EleutherAI/lm-evaluation-harness"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Open model suite",
+        "example": "Pythia checkpoints across sizes and training steps",
+        "assessment": "A deliberately controlled suite lets researchers compare how related models change during training. The innovation is the experimental design and released evidence, not a new architecture.",
+        "source": "https://github.com/EleutherAI/pythia",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training configs",
+            "url": "https://github.com/EleutherAI/pythia"
+          },
+          {
+            "kind": "code",
+            "label": "GPT-NeoX training code",
+            "url": "https://github.com/EleutherAI/gpt-neox"
+          },
+          {
+            "kind": "weights",
+            "label": "Example checkpoint",
+            "url": "https://huggingface.co/EleutherAI/pythia-1.4b"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2304.01373"
+          }
+        ],
+        "note": "Pythia released snapshots from many points during training, across models of different sizes. Researchers can compare when a behavior appears and whether larger models learn it sooner."
+      },
+      "fit": ""
+    },
+    {
+      "name": "EquiLibre Technologies",
+      "scope": "Research startup",
+      "focus": "Trains reinforcement-learning trading models using experience from game-playing AI.",
+      "location": "Prague, Czechia",
+      "status": "Trading with in-house models",
+      "year": 2021,
+      "site": "https://equilibre.ai/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/equilibre-technologies",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://equilibre.ai/",
+      "spaces": [
+        "Trading",
+        "Finance",
+        "Continual learning"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Martin Schmid, Matej Moravcik, Rudolf Kadlec",
+        "background": "All three founders worked at DeepMind and IBM. Their publications include DeepStack and Player of Games.",
+        "source": "https://equilibre.ai/",
+        "size": "11–50 employees",
+        "basis": "LinkedIn company size band",
+        "size_source": "https://www.linkedin.com/company/equilibre-technologies",
+        "links": [
+          [
+            "Martin on X",
+            "https://x.com/Lifrordi/status/2072664533491921289"
+          ]
+        ]
+      },
+      "people": {
+        "role": "Founders",
+        "names": "Martin Schmid, Matej Moravcik, Rudolf Kadlec",
+        "source": "https://equilibre.ai/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company-reported deployment",
+        "example": "Reinforcement-learning models in live trading",
+        "assessment": "Applying self-play and game-theory experience to live trading is a concrete deployment. The public evidence does not isolate the model's advantage or establish returns.",
+        "source": "https://equilibre.ai/",
+        "comparison": "",
+        "note": "The team works on decisions under uncertainty, drawing on reinforcement learning and game theory. The public material gives a research direction and use case while leaving the trading model's implementation private."
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Essential AI",
+      "scope": "Research startup",
+      "focus": "Trains open language models and publishes research on data and model development.",
+      "location": "San Francisco, US",
+      "status": "Acquired",
+      "year": 2023,
+      "site": "https://essential.ai/",
+      "x": "https://x.com/essential_ai",
+      "linkedin": "https://www.linkedin.com/company/essentialai",
+      "github": "https://github.com/Essential-AI",
+      "hf": "https://huggingface.co/EssentialAI",
+      "community": "",
+      "size": "",
+      "evidence": "https://huggingface.co/essentialai",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 281835,
+          "url": "https://huggingface.co/EssentialAI/eai-distill-0.5b",
+          "label": "EssentialAI/eai-distill-0.5b"
+        },
+        "gh": {
+          "value": 61,
+          "url": "https://github.com/Essential-AI/eai-taxonomy",
+          "label": "Essential-AI/eai-taxonomy"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Ashish Vaswani, Niki Parmar",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Released models",
+        "example": "Rnj open language models",
+        "assessment": "Expands access to independently trained models and related experimental materials. A clean ablation or independently reproduced improvement would be needed to credit a new training method.",
+        "source": "https://huggingface.co/essentialai",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Fish Audio",
+      "scope": "Research startup",
+      "focus": "Develops multilingual speech generation models and releases model weights.",
+      "location": "Palo Alto, US",
+      "status": "",
+      "year": null,
+      "site": "https://fish.audio/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/fishaudio/fish-speech",
+      "hf": "https://huggingface.co/fishaudio",
+      "community": "https://discord.com/invite/fish-audio",
+      "size": "",
+      "evidence": "https://github.com/fishaudio/fish-speech",
+      "spaces": [
+        "Voice and audio"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 43965,
+          "url": "https://huggingface.co/fishaudio/drama-3",
+          "label": "fishaudio/drama-3"
+        },
+        "gh": {
+          "value": 33771,
+          "url": "https://github.com/fishaudio/fish-speech",
+          "label": "fishaudio/fish-speech"
+        },
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 0.006257142857142857,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.004614285714285715
+        },
+        "spend": {
+          "value": 0.0017285714285714285,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0013428571428571428
+        },
+        "tokens": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Weights and code",
+        "example": "Fish Audio S2 expressive multilingual speech",
+        "assessment": "Released models expose fine-grained delivery control. Expressive TTS predates S2. The practical contribution is supporting controllable multilingual generation in a downloadable release.",
+        "source": "https://fish.audio/s2/",
+        "comparison": "https://github.com/fishaudio/fish-speech",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/fishaudio/fish-speech"
+          },
+          {
+            "kind": "weights",
+            "label": "S2-Pro weights",
+            "url": "https://huggingface.co/fishaudio/s2-pro"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Flapping Airplanes",
+      "scope": "Research startup",
+      "focus": "Researches data-efficient pretraining and GPU kernels for model training.",
+      "location": "San Francisco, US",
+      "status": "Stealth",
+      "year": 2025,
+      "site": "https://flappingairplanes.com/",
+      "x": "https://x.com/flappyairplanes",
+      "linkedin": "https://www.linkedin.com/company/flapping-airplanes",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.indexventures.com/perspectives/toward-more-efficient-ai-leading-flapping-airplanes-1b-series-a/",
+      "spaces": [
+        "Frontier models",
+        "Model efficiency"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Ben Spector, Asher Spector, Aidan Smith",
+        "background": "The team works across GPU kernels, pretraining, post-training, and inference.",
+        "size": "About two dozen",
+        "date": "Oct 2026",
+        "basis": "Reported by lead investor",
+        "source": "https://www.indexventures.com/perspectives/toward-more-efficient-ai-leading-flapping-airplanes-1b-series-a/"
+      },
+      "people": {
+        "role": "Founders",
+        "names": "Ben Spector, Asher Spector, Aidan Smith",
+        "source": "https://www.indexventures.com/companies/flapping-airplanes/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Investor report · technical artifacts",
+        "example": "Data-efficient model training and GPU megakernels",
+        "assessment": "Reports kernel work spanning training and inference. The broader data-efficiency claim needs published model or matched-compute comparisons to quantify the gain.",
+        "source": "https://www.indexventures.com/perspectives/toward-more-efficient-ai-leading-flapping-airplanes-1b-series-a/",
+        "comparison": "",
+        "note": "The question is how to get more learning from the same training data. The public GPU kernel work addresses a related engineering problem by combining multiple operations so GPUs can spend more time doing useful computation."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Flourish",
+      "scope": "Research startup",
+      "focus": "Reportedly researches brain-inspired approaches to more energy-efficient AI.",
+      "location": "",
+      "status": "",
+      "year": 2025,
+      "site": "",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://news.bloomberglaw.com/private-equity/startup-bringing-brains-to-ai-aims-for-2-5-billion-valuation",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Thomas Reardon, Rob Williams",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Press reporting",
+        "example": "Brain-inspired AI research program",
+        "assessment": "Public reporting establishes a research direction. It leaves the design details, measured energy costs, and model results unresolved.",
+        "source": "https://news.bloomberglaw.com/private-equity/startup-bringing-brains-to-ai-aims-for-2-5-billion-valuation",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Fractale",
+      "scope": "Solo project",
+      "focus": "Trained a 350M language model in an experiment on learned memory.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/fractale-lm",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/fractale-lm",
+      "community": "",
+      "size": "Researcher identifies it as solo.",
+      "evidence": "https://huggingface.co/fractale-lm/Fractale-350M-base",
+      "spaces": [
+        "Small models",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 0,
+          "url": "https://huggingface.co/fractale-lm/Fractale-350M-base",
+          "label": "fractale-lm/Fractale-350M-base"
+        }
+      },
+      "team": {
+        "size": "1",
+        "basis": "Self-described solo project",
+        "source": "https://www.reddit.com/r/LocalLLaMA/comments/1v174ql/fractale350mbase_memory_as_trained_behaviour/"
+      },
+      "people": {
+        "role": "Model publisher",
+        "names": "fractale-lm",
+        "source": "https://huggingface.co/fractale-lm/Fractale-350M-base"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "Fractale-350M-base memory experiment",
+        "assessment": "Releases weights and a small-scale memory experiment. An ablation separating learned memory effects from data and model size would strengthen the novelty claim.",
+        "source": "https://huggingface.co/fractale-lm/Fractale-350M-base",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/fractale-lm/Fractale-350M-base"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Fundamental",
+      "scope": "Research startup",
+      "focus": "Pretrained NEXUS to learn from tabular data across different domains.",
+      "location": "San Francisco, US",
+      "status": "Stealth",
+      "year": 2024,
+      "site": "https://fundamental.tech/",
+      "x": "https://x.com/LTMpredict",
+      "linkedin": "https://www.linkedin.com/company/fundamentalhq",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@Fundamental-tech",
+      "size": "",
+      "evidence": "https://fundamental.tech/nexus",
+      "spaces": [
+        "Enterprise AI",
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [
+        {
+          "date": "2026-05-07",
+          "type": "Nomination",
+          "title": "Fundamental nomination",
+          "author": "TheRealDanSaedi",
+          "url": "https://x.com/TheRealDanSaedi/status/2052404552960290994",
+          "site": "",
+          "note": "A reply arguing for Fundamental. The live list already carries the company.",
+          "spaces": [
+            "Enterprise AI"
+          ]
+        }
+      ],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jeremy Fraenkel, Gabriel Suissa",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Released model · lab evaluation",
+        "example": "NEXUS pretrained tabular model",
+        "assessment": "Pushes large-scale pretraining for enterprise prediction on tables. Tabular foundation models already exist, so the open question is the gain across unseen tasks under matched evaluation.",
+        "source": "https://fundamental.tech/nexus",
+        "comparison": "https://pubmed.ncbi.nlm.nih.gov/39780007/"
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Generalist AI",
+      "scope": "Research startup",
+      "focus": "Develops robot foundation models using data that combine multiple senses.",
+      "location": "San Mateo, US",
+      "status": "Research only",
+      "year": 2024,
+      "site": "https://generalistai.com/",
+      "x": "https://x.com/GeneralistAI",
+      "linkedin": "https://www.linkedin.com/company/generalistai",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@Generalist_AI",
+      "size": "",
+      "evidence": "https://generalistai.com/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Pete Florence, Andy Zeng, Andrew Barry",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Lab demonstrations",
+        "example": "GEN-0 multimodal robot foundation model",
+        "assessment": "Demonstrates sensor-rich robot learning across manipulation tasks. The contribution is the collected data and trained policy. The effect of each sensor needs matched controls.",
+        "source": "https://generalistai.com/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Genesis AI",
+      "scope": "Research startup",
+      "focus": "Develops a robot foundation model for dexterous manipulation, using both human and robot data.",
+      "location": "Paris, FR",
+      "status": "Research only",
+      "year": 2024,
+      "site": "https://www.genesis.ai/",
+      "x": "https://x.com/gs_ai_",
+      "linkedin": "https://www.linkedin.com/company/gs-ai",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@GenesisAI_official",
+      "size": "",
+      "evidence": "https://www.genesis.ai/news/press-release-gene-265",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Co-founders named in release",
+        "names": "Zhou Xian, Théophile Gervet",
+        "source": "https://www.genesis.ai/news/press-release-gene-265"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company demonstration",
+        "example": "GENE 26.5 dexterous manipulation model",
+        "assessment": "Combines human and robot data to train dexterous behavior. Demos establish a working capability on selected tasks. Unseen-task reliability and the gain from each data source are less clear.",
+        "source": "https://www.genesis.ai/news/press-release-gene-265",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Genmo",
+      "scope": "Research startup",
+      "focus": "Trained Mochi, an open video generation model with an asymmetric diffusion Transformer.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.genmo.ai/",
+      "x": "https://x.com/genmoai",
+      "linkedin": "https://www.linkedin.com/company/genmoai",
+      "github": "https://github.com/genmoai/mochi",
+      "hf": "https://huggingface.co/genmo",
+      "community": "https://www.youtube.com/@genmoai",
+      "size": "",
+      "evidence": "https://github.com/genmoai/models",
+      "spaces": [
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 3935,
+          "url": "https://huggingface.co/genmo/mochi-1-preview",
+          "label": "genmo/mochi-1-preview"
+        },
+        "gh": {
+          "value": 3768,
+          "url": "https://github.com/genmoai/mochi",
+          "label": "genmoai/mochi"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Weights and code",
+        "example": "Mochi asymmetric diffusion Transformer",
+        "assessment": "Allocates model capacity differently to video and text in an open video generator. Its code and weights make the design testable against prior diffusion systems.",
+        "source": "https://github.com/genmoai/mochi",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/genmoai/mochi"
+          },
+          {
+            "kind": "weights",
+            "label": "Preview weights",
+            "url": "https://huggingface.co/genmo/mochi-1-preview"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Goodfire",
+      "scope": "Research startup",
+      "focus": "Tests whether training against internal model representations can shape behavior.",
+      "location": "San Francisco, US",
+      "status": "API",
+      "year": 2024,
+      "site": "https://www.goodfire.com/",
+      "x": "https://x.com/goodfireAI",
+      "linkedin": "https://www.linkedin.com/company/goodfire-ai",
+      "github": "",
+      "hf": "https://huggingface.co/Goodfire",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.goodfire.com/research/mechanistic-shaping",
+      "spaces": [
+        "Safety and interpretability"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 82,
+          "url": "https://huggingface.co/Goodfire/Llama-3.1-8B-Instruct-SAE-l19",
+          "label": "Goodfire/Llama-3.1-8B-Instruct-SAE-l19"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Eric Ho, Daniel Balsam, Tom McGrath",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Published experiments",
+        "example": "Mechanistic shaping during training",
+        "assessment": "Uses internal representations as a training target and measures the resulting behavior. This differs from judging output alone. The experiments demonstrate targeted effects, with generalization beyond them still uncertain.",
+        "source": "https://www.goodfire.com/research/mechanistic-shaping",
+        "comparison": "",
+        "note": "The team looks for patterns inside a model that correspond to a behavior. It tests whether making those patterns more or less active during training changes how the model behaves later."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Gradium",
+      "scope": "Borderline candidate",
+      "focus": "Develops speech models for real-time voice applications and on-device use.",
+      "location": "Paris, France",
+      "status": "",
+      "year": 2025,
+      "site": "https://gradium.ai/",
+      "x": "https://x.com/GradiumAI",
+      "linkedin": "https://www.linkedin.com/company/gradium-ai",
+      "github": "https://github.com/gradium-ai",
+      "hf": "",
+      "community": "https://discord.gg/T85yt8kD33",
+      "size": "",
+      "evidence": "https://gradium.ai/blog/release-phonon-open-weight",
+      "spaces": [
+        "Voice and audio"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 509,
+          "url": "https://github.com/gradium-ai/xn-ptts",
+          "label": "gradium-ai/xn-ptts"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founders",
+        "names": "Neil Zeghidour, Olivier Teboul, Laurent Mazaré, Alexandre Défossez",
+        "source": "https://gradium.ai/blog/gradium"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model release",
+        "example": "Phonon on-device speech models",
+        "assessment": "The Phonon release makes speech models available for local execution. The concrete contribution is the released models and intended deployment setting. Performance depends on device and workload.",
+        "source": "https://gradium.ai/blog/release-phonon-open-weight",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/gradium-ai/xn-ptts"
+          },
+          {
+            "kind": "weights",
+            "label": "31M weights",
+            "url": "https://huggingface.co/gradium/phonon-31m-en"
+          }
+        ]
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Guide Labs",
+      "scope": "Research startup",
+      "focus": "Develops the Steerable model family and experiments with architectures for interpretability.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.guidelabs.ai/",
+      "x": "https://x.com/guidelabsai",
+      "linkedin": "https://www.linkedin.com/company/guide-labs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.guidelabs.ai/",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founders",
+        "names": "Julius Adebayo, Aya Ismail",
+        "source": "https://www.guidelabs.ai/post/scaling-interpretable-models-8b/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and weights",
+        "example": "Steerling-8B concept representations",
+        "assessment": "Builds interpretable concept representations into a language model and exposes them for inspection and intervention. This makes some controls first-class. It does not make every internal computation or concept transparent.",
+        "source": "https://www.guidelabs.ai/papers/scaling-inherently-interpretable-language-models/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "H Company",
+      "scope": "Research startup",
+      "focus": "Develops Holo models for visual grounding and cross-platform computer use.",
+      "location": "Paris, FR",
+      "status": "Open model",
+      "year": 2024,
+      "site": "https://hcompany.ai/",
+      "x": "https://x.com/hcompany_ai",
+      "linkedin": "https://www.linkedin.com/company/h-company-ai",
+      "github": "https://github.com/hcompai",
+      "hf": "https://huggingface.co/Hcompany",
+      "community": "https://discord.gg/gAWcDZgx4s",
+      "size": "",
+      "evidence": "https://hcompany.ai/newsroom/holo2",
+      "spaces": [
+        "Enterprise AI",
+        "Agents"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 64168,
+          "url": "https://huggingface.co/Hcompany/Holo-3.1-35B-A3B-GGUF",
+          "label": "Hcompany/Holo-3.1-35B-A3B-GGUF"
+        },
+        "gh": {
+          "value": 163,
+          "url": "https://github.com/hcompai/surfer-h-cli",
+          "label": "hcompai/surfer-h-cli"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Charles Kantor, Laurent Sifre, Karl Tuyls, Daan Wierstra, Julien Perolat",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model release",
+        "example": "Holo2 desktop and mobile computer-use models",
+        "assessment": "Combines grounding and action across several interfaces. Its model release and evaluations support a specialized improvement, with results tied to the reported tasks and compute budgets.",
+        "source": "https://hcompany.ai/newsroom/holo2",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Hark",
+      "scope": "Research startup",
+      "focus": "Develops personal AI software and post-trains computer-use models for Handoff.",
+      "location": "San Jose, US",
+      "status": "Product",
+      "year": 2025,
+      "site": "https://hark.com/",
+      "x": "https://x.com/hark_labs",
+      "linkedin": "https://www.linkedin.com/company/hark-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://hark.com/articles/introducing-hark-handoff",
+      "spaces": [
+        "Enterprise AI"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Brett Adcock",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company research preview",
+        "example": "Handoff personal computer-use agent",
+        "assessment": "Handoff is a working product and Hark describes post-training alongside software development. The preview leaves the isolated contribution of training and the agent harness open.",
+        "source": "https://hark.com/articles/introducing-hark-handoff",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Harmonic",
+      "scope": "Research startup",
+      "focus": "Trains Aristotle for formal mathematical reasoning and proof search.",
+      "location": "Palo Alto, US",
+      "status": "API",
+      "year": 2023,
+      "site": "https://www.harmonic.fun/",
+      "x": "https://x.com/HarmonicMath",
+      "linkedin": "https://www.linkedin.com/company/harmonicmath",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@HarmonicMathemathics",
+      "size": "",
+      "evidence": "https://www.harmonic.fun/",
+      "spaces": [
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Tudor Achim, Vlad Tenev",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Verifiable proofs",
+        "example": "Aristotle formal reasoning and proof search",
+        "assessment": "Connects a model to machine-checked proofs. Formal checking verifies the output for individual statements. General research ability requires separate task-level comparisons.",
+        "source": "https://www.harmonic.fun/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "HiDream.ai",
+      "scope": "Research startup",
+      "focus": "Develops open image generation models, including the HiDream-I1 architecture.",
+      "location": "China",
+      "status": "",
+      "year": null,
+      "site": "https://hidreamai.com/home",
+      "x": "https://x.com/HiDream19628",
+      "linkedin": "",
+      "github": "https://github.com/HiDream-ai",
+      "hf": "https://huggingface.co/HiDream-ai",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/HiDream-ai/HiDream-I1",
+      "spaces": [
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 40994,
+          "url": "https://huggingface.co/HiDream-ai/HiDream-O1-Image",
+          "label": "HiDream-ai/HiDream-O1-Image"
+        },
+        "gh": {
+          "value": 2509,
+          "url": "https://github.com/HiDream-ai/HiDream-I1",
+          "label": "HiDream-ai/HiDream-I1"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Weights and code",
+        "example": "HiDream-I1 open image generator",
+        "assessment": "Combines a diffusion Transformer with multiple text representations. The released architecture is inspectable. Image benchmark differences do not isolate the contribution of each component.",
+        "source": "https://github.com/HiDream-ai/HiDream-I1",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/HiDream-ai/HiDream-I1"
+          },
+          {
+            "kind": "weights",
+            "label": "Full model weights",
+            "url": "https://huggingface.co/HiDream-ai/HiDream-I1-Full"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Imbue",
+      "scope": "Adjacent",
+      "focus": "Now develops coding-agent tools and previously reported training a 70B language model from scratch.",
+      "location": "San Francisco, CA, US",
+      "status": "",
+      "year": 2020,
+      "site": "https://imbue.com/",
+      "x": "https://x.com/imbue_ai",
+      "linkedin": "",
+      "github": "https://github.com/imbue-ai",
+      "hf": "",
+      "community": "https://www.youtube.com/@imbue_ai",
+      "size": "",
+      "evidence": "https://imbue.com/blog/70b-intro",
+      "spaces": [
+        "Enterprise AI",
+        "Agents"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 549,
+          "url": "https://github.com/imbue-ai/self_supervised",
+          "label": "imbue-ai/self_supervised"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Kanjun Qiu, Josh Albrecht",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Technical writeup and open tools",
+        "example": "Imbue 70B training study",
+        "assessment": "The published work documents a completed model training run and releases training and evaluation tools. It supplies an inspectable research contribution from an earlier phase of the company.",
+        "source": "https://imbue.com/blog/70b-intro",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Scaling optimizer code",
+            "url": "https://github.com/imbue-ai/carbs"
+          },
+          {
+            "kind": "code",
+            "label": "Training infrastructure scripts",
+            "url": "https://github.com/imbue-ai/cluster-health"
+          }
+        ]
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Inception Labs",
+      "scope": "Research startup",
+      "focus": "Develops Mercury, a family of diffusion language models.",
+      "location": "Palo Alto, US",
+      "status": "API",
+      "year": 2024,
+      "site": "https://www.inceptionlabs.ai/",
+      "x": "https://x.com/_inception_ai",
+      "linkedin": "https://www.linkedin.com/company/inception-labs-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+      "spaces": [
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [
+        {
+          "date": "2026-01-14",
+          "type": "Nomination",
+          "title": "Inception Labs nomination",
+          "author": "sarahcat21",
+          "url": "https://x.com/sarahcat21/status/2011227776079306814",
+          "site": "",
+          "note": "A reply to the early crowdsourced list naming Inception Labs.",
+          "spaces": [
+            "Model efficiency"
+          ]
+        }
+      ],
+      "metrics": {
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 0.019942857142857144,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.014271428571428572
+        },
+        "spend": {
+          "value": 0.0033,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.002314285714285714
+        },
+        "tokens": {
+          "value": 0.024214285714285712,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0122
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Stefano Ermon, Aditya Grover, Volodymyr Kuleshov",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Released model · lab evaluation",
+        "example": "Mercury diffusion language models",
+        "assessment": "Parallel denoising offers a different speed–quality tradeoff from token-by-token generation. Text diffusion predates Mercury. The contribution is making it work in a released model family at larger scale.",
+        "source": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Ineffable Intelligence",
+      "scope": "Research startup",
+      "focus": "Researches reinforcement-learning systems that learn from experience.",
+      "location": "London, UK",
+      "status": "Research only",
+      "year": 2026,
+      "site": "https://www.ineffable.ai/",
+      "x": "https://x.com/IneffableLabs",
+      "linkedin": "https://www.linkedin.com/company/ineffable-intelligence",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.ineffable.ai/",
+      "spaces": [
+        "Frontier models",
+        "Continual learning"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "David Silver",
+        "background": "Silver is a UCL professor and formerly led reinforcement learning at Google DeepMind.",
+        "source": "https://www.ucl.ac.uk/news/2026/apr/ucl-researchers-lead-two-europes-largest-ever-ai-funding-rounds"
+      },
+      "people": {
+        "role": "Founder",
+        "names": "David Silver",
+        "source": "https://www.ucl.ac.uk/news/2026/apr/ucl-researchers-lead-two-europes-largest-ever-ai-funding-rounds"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Research statement",
+        "example": "Learning from self-generated experience",
+        "assessment": "The founder sets out a concrete reinforcement-learning agenda. The cited public material offers no model, result, or comparison from which to assign technical credit.",
+        "source": "https://www.ineffable.ai/",
+        "comparison": "",
+        "note": "The research agenda asks whether an agent can discover new skills by acting and learning from the consequences. In reinforcement learning, those consequences supply rewards that help it decide which actions to repeat."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Intelligent Machines",
+      "scope": "Borderline candidate",
+      "focus": "Reportedly develops robots for complex industrial work.",
+      "location": "",
+      "status": "",
+      "year": 2026,
+      "site": "",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.theinformation.com/newsletters/ai-agenda/former-tesla-optimus-lead-launching-industrial-robot-startup/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Ashish Kumar",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Press reporting",
+        "example": "Industrial robot research program",
+        "assessment": "Press reporting describes prototypes and the team’s direction. Public evidence is too limited for a model-level comparison.",
+        "source": "https://www.theinformation.com/newsletters/ai-agenda/former-tesla-optimus-lead-launching-industrial-robot-startup/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Isara Labs",
+      "scope": "Research startup",
+      "focus": "Builds systems for modeling decisions with many simulated agents.",
+      "location": "San Francisco, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://www.isara.io/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/isara-labs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.isara.io/",
+      "spaces": [
+        "Forecasting",
+        "Finance",
+        "Agents"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Eddie Zhang, Henry Gasztowtt",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Company overview",
+        "example": "Multi-agent simulation system",
+        "assessment": "The public evidence describes the system and its use cases. Controlled comparisons would help establish a specific forecasting or modeling gain.",
+        "source": "https://www.isara.io/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Isomorphic Labs",
+      "scope": "Research startup",
+      "focus": "Co-developed AlphaFold 3 for molecular structure prediction in drug research.",
+      "location": "London, UK",
+      "status": "Partnerships",
+      "year": 2021,
+      "site": "https://www.isomorphiclabs.com/",
+      "x": "https://x.com/IsomorphicLabs",
+      "linkedin": "https://www.linkedin.com/company/isomorphic-labs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.isomorphiclabs.com/articles/alphafold-3-predicts-the-structure-and-interactions-of-all-of-lifes-molecules",
+      "spaces": [
+        "Life sciences",
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Demis Hassabis",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Peer-reviewed paper",
+        "example": "AlphaFold 3, joint work with Google DeepMind",
+        "assessment": "Expands structure prediction across multiple molecule classes relative to previous AlphaFold systems. The paper reports comparative gains. Credit belongs to both teams.",
+        "source": "https://www.nature.com/articles/s41586-024-07487-w",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Kohaku Lab",
+      "scope": "Small team",
+      "focus": "Develops diffusion models and experiments with efficient diffusion training.",
+      "location": "Taiwan / global",
+      "status": "",
+      "year": null,
+      "site": "https://kohaku-lab.org/",
+      "x": "https://x.com/KohakuBlueleaf",
+      "linkedin": "",
+      "github": "https://github.com/Kohaku-Lab",
+      "hf": "https://huggingface.co/KBlueLeaf",
+      "community": "https://discord.gg/tPBsKDyRR5",
+      "size": "Organization lists five core members.",
+      "evidence": "https://github.com/Kohaku-Lab",
+      "spaces": [
+        "Model efficiency"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 24265,
+          "url": "https://huggingface.co/KBlueLeaf/DanTagGen-delta-rev2",
+          "label": "KBlueLeaf/DanTagGen-delta-rev2"
+        },
+        "gh": {
+          "value": 555,
+          "url": "https://github.com/Kohaku-Lab/KohakuTerrarium",
+          "label": "Kohaku-Lab/KohakuTerrarium"
+        }
+      },
+      "team": {
+        "background": "An open research group publishing diffusion models and tools.",
+        "size": "5 listed core members",
+        "date": "Nov 2026",
+        "basis": "GitHub organization profile",
+        "source": "https://github.com/Kohaku-Lab"
+      },
+      "people": {
+        "role": "Founder",
+        "names": "KohakuBlueLeaf",
+        "source": "https://github.com/Kohaku-Lab"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Open projects",
+        "example": "Open diffusion experiments and training tools",
+        "assessment": "Publishes training and model work that others can inspect. Public project reports do not establish a consistent advantage over matching open diffusion baselines.",
+        "source": "https://github.com/Kohaku-Lab",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Kronos",
+      "scope": "Academic research project",
+      "focus": "Published a pretrained model for financial time series and a tokenizer for market data.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://github.com/shiyu-coder/Kronos",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/shiyu-coder/Kronos",
+      "hf": "https://huggingface.co/NeoQuasar",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/shiyu-coder/Kronos",
+      "spaces": [
+        "Trading",
+        "Finance",
+        "Forecasting"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 47957,
+          "url": "https://github.com/shiyu-coder/Kronos",
+          "label": "shiyu-coder/Kronos"
+        },
+        "hf": {
+          "value": 3020785,
+          "url": "https://huggingface.co/NeoQuasar/Kronos-small",
+          "label": "NeoQuasar/Kronos-small"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and weights",
+        "example": "Tokenizer and model tailored to financial price and volume data",
+        "assessment": "The authors report a 93% relative RankIC gain over their strongest generic time-series foundation model baseline. The result applies to their benchmark, with no demonstrated trading edge.",
+        "source": "https://arxiv.org/abs/2508.02739",
+        "comparison": "https://arxiv.org/abs/2611.12141",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Model & fine-tuning code",
+            "url": "https://github.com/shiyu-coder/Kronos"
+          },
+          {
+            "kind": "weights",
+            "label": "Base model weights",
+            "url": "https://huggingface.co/NeoQuasar/Kronos-base"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2508.02739"
+          }
+        ],
+        "note": "Financial data arrives as numbers such as price and volume. Kronos learns to turn those records into tokens, then trains a model to predict how the sequence might continue."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Kyutai",
+      "scope": "Independent nonprofit",
+      "focus": "Developed Moshi, a full-duplex spoken dialogue model.",
+      "location": "Paris, France",
+      "status": "Open model",
+      "year": 2023,
+      "site": "https://kyutai.org/",
+      "x": "https://x.com/kyutai_labs",
+      "linkedin": "https://www.linkedin.com/company/kyutai-labs",
+      "github": "https://github.com/kyutai-labs",
+      "hf": "https://huggingface.co/kyutai",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/kyutai-labs/moshi",
+      "spaces": [
+        "Voice and audio",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 303645,
+          "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+          "label": "kyutai/moshiko-pytorch-bf16"
+        },
+        "gh": {
+          "value": 11551,
+          "url": "https://github.com/kyutai-labs/moshi",
+          "label": "kyutai-labs/moshi"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and code",
+        "example": "Moshi full-duplex speech with the Mimi codec",
+        "assessment": "Models overlapping speech streams instead of imposing fixed turns. Kyutai reports about 200 ms practical latency on an L4 GPU. Latency alone does not measure turn-taking quality.",
+        "source": "https://arxiv.org/abs/2410.00037",
+        "comparison": "https://github.com/kyutai-labs/moshi",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/kyutai-labs/moshi"
+          },
+          {
+            "kind": "weights",
+            "label": "Moshiko weights",
+            "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2410.00037"
+          }
+        ],
+        "note": "Most speech assistants wait for the speaker to finish before producing audio. Moshi processes the incoming and outgoing audio streams together, allowing interruptions and overlap during a conversation."
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Levanto Labs",
+      "scope": "Research startup",
+      "focus": "Develops Sage, a decision model for closed-ended questions about text and images.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://levanto.ai/",
+      "x": "https://x.com/levantolabs",
+      "linkedin": "https://www.linkedin.com/company/levantolabs",
+      "github": "https://github.com/levantolabs",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://levanto.ai/",
+      "spaces": [
+        "Decision models",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 62,
+          "url": "https://github.com/levantolabs/sagecut-release",
+          "label": "levantolabs/sagecut-release"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model API and vendor evaluation",
+        "example": "Sage closed-ended decision model",
+        "assessment": "Makes categorical decisions directly accessible through a specialized interface. Vendor benchmark results show the targeted task fit. Independent coverage outside those cases remains limited.",
+        "source": "https://levanto.ai/model",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Lila Sciences",
+      "scope": "Research startup",
+      "focus": "Develops AI systems that work with automated scientific laboratories.",
+      "location": "Cambridge, MA, US",
+      "status": "Partnerships",
+      "year": 2023,
+      "site": "https://www.lila.ai/",
+      "x": "https://x.com/LilaSciences",
+      "linkedin": "https://www.linkedin.com/company/lila-sciences",
+      "github": "",
+      "hf": "",
+      "community": "https://bsky.app/profile/lilasciences.bsky.social",
+      "size": "",
+      "evidence": "https://www.lila.ai/",
+      "spaces": [
+        "Life sciences",
+        "Materials",
+        "Math and reasoning"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Geoffrey von Maltzahn, Molly Gibson, Noubar Afeyan, Rafael Gómez-Bombarelli",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company demonstration",
+        "example": "AI Science Factory",
+        "assessment": "The company documents an integrated loop for scientific analysis, experimentation, and feedback. The showcased workflow establishes an application. Broader model advantages depend on comparable evaluations.",
+        "source": "https://www.lila.ai/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Liquid AI",
+      "scope": "Research startup",
+      "focus": "Tests hardware-aware architectures with LFM2, a family of hybrid foundation models.",
+      "location": "Cambridge, MA, US",
+      "status": "Product",
+      "year": 2023,
+      "site": "https://www.liquid.ai/",
+      "x": "https://x.com/liquidai",
+      "linkedin": "https://www.linkedin.com/company/liquid-ai-inc",
+      "github": "https://github.com/Liquid4All",
+      "hf": "https://huggingface.co/LiquidAI",
+      "community": "https://www.youtube.com/channel/UClzRQA8Un3AJnlD6h1hv6fA",
+      "size": "",
+      "evidence": "https://www.liquid.ai/research/lfm2-technical-report",
+      "spaces": [
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 514898,
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B-JP-GGUF",
+          "label": "LiquidAI/LFM2.5-Audio-1.5B-JP-GGUF"
+        },
+        "gh": {
+          "value": 2788,
+          "url": "https://github.com/Liquid4All/cookbook",
+          "label": "Liquid4All/cookbook"
+        },
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 0.07495714285714285,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.041228571428571434
+        },
+        "spend": {
+          "value": 0.0005571428571428571,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0005571428571428571
+        },
+        "tokens": {
+          "value": 0.002942857142857143,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.002942857142857143
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Ramin Hasani, Mathias Lechner, Alexander Amini, Daniela Rus",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Report and weights",
+        "example": "LFM2 hardware-aware hybrid architecture",
+        "assessment": "Mixes gated short convolutions with attention selected under edge hardware constraints. The report finds up to 2× faster CPU prefill and decoding versus similarly sized models in its tests.",
+        "source": "https://www.liquid.ai/research/lfm2-technical-report",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "LFM2-1.2B weights",
+            "url": "https://huggingface.co/LiquidAI/LFM2-1.2B"
+          },
+          {
+            "kind": "report",
+            "label": "Technical report",
+            "url": "https://www.liquid.ai/research/lfm2-technical-report"
+          }
+        ],
+        "note": "LFM2 mixes attention layers with cheaper operations that work over short stretches of text. The team studies how this mix changes quality and speed on the hardware that will actually run the model."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Luma AI",
+      "scope": "Established model developer",
+      "focus": "Trains video and image models and deploys them through creative products.",
+      "location": "Palo Alto, US",
+      "status": "Product",
+      "year": 2021,
+      "site": "https://lumalabs.ai/",
+      "x": "https://x.com/LumaLabsAI",
+      "linkedin": "https://www.linkedin.com/company/lumalabsai",
+      "github": "",
+      "hf": "",
+      "community": "https://www.youtube.com/@lumalabsai",
+      "size": "",
+      "evidence": "https://lumalabs.ai/news/ray3",
+      "spaces": [
+        "Voice and audio",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Amit Jain, Alex Yu, Alberto Taiuti",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Product release",
+        "example": "Ray3 video generation model",
+        "assessment": "Ray3 is a shipped model with a creative workflow for video generation. The launch demonstrates product and model integration. It leaves the marginal contribution of the reasoning component open.",
+        "source": "https://lumalabs.ai/news/ray3",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Lvmin Zhang",
+      "scope": "Solo-led project",
+      "focus": "Published FramePack, a frame-packing method for long video generation.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://github.com/lllyasviel",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/lllyasviel",
+      "hf": "",
+      "community": "",
+      "size": "Researcher-led, with academic collaborators.",
+      "evidence": "https://github.com/lllyasviel/FramePack",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 17363,
+          "url": "https://github.com/lllyasviel/FramePack",
+          "label": "lllyasviel/FramePack"
+        }
+      },
+      "team": {
+        "background": "Researcher-led, with academic collaborators.",
+        "source": "https://github.com/lllyasviel/FramePack"
+      },
+      "people": {
+        "role": "Project lead",
+        "names": "Lvmin Zhang",
+        "source": "https://github.com/lllyasviel/FramePack"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and code",
+        "example": "FramePack for video generation",
+        "assessment": "Compresses older frames to keep generation context manageable as video length grows. The code and examples demonstrate the engineering tradeoff, without guaranteeing long-range scene consistency.",
+        "source": "https://github.com/lllyasviel/FramePack",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/lllyasviel/FramePack"
+          }
+        ],
+        "note": "FramePack is designed to keep video generation from getting progressively more expensive as the clip grows. It summarizes earlier frames so the generator can use their context without retaining every frame at full detail."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Magic",
+      "scope": "Research startup",
+      "focus": "Trained LTM-2-mini and researched efficient access to a 100-million-token context.",
+      "location": "San Francisco, US",
+      "status": "Research only",
+      "year": 2022,
+      "site": "https://magic.dev/",
+      "x": "https://x.com/magicailabs",
+      "linkedin": "https://www.linkedin.com/company/magicailabs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://magic.dev/blog/100m-token-context-windows",
+      "spaces": [
+        "Coding",
+        "Agents",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Eric Steinberger, Sebastian De Ro",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Company technical report",
+        "example": "LTM-2-mini long-context experiments",
+        "assessment": "Reports operating on 100M-token inputs with lower memory costs than dense attention in its setup. Advertised context length and reliable recall on arbitrary long tasks are different outcomes.",
+        "source": "https://magic.dev/blog/100m-token-context-windows",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Mantic",
+      "scope": "Research startup",
+      "focus": "Studies training and inference methods for forecasting real-world events.",
+      "location": "London, UK",
+      "status": "",
+      "year": null,
+      "site": "https://mantic.com/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/mantic-ai/",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://thinkingmachines.ai/news/training-llms-to-predict-world-events/",
+      "spaces": [
+        "Forecasting",
+        "Finance"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Toby Shevlane, Ben Day",
+        "background": "The team includes researchers and engineers with backgrounds at Google DeepMind and Palantir.",
+        "source": "https://radical.vc/articles/the-era-of-superhuman-forecasting/"
+      },
+      "people": {
+        "role": "Founders",
+        "names": "Toby Shevlane, Ben Day",
+        "source": "https://radical.vc/articles/the-era-of-superhuman-forecasting-is-here/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report",
+        "example": "Forecast-specific RL post-training",
+        "assessment": "The authors tested a specialized predictor on unseen forecasting questions and report an advantage from post-training over the base model. The result concerns forecasting accuracy, not financial returns.",
+        "source": "https://thinkingmachines.ai/news/training-llms-to-predict-world-events/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Maritaca AI",
+      "scope": "Research startup",
+      "focus": "Develops Portuguese language models in the Sabiá family and documents language-specific training.",
+      "location": "Brazil",
+      "status": "",
+      "year": null,
+      "site": "https://www.maritaca.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/maritaca-ai",
+      "community": "",
+      "size": "",
+      "evidence": "https://arxiv.org/abs/2603.10213",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 4642,
+          "url": "https://huggingface.co/maritaca-ai/S5-nano-GGUF",
+          "label": "maritaca-ai/S5-nano-GGUF"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Technical report",
+        "example": "Sabiá-4 Portuguese-specialized models",
+        "assessment": "Documents gains on Brazilian Portuguese tasks and evaluations. Domain data and evaluation are the distinctive contributions. The report does not establish a generally stronger architecture.",
+        "source": "https://arxiv.org/abs/2603.10213",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Mind Robotics",
+      "scope": "Borderline candidate",
+      "focus": "Develops industrial robots and trains foundation models with manufacturing data.",
+      "location": "Palo Alto, US",
+      "status": "",
+      "year": 2025,
+      "site": "https://www.mindrobotics.com/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.mindrobotics.com/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founder",
+        "names": "RJ Scaringe",
+        "source": "https://techcrunch.com/2026/03/11/rivian-mind-robotics-series-a-500m-fund-raise-industrial-ai-powered-robots/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company deployment description",
+        "example": "Rivian production-line learning",
+        "assessment": "Mind describes collecting data with a manufacturing partner and training models on production tasks. This documents a deployment and learning loop. Transfer to other factories remains a separate result.",
+        "source": "https://www.mindrobotics.com/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Mnemonic Labs",
+      "scope": "Research startup",
+      "focus": "Trains a foundation model directly on financial market activity.",
+      "location": "San Francisco, US",
+      "status": "",
+      "year": null,
+      "site": "https://mnemoniclabs.ai/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/mnemonic-labs/",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.ycombinator.com/launches/XRK-mnemonic-labs-openai-for-financial-markets",
+      "spaces": [
+        "Trading",
+        "Finance",
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Videh Seksaria, Kalki Seksaria",
+        "background": "Both founders studied at MIT. Videh did quant research at Citadel and Walleye. Kalki worked at Tower Research Capital.",
+        "size": "2 people",
+        "date": "Nov 2026",
+        "basis": "YC company profile",
+        "small": true,
+        "source": "https://www.ycombinator.com/companies/mnemonic-labs",
+        "links": [
+          [
+            "Videh on X",
+            "https://x.com/videhps"
+          ],
+          [
+            "Kalki on X",
+            "https://x.com/bayesiankalki"
+          ]
+        ]
+      },
+      "people": {
+        "role": "Founders",
+        "names": "Videh Seksaria, Kalki Seksaria",
+        "source": "https://www.ycombinator.com/companies/mnemonic-labs"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company announcement",
+        "example": "Training run for a market-native foundation model",
+        "assessment": "The launch confirms training is underway. It does not disclose results against a simple market baseline or held-out performance.",
+        "source": "https://www.ycombinator.com/launches/XRK-mnemonic-labs-openai-for-financial-markets",
+        "comparison": "",
+        "note": "The stated aim is to learn from trading activity itself. The public launch describes the training direction and provides too little detail to assess the architecture or how the model performs on future market data."
+      },
+      "fit": ""
+    },
+    {
+      "name": "ModelBest",
+      "scope": "Research startup",
+      "focus": "Co-develops the MiniCPM family and researches efficient language and vision models.",
+      "location": "China",
+      "status": "",
+      "year": 2022,
+      "site": "https://modelbest.cn/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/modelbest",
+      "github": "https://github.com/OpenBMB",
+      "hf": "https://huggingface.co/openbmb",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/OpenBMB/MiniCPM",
+      "spaces": [
+        "Small models",
+        "Model efficiency"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Models and reports",
+        "example": "MiniCPM family for efficient device-side inference",
+        "assessment": "Demonstrates model efficiency and multimodal capability in released checkpoints. These are joint OpenBMB releases. Parameter efficiency and end-to-end device latency are distinct comparisons.",
+        "source": "https://github.com/OpenBMB/MiniCPM",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Model & inference code",
+            "url": "https://github.com/OpenBMB/MiniCPM"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "nanochat",
+      "scope": "Solo-led project",
+      "focus": "Trains reference chat models and documents pretraining and post-training end to end.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://github.com/karpathy/nanochat",
+      "x": "https://x.com/karpathy",
+      "linkedin": "",
+      "github": "https://github.com/karpathy/nanochat",
+      "hf": "",
+      "community": "",
+      "size": "Individual-led project with community contributors.",
+      "evidence": "https://github.com/karpathy/nanochat",
+      "spaces": [
+        "Small models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 60649,
+          "url": "https://github.com/karpathy/nanochat",
+          "label": "karpathy/nanochat"
+        }
+      },
+      "team": {
+        "background": "Individual-led project with community contributors.",
+        "source": "https://github.com/karpathy/nanochat/blob/master/README.md"
+      },
+      "people": {
+        "role": "Project lead",
+        "names": "Andrej Karpathy",
+        "source": "https://github.com/karpathy/nanochat"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Open code and leaderboard",
+        "example": "GPT-2 training speedrun",
+        "assessment": "Open training, evaluation, and a commit-linked speedrun record make incremental changes comparable. GPT-2-grade means the project’s benchmark threshold, not parity with GPT-2 across all tasks.",
+        "source": "https://github.com/karpathy/nanochat/blob/master/dev/LEADERBOARD.md",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training code",
+            "url": "https://github.com/karpathy/nanochat/blob/master/runs/speedrun.sh"
+          },
+          {
+            "kind": "data",
+            "label": "Speedrun results",
+            "url": "https://github.com/karpathy/nanochat/blob/master/dev/LEADERBOARD.md"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Nof1",
+      "scope": "Research startup",
+      "focus": "Develops market intelligence models and training environments for financial markets.",
+      "location": "New York, US",
+      "status": "",
+      "year": null,
+      "site": "https://www.nof1.ai/",
+      "x": "https://x.com/the_nof1",
+      "linkedin": "https://www.linkedin.com/company/thenof1/",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.nof1.ai/",
+      "spaces": [
+        "Trading",
+        "Finance",
+        "Forecasting"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Julian Togelius (research lead)",
+        "background": "Its team includes alumni of DeepMind, Two Sigma, Citadel, and Bridgewater.",
+        "source": "https://www.nof1.ai/"
+      },
+      "people": {
+        "role": "Research lead",
+        "names": "Julian Togelius",
+        "source": "https://www.nof1.ai/"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Public benchmark",
+        "example": "Alpha Arena live evaluation",
+        "assessment": "Alpha Arena provides a common setting to compare models making market decisions. Performance by third-party models gives no evidence of Nof1's own model advantage.",
+        "source": "https://alphaarena.ai/",
+        "comparison": "https://www.nof1.ai/"
+      },
+      "fit": ""
+    },
+    {
+      "name": "Nomic AI",
+      "scope": "Research startup",
+      "focus": "Trains open embedding models for multimodal and text retrieval.",
+      "location": "US",
+      "status": "",
+      "year": null,
+      "site": "https://www.nomic.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/nomic-ai",
+      "hf": "https://huggingface.co/nomic-ai",
+      "community": "",
+      "size": "",
+      "evidence": "https://huggingface.co/nomic-ai/nomic-embed-text-v1",
+      "spaces": [
+        "Retrieval"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 11521318,
+          "url": "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5",
+          "label": "nomic-ai/nomic-embed-text-v1.5"
+        },
+        "gh": {
+          "value": 77344,
+          "url": "https://github.com/nomic-ai/gpt4all",
+          "label": "nomic-ai/gpt4all"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founder",
+        "names": "Andriy Mulyar",
+        "source": "https://www.nomic.ai/about"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Report and weights",
+        "example": "Nomic Embed with 8,192-token context",
+        "assessment": "Releases a reproducible long-context text embedder and reports comparisons with proprietary embedding models. The main gain is the combination of context, access, and published training details.",
+        "source": "https://static.nomic.ai/reports/2024_Nomic_Embed_Text_Technical_Report.pdf",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training code",
+            "url": "https://github.com/nomic-ai/contrastors#training-nomic-embed-text-v1"
+          },
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/nomic-ai/nomic-embed-text-v1"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2402.01613"
+          }
+        ],
+        "note": "An embedding turns a passage into a vector that search systems can compare by meaning. A longer input window lets this model encode larger passages in one pass."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Nous Research",
+      "scope": "Research startup",
+      "focus": "Develops distributed training methods and experiments with open reasoning models.",
+      "location": "New York, US",
+      "status": "Open model",
+      "year": 2023,
+      "site": "https://nousresearch.com/",
+      "x": "https://x.com/NousResearch",
+      "linkedin": "https://www.linkedin.com/company/nousresearch",
+      "github": "https://github.com/NousResearch",
+      "hf": "https://huggingface.co/NousResearch",
+      "community": "https://www.youtube.com/@NousResearch",
+      "size": "",
+      "evidence": "https://github.com/NousResearch/DisTrO",
+      "spaces": [
+        "Agents",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 335054,
+          "url": "https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B",
+          "label": "NousResearch/Hermes-3-Llama-3.1-8B"
+        },
+        "gh": {
+          "value": 264352,
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "label": "NousResearch/hermes-agent"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jeffrey Quesnelle, Karan Malhotra, Teknium, Shivani Mitra",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Open implementation",
+        "example": "DisTrO communications-efficient training",
+        "assessment": "Investigates optimizers that reduce communication during distributed updates. This is a different systems tradeoff for slow connections. Results at one model scale do not imply unrestricted scaling.",
+        "source": "https://github.com/NousResearch/DisTrO",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "report",
+            "label": "DisTrO report",
+            "url": "https://github.com/NousResearch/DisTrO/blob/main/A_Preliminary_Report_on_DisTrO.pdf"
+          }
+        ]
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Occiglot",
+      "scope": "Independent collective",
+      "focus": "Studies continued pretraining and data mixtures for multilingual language models.",
+      "location": "Europe",
+      "status": "",
+      "year": null,
+      "site": "https://occiglot.eu/",
+      "x": "https://x.com/occiglot",
+      "linkedin": "",
+      "github": "https://github.com/occiglot",
+      "hf": "https://huggingface.co/occiglot",
+      "community": "https://discord.gg/wUpvYs4XvM",
+      "size": "",
+      "evidence": "https://huggingface.co/occiglot/occiglot-7b-eu5",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 2894,
+          "url": "https://huggingface.co/occiglot/occiglot-7b-it-en-instruct",
+          "label": "occiglot/occiglot-7b-it-en-instruct"
+        },
+        "gh": {
+          "value": 6,
+          "url": "https://github.com/occiglot/tech-report",
+          "label": "occiglot/tech-report"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model card",
+        "example": "Occiglot-7B-EU5 multilingual continued pretraining",
+        "assessment": "Adapts a base model to several European languages with published checkpoints. It adds language coverage and a comparison point for multilingual data mixes.",
+        "source": "https://huggingface.co/occiglot/occiglot-7b-eu5",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "7B weights",
+            "url": "https://huggingface.co/occiglot/occiglot-7b-eu5"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Odyssey",
+      "scope": "Research startup",
+      "focus": "Develops interactive world models that generate video in response to actions.",
+      "location": "San Francisco, US",
+      "status": "Product",
+      "year": 2023,
+      "site": "https://odyssey.systems/",
+      "x": "https://x.com/odysseyml",
+      "linkedin": "https://www.linkedin.com/company/odysseyml",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://odyssey.systems/",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Oliver Cameron, Jeff Hawke",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Research demo",
+        "example": "Odyssey-2 action-conditioned interactive video",
+        "assessment": "Shows generated scenes responding to input over time. The contribution is a working interactive model. Visual coherence is distinct from physically accurate behavior.",
+        "source": "https://odyssey.systems/introducing-odyssey-2",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Overworld",
+      "scope": "Research startup",
+      "focus": "Develops real-time interactive world models for games, including an open release.",
+      "location": "Providence, US",
+      "status": "",
+      "year": null,
+      "site": "https://over.world/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/Overworldai",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://over.world/",
+      "spaces": [
+        "World models",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 195,
+          "url": "https://github.com/Overworldai/world_engine",
+          "label": "Overworldai/world_engine"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Release and demonstrations",
+        "example": "Interactive models for generating game environments",
+        "assessment": "Gives researchers working action-conditioned generation. The useful evidence is runtime interaction and the release. It leaves long-horizon world consistency and performance against matched models open.",
+        "source": "https://over.world/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Pathway",
+      "scope": "Research startup",
+      "focus": "Proposed and tested the Dragon Hatchling recurrent architecture for language models.",
+      "location": "Palo Alto, CA, US",
+      "status": "",
+      "year": 2020,
+      "site": "https://pathway.com/",
+      "x": "https://x.com/pathway_com",
+      "linkedin": "https://www.linkedin.com/company/pathway",
+      "github": "https://github.com/pathwaycom",
+      "hf": "https://huggingface.co/pathwaycom",
+      "community": "",
+      "size": "",
+      "evidence": "https://arxiv.org/abs/2509.26507",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 61986,
+          "url": "https://github.com/pathwaycom/pathway",
+          "label": "pathwaycom/pathway"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Zuzanna Stamirowska, Jan Chorowski, Adrian Kosowski",
+        "source": "https://pathway.com/media-kit"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and code",
+        "example": "Dragon Hatchling recurrent architecture",
+        "assessment": "Proposes a recurrent language model using a local interaction mechanism and shares reference code. The published work supports architectural novelty at experiment scale. Performance at large deployment scale remains open.",
+        "source": "https://arxiv.org/abs/2509.26507",
+        "comparison": "https://github.com/pathwaycom/bdh",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Architecture implementation",
+            "url": "https://github.com/pathwaycom/bdh"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2509.26507"
+          }
+        ],
+        "note": "Dragon Hatchling uses a recurrent design. The model carries a state forward as it reads, so earlier inputs can affect later outputs through that state."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Periodic Labs",
+      "scope": "Research startup",
+      "focus": "Trains models on physical-science experiment data. Its Neon model analyzes lab results.",
+      "location": "San Francisco, US",
+      "status": "Partnerships",
+      "year": 2025,
+      "site": "https://periodic.com/",
+      "x": "https://x.com/periodiclabs",
+      "linkedin": "https://www.linkedin.com/company/periodic-labs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://periodic.com/news",
+      "spaces": [
+        "Materials",
+        "Life sciences",
+        "Math and reasoning"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "background": "The founding team includes contributors to ChatGPT, OpenAI Operator, and DeepMind’s GNoME and MatterGen.",
+        "source": "https://periodic.com/"
+      },
+      "people": {
+        "role": "Founding team",
+        "names": "Liam Fedus, Ekin Dogus Cubuk",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Report · lab deployment",
+        "example": "Periodic Neon analyzes X-ray diffraction data",
+        "assessment": "Uses experiment measurements as training data and applies a model inside an operating lab. The public example establishes a narrow analysis workflow. Scientific discovery gains beyond that workflow need separate evidence.",
+        "source": "https://periodic.com/news",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Physical Intelligence",
+      "scope": "Research startup",
+      "focus": "Develops generalist robot policies that combine vision, language, and motor actions.",
+      "location": "San Francisco, US",
+      "status": "API",
+      "year": 2024,
+      "site": "https://pi.website",
+      "x": "https://x.com/physical_int",
+      "linkedin": "https://www.linkedin.com/company/physical-intelligence",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.pi.website/blog/pi0",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Sergey Levine, Karol Hausman, Lachy Groom",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and demos",
+        "example": "π0 generalist robot policy",
+        "assessment": "Combines a pretrained vision–language model with a flow-matching action component. Tests reuse across robot bodies and manipulation tasks. Robustness across unseen real environments remains task-dependent.",
+        "source": "https://www.pi.website/blog/pi0",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Policy & fine-tuning code",
+            "url": "https://github.com/Physical-Intelligence/openpi"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2410.24164"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Physical Superintelligence",
+      "scope": "Research startup",
+      "focus": "Builds automated research systems for physics and engineering.",
+      "location": "Boston, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://psi.inc/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/physical-superintelligence",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://psi.inc/research/aaronson-ambainis/index.html",
+      "spaces": [
+        "Materials",
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Matt Pines, Alex Wissner-Gross, Alex Klokus; Alessandro Morari",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Published mathematical result",
+        "example": "Aaronson–Ambainis conjecture proof",
+        "assessment": "PSI reports that its research system found a proof using an Anthropic model. The public result supports the research system’s contribution. Credit for the underlying model belongs to Anthropic.",
+        "source": "https://psi.inc/research/aaronson-ambainis/index.html",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Pleias",
+      "scope": "Independent lab",
+      "focus": "Pretrains language models with openly licensed data and experiments with small reasoning models.",
+      "location": "France",
+      "status": "",
+      "year": null,
+      "site": "https://pleias.ai/",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/pleias",
+      "github": "https://github.com/Pleias",
+      "hf": "https://huggingface.co/PleIAs",
+      "community": "",
+      "size": "",
+      "evidence": "https://huggingface.co/PleIAs/Baguettotron",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 4970,
+          "url": "https://huggingface.co/PleIAs/Monad",
+          "label": "PleIAs/Monad"
+        },
+        "gh": {
+          "value": 80,
+          "url": "https://github.com/Pleias/Quest-Best-Tokens",
+          "label": "Pleias/Quest-Best-Tokens"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model and documentation",
+        "example": "Baguettotron small reasoning model",
+        "assessment": "Combines a small reasoning model with openly licensed training material. The differentiator is reproducibility and data provenance. Public evaluation does not separate each ingredient's effect.",
+        "source": "https://huggingface.co/PleIAs/Baguettotron",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/PleIAs/Baguettotron"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Pluralis Research",
+      "scope": "Research startup",
+      "focus": "Researches decentralized training under low-bandwidth constraints and releases experimental models.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://pluralis.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/pluralisai",
+      "hf": "https://huggingface.co/pluralis",
+      "community": "",
+      "size": "",
+      "evidence": "https://pluralis.ai/",
+      "spaces": [
+        "Training and inference"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Research and open artifacts",
+        "example": "Low-bandwidth distributed model training",
+        "assessment": "Experiments with how to divide model training across weakly connected workers. The value is an alternative systems design. Its cost and coordination benefits depend on the network and workload.",
+        "source": "https://pluralis.ai/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Poetiq",
+      "scope": "Research startup",
+      "focus": "Develops a reasoning system that searches and refines solutions using existing language models.",
+      "location": "Mountain View, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://poetiq.ai/",
+      "x": "https://x.com/poetiq_ai",
+      "linkedin": "https://www.linkedin.com/company/poetiq",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://poetiq.ai/posts/arcagi_verified/",
+      "spaces": [
+        "Agents",
+        "Continual learning"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Shumeet Baluja, Ian Fischer",
+        "background": "The founders previously worked at Google and DeepMind.",
+        "size": "7 named staff",
+        "date": "Nov 2026",
+        "basis": "Company team page",
+        "source": "https://poetiq.ai/"
+      },
+      "people": {
+        "role": "Founding team",
+        "names": "Shumeet Baluja, Ian Fischer",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Benchmark result",
+        "example": "ARC-AGI-2 reasoning system",
+        "assessment": "Reported semi-private results test the system’s approach to improving reasoning cost and accuracy. The contribution is in search and orchestration with existing models, whose capabilities also matter.",
+        "source": "https://poetiq.ai/posts/arcagi_verified/",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Solver & evaluation code",
+            "url": "https://github.com/poetiq-ai/poetiq-arc-agi-solver"
+          }
+        ],
+        "note": "The system proposes candidate programs for a grid puzzle and tests them against the examples it has been shown. It then revises the candidates before choosing one for the held-out puzzle."
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Poolside",
+      "scope": "Research startup",
+      "focus": "Trains Laguna coding models and studies reinforcement learning in software-engineering environments.",
+      "location": "San Francisco, US",
+      "status": "Licensed",
+      "year": 2023,
+      "site": "https://poolside.ai/",
+      "x": "https://x.com/poolsideai",
+      "linkedin": "https://www.linkedin.com/company/poolsideai",
+      "github": "",
+      "hf": "https://huggingface.co/poolside",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.poolside.ai/blog/introducing-laguna-xs2-m1",
+      "spaces": [
+        "Coding",
+        "Agents",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 719569,
+          "url": "https://huggingface.co/poolside/Laguna-XS.2",
+          "label": "poolside/Laguna-XS.2"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jason Warner, Eiso Kant",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report and release",
+        "example": "Laguna coding models",
+        "assessment": "Trains coding models using reinforcement learning in software-engineering environments and releases XS.2 weights. Results establish a competitive coding model in the reported benchmark suite. They do not isolate the training environment's marginal gain.",
+        "source": "https://poolside.ai/assets/laguna/laguna-m1-xs2-technical-report.pdf",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Prime Intellect",
+      "scope": "Borderline candidate",
+      "focus": "Develops distributed training and reinforcement-learning methods, including the INTELLECT models.",
+      "location": "San Francisco, US",
+      "status": "Open model",
+      "year": 2023,
+      "site": "https://www.primeintellect.ai/",
+      "x": "https://x.com/PrimeIntellect",
+      "linkedin": "https://www.linkedin.com/company/primeintellect-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.primeintellect.ai/",
+      "spaces": [
+        "Training and inference",
+        "Compute and chips",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Vincent Weisser, Johannes Hagemann",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Report and release",
+        "example": "INTELLECT-2 distributed RL training of a 32B model",
+        "assessment": "Demonstrates reinforcement learning with geographically distributed rollout generation. It extends prior distributed training work. The result does not settle efficiency versus an equivalent centralized run.",
+        "source": "https://www.primeintellect.ai/blog/intellect-2-release",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Project Prometheus",
+      "scope": "Research startup",
+      "focus": "Reportedly builds AI for engineering, manufacturing, and physical systems.",
+      "location": "San Francisco, US",
+      "status": "Stealth",
+      "year": 2025,
+      "site": "https://prometheus.ai/",
+      "x": "https://x.com/PrometheusInc",
+      "linkedin": "https://www.linkedin.com/company/prometheus",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://builtin.com/articles/what-is-project-prometheus",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jeff Bezos, Vik Bajaj",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Press reporting",
+        "example": "Industrial AI research program",
+        "assessment": "The reported scope covers engineering and manufacturing. The public profile leaves the technical result attributable to the parent lab unresolved.",
+        "source": "https://builtin.com/articles/what-is-project-prometheus",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "QFI Labs",
+      "scope": "Independent lab",
+      "focus": "Trains financial language models on disclosures, news, and research.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://qfi-labs.com/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://qfi-labs.com/models",
+      "spaces": [
+        "Finance",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research note",
+        "example": "Financial language model pretraining",
+        "assessment": "The stated focus is pretraining on financial documents. A verified model result or fair comparison with a general text model is still missing.",
+        "source": "https://qfi-labs.com/models",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "QSI Labs",
+      "scope": "Independent lab",
+      "focus": "Researches financial world models and trains trading agents in market-specific environments.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.quantitativesuperintelligencelabs.com/",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.quantitativesuperintelligencelabs.com/",
+      "spaces": [
+        "Trading",
+        "Finance"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research note",
+        "example": "Research program for market models and RL agents",
+        "assessment": "The public description covers several directions. It does not establish a reproducible improvement over a baseline for a named model.",
+        "source": "https://www.quantitativesuperintelligencelabs.com/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Reflection AI",
+      "scope": "Research startup",
+      "focus": "Trained Beam, a sparse mixture-of-experts model, and studied how to control reasoning length during reinforcement learning.",
+      "location": "New York, US",
+      "status": "Open model",
+      "year": 2024,
+      "site": "https://reflection.ai/",
+      "x": "https://x.com/reflection_ai",
+      "linkedin": "https://www.linkedin.com/company/reflectionai",
+      "github": "",
+      "hf": "https://huggingface.co/reflection",
+      "community": "https://www.youtube.com/@ReflectionInc",
+      "size": "",
+      "evidence": "https://reflection.ai/blog/introducing-beam",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 13962,
+          "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+          "label": "reflection/Beam-1.0-501B-A23B"
+        },
+        "gh": {
+          "value": 0,
+          "url": "https://github.com/reflectionai/rock-paper-scissors",
+          "label": "reflectionai/rock-paper-scissors"
+        },
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 1.4410714285714286,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 1.8824
+        },
+        "spend": {
+          "value": 0.0004999999999999999,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.008214285714285714
+        },
+        "tokens": {
+          "value": 22.224271428571427,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 24.03707142857143
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Misha Laskin, Ioannis Antonoglou",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Report and weights",
+        "example": "Beam reasoning-length control",
+        "assessment": "The training report tracks the effect of penalizing reasoning length during RL. The contribution is a measured capability–cost tradeoff within Beam, building on earlier mixture-of-experts and RL methods.",
+        "source": "https://reflection.ai/blog/introducing-beam",
+        "comparison": "https://reflection.ai/blog/beam-is-available",
+        "note": "A model can spend more computation by writing a longer reasoning trace. Beam’s training experiments probe how explicitly making long traces costly affects answer quality and compute use."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Reka AI",
+      "scope": "Research startup",
+      "focus": "Trained the multimodal Core, Flash, and Edge model series with different deployment tradeoffs.",
+      "location": "Sunnyvale, CA, US",
+      "status": "",
+      "year": 2022,
+      "site": "https://reka.ai/",
+      "x": "https://x.com/rekaailabs",
+      "linkedin": "https://www.linkedin.com/company/reka-ai",
+      "github": "https://github.com/reka-ai",
+      "hf": "https://huggingface.co/RekaAI",
+      "community": "https://www.youtube.com/@RekaAI",
+      "size": "",
+      "evidence": "https://publications.reka.ai/reka-core-tech-report.pdf",
+      "spaces": [
+        "Frontier models",
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 1650,
+          "url": "https://huggingface.co/RekaAI/reka-flash-3",
+          "label": "RekaAI/reka-flash-3"
+        },
+        "gh": {
+          "value": 189,
+          "url": "https://github.com/reka-ai/reka-vibe-eval",
+          "label": "reka-ai/reka-vibe-eval"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Dani Yogatama, Cyprien de Masson d'Autume, Yi Tay, Qi Liu",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Technical report",
+        "example": "Reka Core, Flash, and Edge",
+        "assessment": "Trains broad multimodal models across several size tiers. The contribution is combined modality support and deployable size choices reported in the same research series.",
+        "source": "https://publications.reka.ai/reka-core-tech-report.pdf",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Rhoda AI",
+      "scope": "Research startup",
+      "focus": "Trains robot policies using video and robot action data.",
+      "location": "San Francisco, US",
+      "status": "Research only",
+      "year": 2024,
+      "site": "https://www.rhoda.ai/",
+      "x": "https://x.com/RhodaAI",
+      "linkedin": "https://www.linkedin.com/company/rhoda-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.rhoda.ai/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Jagdeep Singh",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report · lab evaluation",
+        "example": "Direct Video-Action for mobile manipulation",
+        "assessment": "Rhoda reports extending its Direct Video-Action model to combine mobility and manipulation. The published example tests adaptation with limited additional robot data in selected tasks.",
+        "source": "https://www.rhoda.ai/",
+        "comparison": "",
+        "note": "The lab studies whether video can teach robots what an action should accomplish. Its published demonstrations use video prediction together with robot actions to move and manipulate objects in selected tasks."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Ricursive Intelligence",
+      "scope": "Research startup",
+      "focus": "Develops AI for chip design and trained its own open-weight language model.",
+      "location": "Palo Alto, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://www.ricursive.com/",
+      "x": "https://x.com/RicursiveAI",
+      "linkedin": "https://www.linkedin.com/company/ricursive-intelligence",
+      "github": "",
+      "hf": "https://huggingface.co/ricursiveAI",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.ricursive.com/ripple",
+      "spaces": [
+        "Compute and chips",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 13121,
+          "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
+          "label": "ricursiveAI/Ripple-65B-Preview"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Anna Goldie, Azalia Mirhoseini",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model release · lab evaluation",
+        "example": "Ripple-65B preview",
+        "assessment": "Reports training Ripple from scratch and releasing weights for inspection. Its coding results are reported model comparisons. They leave any downstream improvement in chip design to separate evidence.",
+        "source": "https://www.ricursive.com/ripple",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Model implementation",
+            "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/main/modeling_ricursive.py"
+          },
+          {
+            "kind": "weights",
+            "label": "Preview weights",
+            "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview"
+          }
+        ],
+        "note": "Ripple-65B combines a dense language model with an explicitly long input window. Ricursive tested whether that design can handle coding tasks competitively and released a checkpoint for others to inspect."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "RODIN",
+      "scope": "Solo project",
+      "focus": "Pretrained an open one-billion-parameter base model for French.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/rodin-llm",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/rodin-llm/rodin",
+      "hf": "https://huggingface.co/rodin-llm",
+      "community": "",
+      "size": "Model card reports a single developer.",
+      "evidence": "https://huggingface.co/rodin-llm/rodin-1b",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 166,
+          "url": "https://huggingface.co/rodin-llm/rodin-1b",
+          "label": "rodin-llm/rodin-1b"
+        },
+        "gh": {
+          "value": 0,
+          "url": "https://github.com/rodin-llm/rodin",
+          "label": "rodin-llm/rodin"
+        }
+      },
+      "team": {
+        "size": "1",
+        "basis": "Self-described solo project",
+        "source": "https://huggingface.co/rodin-llm/rodin-1b"
+      },
+      "people": {
+        "role": "Model publisher",
+        "names": "rodin-llm",
+        "source": "https://huggingface.co/rodin-llm/rodin-1b"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "French-first RODIN-1B",
+        "assessment": "A from-scratch base model makes French-focused pretraining inspectable. Its main addition is language coverage and a usable checkpoint.",
+        "source": "https://huggingface.co/rodin-llm/rodin-1b",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Model & training repo",
+            "url": "https://github.com/rodin-llm/rodin"
+          },
+          {
+            "kind": "weights",
+            "label": "1B weights",
+            "url": "https://huggingface.co/rodin-llm/rodin-1b"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "RWKV",
+      "scope": "Independent collective",
+      "focus": "Develops recurrent language model architectures and publishes trained checkpoints.",
+      "location": "Global",
+      "status": "",
+      "year": null,
+      "site": "https://www.rwkv.com/",
+      "x": "https://x.com/BlinkDL_AI",
+      "linkedin": "",
+      "github": "https://github.com/BlinkDL/RWKV-LM",
+      "hf": "https://huggingface.co/RWKV",
+      "community": "https://discord.gg/bDSBUMeFpc",
+      "size": "Started by Bo Peng. Now a broader project.",
+      "evidence": "https://github.com/BlinkDL/RWKV-LM",
+      "spaces": [
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 7224,
+          "url": "https://huggingface.co/RWKV/v5-Eagle-7B-HF",
+          "label": "RWKV/v5-Eagle-7B-HF"
+        },
+        "gh": {
+          "value": 14783,
+          "url": "https://github.com/BlinkDL/RWKV-LM",
+          "label": "BlinkDL/RWKV-LM"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Project lead",
+        "names": "Bo Peng",
+        "source": "https://arxiv.org/abs/2305.13048"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and weights",
+        "example": "RWKV recurrent language-model family",
+        "assessment": "Uses a fixed-size recurrent state for inference with parallelizable training. This changes the memory scaling tradeoff. Its long-context quality still depends on the checkpoint and task.",
+        "source": "https://arxiv.org/abs/2503.14456",
+        "comparison": "https://github.com/BlinkDL/RWKV-LM",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "RWKV-7 training & inference code",
+            "url": "https://github.com/BlinkDL/RWKV-LM/tree/main/RWKV-v7"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2503.14456"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Sakana AI",
+      "scope": "Research startup",
+      "focus": "Experiments with architectures and learning systems, including the Continuous Thought Machine.",
+      "location": "Tokyo, JP",
+      "status": "Product",
+      "year": 2023,
+      "site": "https://sakana.ai/",
+      "x": "https://x.com/SakanaAILabs",
+      "linkedin": "https://www.linkedin.com/company/sakana-ai",
+      "github": "https://github.com/SakanaAI",
+      "hf": "https://huggingface.co/SakanaAI",
+      "community": "",
+      "size": "",
+      "evidence": "https://sakana.ai/ctm/",
+      "spaces": [
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 1652,
+          "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-GGUF",
+          "label": "SakanaAI/TinySwallow-1.5B-Instruct-GGUF"
+        },
+        "gh": {
+          "value": 15014,
+          "url": "https://github.com/SakanaAI/AI-Scientist",
+          "label": "SakanaAI/AI-Scientist"
+        },
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 0.0027285714285714283,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0046
+        },
+        "spend": {
+          "value": 0.005328571428571428,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.035242857142857145
+        },
+        "tokens": {
+          "value": 0.00027142857142857144,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0019714285714285715
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": {
+        "people": "David Ha, Ren Ito, Llion Jones",
+        "background": "Ha led Google Brain’s Tokyo research team. Jones co-authored the Transformer paper.",
+        "source": "https://sakana.ai/company-info/?lang=en"
+      },
+      "people": {
+        "role": "Founders",
+        "names": "David Ha, Ren Ito, Llion Jones",
+        "source": "https://sakana.ai/company-info/?lang=en"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper and code",
+        "example": "Continuous Thought Machine",
+        "assessment": "Uses neuron synchronization across internal processing steps as a representation. Maze experiments show a working mechanism. They do not establish superiority at language-model scale.",
+        "source": "https://sakana.ai/ctm/",
+        "comparison": "https://github.com/SakanaAI/continuous-thought-machines/",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training & evaluation code",
+            "url": "https://github.com/SakanaAI/continuous-thought-machines"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2505.05522"
+          }
+        ],
+        "note": "The Continuous Thought Machine gives the network an internal sequence of steps before it answers. It uses the timing of activity across units as information the next stage can read."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Sapient Intelligence",
+      "scope": "Research startup",
+      "focus": "Developed a hierarchical recurrent architecture for reasoning, with published weights and experiments.",
+      "location": "Singapore",
+      "status": "",
+      "year": 2024,
+      "site": "https://sapient.inc/",
+      "x": "https://x.com/Sapient_Int",
+      "linkedin": "https://www.linkedin.com/company/sapientinc",
+      "github": "https://github.com/sapientinc",
+      "hf": "https://huggingface.co/sapientinc",
+      "community": "https://discord.gg/sapient",
+      "size": "",
+      "evidence": "https://github.com/sapientinc/HRM",
+      "spaces": [
+        "Model efficiency"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 3134,
+          "url": "https://huggingface.co/sapientinc/HRM-Text-1B",
+          "label": "sapientinc/HRM-Text-1B"
+        },
+        "gh": {
+          "value": 12671,
+          "url": "https://github.com/sapientinc/HRM",
+          "label": "sapientinc/HRM"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founders",
+        "names": "Guan Wang, William Chen",
+        "source": "https://www.sapient.inc/about"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Paper with independent analysis",
+        "example": "Hierarchical Reasoning Model on ARC-AGI",
+        "assessment": "The recurrent design is inspectable. ARC Prize found that repeated refinement and parts of the evaluation setup drove much of the result, limiting credit attributable to the hierarchy itself.",
+        "source": "https://arxiv.org/abs/2506.21734",
+        "comparison": "https://arcprize.org/blog/hrm-analysis",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training & evaluation code",
+            "url": "https://github.com/sapientinc/HRM"
+          },
+          {
+            "kind": "paper",
+            "label": "Paper",
+            "url": "https://arxiv.org/abs/2506.21734"
+          }
+        ],
+        "note": "The Hierarchical Reasoning Model updates two recurrent components at different speeds. The slower component maintains a higher-level state as the faster one iterates on the current input."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Sarvam AI",
+      "scope": "Research startup",
+      "focus": "Open-sourced 30B and 105B models trained for Indic languages and general reasoning.",
+      "location": "Bengaluru, Karnataka, IN",
+      "status": "",
+      "year": 2023,
+      "site": "https://www.sarvam.ai/",
+      "x": "https://x.com/sarvamai",
+      "linkedin": "https://www.linkedin.com/company/sarvam-ai",
+      "github": "https://github.com/sarvamai",
+      "hf": "https://huggingface.co/sarvamai",
+      "community": "https://youtube.com/@sarvamai",
+      "size": "",
+      "evidence": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 49989,
+          "url": "https://huggingface.co/sarvamai/sarvam-translate",
+          "label": "sarvamai/sarvam-translate"
+        },
+        "gh": {
+          "value": 198,
+          "url": "https://github.com/sarvamai/sarvam-ai-cookbook",
+          "label": "sarvamai/sarvam-ai-cookbook"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Vivek Raghavan, Pratyush Kumar",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Report and weights",
+        "example": "Sarvam 30B and 105B Indic-language models",
+        "assessment": "Releases separately trained models and evaluates Indic-language coverage. The visible advance is language coverage and open access at that scale. Architectural novelty is not the main claim.",
+        "source": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Scaled Cognition",
+      "scope": "Research startup",
+      "focus": "Trains the APT model family for customer-service agents and tool use.",
+      "location": "",
+      "status": "",
+      "year": 2023,
+      "site": "https://www.scaledcognition.com/",
+      "x": "https://x.com/ScaledCognition",
+      "linkedin": "https://www.linkedin.com/company/scaledcognition",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.scaledcognition.com/blog/apt-1",
+      "spaces": [
+        "Enterprise AI"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Dan Roth, Dan Klein",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company evaluation",
+        "example": "Agentic Pretrained Transformer",
+        "assessment": "The launch describes training for agentic workflows and comparisons on τ-bench. The result supports a specialized model and workload. It leaves architecture-level advantages across other tasks open.",
+        "source": "https://www.scaledcognition.com/blog/apt-1",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Sesame",
+      "scope": "Research startup",
+      "focus": "Developed CSM for speech generation using conversation context.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.sesame.com/",
+      "x": "https://x.com/sesame",
+      "linkedin": "https://www.linkedin.com/company/sesameai",
+      "github": "https://github.com/SesameAILabs/csm",
+      "hf": "https://huggingface.co/sesame",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/SesameAILabs/csm",
+      "spaces": [
+        "Voice and audio"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 37710,
+          "url": "https://huggingface.co/sesame/csm-1b",
+          "label": "sesame/csm-1b"
+        },
+        "gh": {
+          "value": 14752,
+          "url": "https://github.com/SesameAILabs/csm",
+          "label": "SesameAILabs/csm"
+        }
+      },
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Weights and code",
+        "example": "CSM conversational speech generation",
+        "assessment": "Conditions speech on conversational context. The public checkpoint demonstrates contextual delivery. End-to-end conversation timing and agent quality depend on the surrounding system.",
+        "source": "https://github.com/SesameAILabs/csm",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/SesameAILabs/csm"
+          },
+          {
+            "kind": "weights",
+            "label": "CSM-1B weights",
+            "url": "https://huggingface.co/sesame/csm-1b"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Simile",
+      "scope": "Research startup",
+      "focus": "Trains behavioral simulations and publishes comparisons with survey outcomes.",
+      "location": "Palo Alto, US",
+      "status": "API",
+      "year": 2025,
+      "site": "https://www.simile.com/",
+      "x": "https://x.com/simile_ai",
+      "linkedin": "https://www.linkedin.com/company/simile-ai-inc",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.simile.com/",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Joon Sung Park, Michael Bernstein, Percy Liang, Lainie Yallen",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company validation",
+        "example": "Behavioral simulations",
+        "assessment": "The company publishes examples comparing simulations with observed results. The value is a way to test a specific population or question. Generalization depends on population and matching conditions.",
+        "source": "https://www.simile.com/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Skild AI",
+      "scope": "Established model developer",
+      "focus": "Trains robot foundation models that adapt across tasks and hardware.",
+      "location": "Pittsburgh, US",
+      "status": "Product",
+      "year": 2023,
+      "site": "https://skild.ai/",
+      "x": "https://x.com/SkildAI",
+      "linkedin": "https://www.linkedin.com/company/skild-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.skild.ai/blogs/s1",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Deepak Pathak, Abhinav Gupta",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report · demos",
+        "example": "S1 learns a manipulation task in context from one video",
+        "assessment": "Compares demonstration conditioning with language prompts on matched training subsets. The report shows stronger transfer on its unseen tasks. Real deployments still depend on the task and environment.",
+        "source": "https://www.skild.ai/blogs/s1",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Sooth Labs",
+      "scope": "Research startup",
+      "focus": "Researches probabilistic models for forecasting real-world events.",
+      "location": "Pittsburgh, US",
+      "status": "Stealth",
+      "year": 2026,
+      "site": "https://soothlabs.com/",
+      "x": "https://x.com/soothlabs",
+      "linkedin": "https://www.linkedin.com/company/soothlabs",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://soothlabs.com/",
+      "spaces": [
+        "Forecasting",
+        "Finance",
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Chuck Hoover, Yaser Sheikh, Ruslan Salakhutdinov, David LaRose, Shih-En Wei",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research statement",
+        "example": "World model for global foresight",
+        "assessment": "The public statement sets out a forecasting objective. It provides too little evidence to estimate calibration or gains against simple baselines.",
+        "source": "https://soothlabs.com/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "SpAItial",
+      "scope": "Research startup",
+      "focus": "Develops spatial world models for generating persistent 3D environments.",
+      "location": "Munich, DE",
+      "status": "",
+      "year": 2024,
+      "site": "https://spaitial.ai/",
+      "x": "https://x.com/SpAItial_AI",
+      "linkedin": "https://www.linkedin.com/company/spaitial-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://spaitial.ai/",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founders",
+        "names": "Matthias Niessner, Luke Rogers, Ricardo Martin-Brualla, David Novotny",
+        "source": "https://spaitial.ai/blog/announcing-spaitial"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Company demonstration",
+        "example": "Spatial generation with persistent 3D structure",
+        "assessment": "The demonstration makes generated scenes usable from more than one viewpoint. Public examples establish a capability in selected scenes. They do not quantify consistency across general scenes.",
+        "source": "https://spaitial.ai/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Standard Intelligence",
+      "scope": "Research startup",
+      "focus": "Pretrains computer-use models on video, and develops speech generation models.",
+      "location": "San Francisco, US",
+      "status": "Research only",
+      "year": 2024,
+      "site": "https://si.inc/",
+      "x": "https://x.com/si_pbc",
+      "linkedin": "https://www.linkedin.com/company/standardintelligence",
+      "github": "https://github.com/Standard-Intelligence",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://si.inc/posts/a/",
+      "spaces": [
+        "Agents",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 1806,
+          "url": "https://github.com/Standard-Intelligence/hertz-dev",
+          "label": "Standard-Intelligence/hertz-dev"
+        }
+      },
+      "team": {
+        "background": "The lab builds models for computer use from video, and publishes work on conversational speech.",
+        "size": "6 people",
+        "date": "Apr 2026",
+        "basis": "Company-reported headcount",
+        "source": "https://si.inc/posts/a/"
+      },
+      "people": {
+        "role": "Founding team",
+        "names": "Galen Mead, Devansh Pandey",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Research release",
+        "example": "FDM-1 video-first computer action model",
+        "assessment": "Uses video-led pretraining for low-level computer actions instead of relying only on a language interface. The demos establish the approach. General task reliability remains less clear.",
+        "source": "https://si.inc/posts/fdm1/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "StentorLabs",
+      "scope": "Solo project",
+      "focus": "Experiments with small-model pretraining on free compute, documented in the Portimbria project.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/StentorLabs",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/StentorLabs",
+      "community": "",
+      "size": "Project writeup identifies a solo developer.",
+      "evidence": "https://huggingface.co/StentorLabs/Portimbria-150M",
+      "spaces": [
+        "Small models",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 400,
+          "url": "https://huggingface.co/StentorLabs/Stentor-30M",
+          "label": "StentorLabs/Stentor-30M"
+        }
+      },
+      "team": {
+        "background": "Pretrained and studied Portimbria using free compute.",
+        "size": "1",
+        "basis": "Model card and project writeup",
+        "source": "https://huggingface.co/StentorLabs/Portimbria-150M"
+      },
+      "people": {
+        "role": "Model publisher",
+        "names": "StentorLabs",
+        "source": "https://huggingface.co/StentorLabs/Portimbria-150M"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "Portimbria-150M trained with free compute",
+        "assessment": "An inspectable small-scale training run shows what a solo researcher can build on free infrastructure. It also documents scale and context changes without isolating which choice improved quality.",
+        "source": "https://huggingface.co/StentorLabs/Portimbria-150M",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/StentorLabs/Portimbria-150M"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "stmonty (lePokeRed)",
+      "scope": "Solo-led project",
+      "focus": "Trained a small world model to recreate game dynamics from gameplay.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://github.com/stmonty/lePokeRed",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/stmonty/lePokeRed",
+      "hf": "",
+      "community": "",
+      "size": "Individual publisher.",
+      "evidence": "https://github.com/stmonty/lePokeRed",
+      "spaces": [
+        "Small models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 4,
+          "url": "https://github.com/stmonty/lePokeRed",
+          "label": "stmonty/lePokeRed"
+        }
+      },
+      "team": {
+        "background": "Individual publisher.",
+        "source": "https://github.com/stmonty/lePokeRed"
+      },
+      "people": {
+        "role": "Project maintainer",
+        "names": "stmonty",
+        "source": "https://github.com/stmonty/lePokeRed"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Open project",
+        "example": "Small world model trained on Pokémon Red gameplay",
+        "assessment": "Shows a compact model reproducing game observations. Its contribution is an accessible experiment in a fixed environment. Transfer to other games is undemonstrated.",
+        "source": "https://github.com/stmonty/lePokeRed",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training code",
+            "url": "https://github.com/stmonty/lePokeRed"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Subquadratic",
+      "scope": "Research startup",
+      "focus": "Trains language models with sparse attention for long-context workloads.",
+      "location": "San Francisco, US",
+      "status": "",
+      "year": 2024,
+      "site": "https://subq.ai/",
+      "x": "https://x.com/subquadratic",
+      "linkedin": "",
+      "github": "",
+      "hf": "",
+      "community": "https://discord.gg/zMahaetckM",
+      "size": "",
+      "evidence": "https://subq.ai/subq-1-1-small-technical-report",
+      "spaces": [
+        "Frontier models",
+        "Model efficiency"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Justin Dangel, Alexander Whedon, Ashley Miyasaki",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical report · lab evaluation",
+        "example": "SubQ 1.1 Small",
+        "assessment": "The report describes a distinct sparse-attention design and long-context retrieval tests. Retrieving one planted fact and reliably reasoning across an entire long document are separate capabilities.",
+        "source": "https://subq.ai/subq-1-1-small-technical-report",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "report",
+            "label": "Technical report",
+            "url": "https://subq.ai/subq-1-1-small-technical-report"
+          }
+        ],
+        "note": "Standard attention can compare every token with every earlier token, making long inputs expensive. SubQ selects a subset of positions to attend to, then tests how much useful context it retains."
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Talkie",
+      "scope": "Small team",
+      "focus": "Trained a 13B language model on pre-1931 text to study knowledge and generalization.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://talkie-lm.com/introducing-talkie",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/talkie-lm/talkie",
+      "hf": "https://huggingface.co/talkie-lm",
+      "community": "",
+      "size": "Release credits three researchers.",
+      "evidence": "https://talkie-lm.com/introducing-talkie",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 0,
+          "url": "https://huggingface.co/talkie-lm/talkie-1930-13b-base",
+          "label": "talkie-lm/talkie-1930-13b-base"
+        },
+        "gh": {
+          "value": 1040,
+          "url": "https://github.com/talkie-lm/talkie",
+          "label": "talkie-lm/talkie"
+        }
+      },
+      "team": {
+        "people": "Nick Levine, David Duvenaud, Alec Radford",
+        "background": "The three researchers published the Talkie 13B historical language model.",
+        "size": "3 release authors",
+        "date": "Apr 2026",
+        "basis": "Publication credits",
+        "source": "https://talkie-lm.com/introducing-talkie"
+      },
+      "people": {
+        "role": "Release authors",
+        "names": "Nick Levine, David Duvenaud, Alec Radford",
+        "source": "https://talkie-lm.com/introducing-talkie"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model and writeup",
+        "example": "Talkie 13B trained on pre-1931 text",
+        "assessment": "The historical data cutoff creates a research instrument for testing what a model can infer without modern text. The main new contribution is the corpus and experimental setup, rather than the Transformer architecture.",
+        "source": "https://talkie-lm.com/introducing-talkie",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Inference code",
+            "url": "https://github.com/talkie-lm/talkie"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "theyur (Dhamma Parrot)",
+      "scope": "Solo project",
+      "focus": "Trained a small model in a personal pretraining experiment.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/theyur",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/theyur",
+      "community": "",
+      "size": "Model card describes a personal project.",
+      "evidence": "https://huggingface.co/theyur/dhamma-parrot-v01",
+      "spaces": [
+        "Small models",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 48,
+          "url": "https://huggingface.co/theyur/dhamma-parrot-v01",
+          "label": "theyur/dhamma-parrot-v01"
+        }
+      },
+      "team": {
+        "size": "1",
+        "basis": "Self-described solo project",
+        "source": "https://huggingface.co/theyur/dhamma-parrot-v01"
+      },
+      "people": {
+        "role": "Project publisher",
+        "names": "theyur",
+        "source": "https://huggingface.co/theyur/dhamma-parrot-v01"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "Dhamma Parrot pretraining experiment",
+        "assessment": "The open checkpoint documents a personal domain-specific pretraining run. It is primarily a reproducible example, with no general architecture gain established.",
+        "source": "https://huggingface.co/theyur/dhamma-parrot-v01",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Thinking Machines Lab",
+      "scope": "Research startup",
+      "focus": "Develops Inkling models and studies reinforcement learning and post-training.",
+      "location": "San Francisco, US",
+      "status": "API",
+      "year": 2025,
+      "site": "https://thinkingmachines.ai/",
+      "x": "https://x.com/thinkymachines",
+      "linkedin": "https://www.linkedin.com/company/thinkingmachinesai",
+      "github": "https://github.com/thinking-machines-lab",
+      "hf": "https://huggingface.co/thinkingmachines",
+      "community": "https://www.youtube.com/@thinkymachines",
+      "size": "",
+      "evidence": "https://thinkingmachines.ai/news/",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 1436547,
+          "url": "https://huggingface.co/thinkingmachines/Inkling",
+          "label": "thinkingmachines/Inkling"
+        },
+        "gh": {
+          "value": 4270,
+          "url": "https://github.com/thinking-machines-lab/tinker-cookbook",
+          "label": "thinking-machines-lab/tinker-cookbook"
+        },
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 0.010499999999999999,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.024428571428571428
+        },
+        "spend": {
+          "value": 0.004214285714285714,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.030514285714285716
+        },
+        "tokens": {
+          "value": 0.0056,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.02467142857142857
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": {
+        "background": "Team members have worked on ChatGPT, Character.AI, PyTorch, OpenAI Gym, and Segment Anything.",
+        "source": "https://thinkingmachines.ai/"
+      },
+      "people": {
+        "role": "Founding team",
+        "names": "Mira Murati, John Schulman, Soumith Chintala",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Open model · interactive demo",
+        "example": "Inkling updated using Tinker",
+        "assessment": "An agent uses Tinker to organize a fine-tuning run, load the new weights, and demonstrate a constrained writing task. This is a concrete integration of models and training tools. It does not establish open-ended self-improvement.",
+        "source": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Inkling weights",
+            "url": "https://huggingface.co/thinkingmachines/Inkling"
+          }
+        ],
+        "note": "Tinker lets researchers run training updates and reuse the resulting checkpoint. The example explores how an agent could use that loop to adapt an existing model for a narrow writing task."
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Tilde Research",
+      "scope": "Small team",
+      "focus": "Studies new model architectures, pretraining, and interpretability.",
+      "location": "San Francisco, US",
+      "status": "",
+      "year": null,
+      "site": "https://tilderesearch.com/about",
+      "x": "",
+      "linkedin": "https://www.linkedin.com/company/tilderesearch",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "LinkedIn lists 2–10 employees.",
+      "evidence": "https://tilderesearch.com/about",
+      "spaces": [
+        "Safety and interpretability"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "background": "The lab works on mechanistic interpretability, model architectures, and pretraining.",
+        "size": "2–10 employees",
+        "basis": "LinkedIn company size band",
+        "source": "https://www.linkedin.com/company/tilderesearch"
+      },
+      "people": null,
+      "innovation": {
+        "kind": "method",
+        "evidence": "Technical writeups",
+        "example": "Sparse attention and controlled training experiments",
+        "assessment": "The lab publishes experiments on reducing attention computation. The evidence is specific to the tested design. The savings and quality effects remain workload-dependent.",
+        "source": "https://tilderesearch.com/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "TypeSafe AI",
+      "scope": "Research startup",
+      "focus": "Trains Jev, a model for structured decisions in software.",
+      "location": "San Francisco, CA",
+      "status": "API",
+      "year": 2024,
+      "site": "https://typesafe.ai/",
+      "x": "https://x.com/typesafeai",
+      "linkedin": "https://www.linkedin.com/company/typesafe-ai",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://typesafe.ai/",
+      "spaces": [
+        "Decision models",
+        "Model efficiency",
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "imageCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/image/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        },
+        "requests": {
+          "value": 32.01755714285714,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 33.16087142857143
+        },
+        "spend": {
+          "value": 0.8504714285714287,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 0.8390571428571428
+        },
+        "tokens": {
+          "value": 4.513328571428572,
+          "url": "https://vercel.com/ai-gateway/leaderboards/labs",
+          "label": "Vercel AI Gateway",
+          "previous": 4.404957142857143
+        },
+        "videoCount": {
+          "value": 0.0,
+          "url": "https://vercel.com/ai-gateway/leaderboards/video/models",
+          "label": "Vercel AI Gateway",
+          "previous": 0.0
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Diogo Moitinho de Almeida, Erik Gafni, Sasha Sheng",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model/API release",
+        "example": "Jev structured decision model",
+        "assessment": "Specializes for selecting from structured options rather than free-form generation. It demonstrates a narrower interface and workload. Claims of general efficiency need comparisons including constrained decoding.",
+        "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Tzafon",
+      "scope": "Research startup",
+      "focus": "Trains computer-use models and released Northstar CUA research.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://www.tzafon.ai/",
+      "x": "https://x.com/tzafon_company",
+      "linkedin": "https://www.linkedin.com/company/tzafon",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.tzafon.ai/",
+      "spaces": [
+        "Agents",
+        "Frontier models"
+      ],
+      "mentions": [
+        {
+          "date": "2026-05-07",
+          "type": "Nomination",
+          "title": "Tzafon nomination",
+          "author": "jessicapeltz",
+          "url": "https://x.com/jessicapeltz/status/2052277765714665584",
+          "site": "https://www.tzafon.ai/",
+          "note": "A reply naming the computer-use model lab. The original chart had a higher valuation threshold.",
+          "spaces": [
+            "Agents",
+            "Frontier models"
+          ]
+        }
+      ],
+      "metrics": {},
+      "team": null,
+      "people": null,
+      "innovation": {
+        "kind": "application",
+        "evidence": "Model announcement",
+        "example": "Northstar computer-use research",
+        "assessment": "Documents a specialized computer-use model with released research examples. The degree of advantage over prior UI control models depends on matched tasks and deployment setup.",
+        "source": "https://www.tzafon.ai/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "Unconventional AI",
+      "scope": "Adjacent",
+      "focus": "Researches computing with physical dynamics and trains experimental models on simulated substrates.",
+      "location": "San Francisco, US",
+      "status": "Research only",
+      "year": 2025,
+      "site": "https://unconv.ai/",
+      "x": "https://x.com/unconvai",
+      "linkedin": "https://www.linkedin.com/company/unconvai",
+      "github": "https://github.com/unconv-ai",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://github.com/unconv-ai/Un-0",
+      "spaces": [
+        "Compute and chips",
+        "Image and video"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 346,
+          "url": "https://github.com/unconv-ai/Un-0",
+          "label": "unconv-ai/Un-0"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Naveen Rao, MeeLan Lee, Michael Carbin, Sara Achour",
+        "source": "https://sequoiacap.com/companies/unconventional-ai"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Model release · lab evaluation",
+        "example": "Un-0 image generation with coupled oscillators",
+        "assessment": "The team demonstrates an image model using a simulated dynamical system. The experiments test the modeling approach. Energy and speed benefits on real hardware need separate measurement.",
+        "source": "https://github.com/unconv-ai/Un-0",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "code",
+            "label": "Training & evaluation code",
+            "url": "https://github.com/unconv-ai/Un-0"
+          },
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/un-ai/Un-0"
+          }
+        ],
+        "note": "Un-0 generates a picture by simulating interacting oscillators. The team uses that experiment to study whether some model computation could eventually be performed by the dynamics of a physical circuit."
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "VeroLM",
+      "scope": "Independent project",
+      "focus": "Trains tiny byte-level language models from scratch.",
+      "location": "",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/VeroLM",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/VeroLM",
+      "community": "",
+      "size": "Team size undisclosed.",
+      "evidence": "https://huggingface.co/VeroLM/NoTokenLM-MicroGen",
+      "spaces": [
+        "Small models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 522,
+          "url": "https://huggingface.co/VeroLM/NoTokenLM-Gen-3.6",
+          "label": "VeroLM/NoTokenLM-Gen-3.6"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Model publisher",
+        "names": "VeroLM",
+        "source": "https://huggingface.co/VeroLM/NoTokenLM-MicroGen"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "NoTokenLM MicroGen",
+        "assessment": "Open byte-level pretraining provides a small test case for a known design family. Gains over equally sized subword models have not been established.",
+        "source": "https://huggingface.co/VeroLM/NoTokenLM-MicroGen",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/VeroLM/NoTokenLM-MicroGen"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "WAR Enterprise",
+      "scope": "Solo-led project",
+      "focus": "Trained a Portuguese-first small language model from scratch.",
+      "location": "Brazil",
+      "status": "",
+      "year": null,
+      "site": "https://huggingface.co/warenterprise",
+      "x": "",
+      "linkedin": "",
+      "github": "",
+      "hf": "https://huggingface.co/warenterprise",
+      "community": "",
+      "size": "Release post describes an independent developer.",
+      "evidence": "https://huggingface.co/warenterprise/WARMIND-200M-V2",
+      "spaces": [
+        "Unclassified"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 12,
+          "url": "https://huggingface.co/warenterprise/WARMIND-200M-V2",
+          "label": "warenterprise/WARMIND-200M-V2"
+        }
+      },
+      "team": {
+        "background": "Release post describes an independent developer.",
+        "source": "https://huggingface.co/warenterprise/WARMIND-200M-V2"
+      },
+      "people": {
+        "role": "Model publisher",
+        "names": "warenterprise",
+        "source": "https://huggingface.co/warenterprise/WARMIND-200M-V2"
+      },
+      "innovation": {
+        "kind": "artifact",
+        "evidence": "Model card",
+        "example": "WARMIND-200M V2 Portuguese model",
+        "assessment": "Pretrained checkpoint adds a small Portuguese-first research baseline. Its evidence supports accessibility and domain coverage, rather than broader quality gains.",
+        "source": "https://huggingface.co/warenterprise/WARMIND-200M-V2",
+        "comparison": "",
+        "artifacts": [
+          {
+            "kind": "weights",
+            "label": "Weights",
+            "url": "https://huggingface.co/warenterprise/WARMIND-200M-V2"
+          }
+        ]
+      },
+      "fit": ""
+    },
+    {
+      "name": "Warp Sciences",
+      "scope": "Adjacent",
+      "focus": "Builds automated chemistry research infrastructure.",
+      "location": "South San Francisco, CA, US",
+      "status": "",
+      "year": 2026,
+      "site": "https://warp.xyz/",
+      "x": "https://x.com/kevinweil",
+      "linkedin": "https://www.linkedin.com/company/warp-sciences",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://warp.xyz/",
+      "spaces": [
+        "Life sciences"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Kevin Weil",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research overview",
+        "example": "Automated chemistry laboratory program",
+        "assessment": "Public material describes the lab infrastructure. It leaves any separately attributable model contribution open.",
+        "source": "https://warp.xyz/",
+        "comparison": ""
+      },
+      "fit": "Borderline"
+    },
+    {
+      "name": "Wayve",
+      "scope": "Established model developer",
+      "focus": "Trains GAIA world models for closed-loop driving simulation and evaluation.",
+      "location": "UK",
+      "status": "",
+      "year": null,
+      "site": "https://wayve.ai/",
+      "x": "",
+      "linkedin": "",
+      "github": "https://github.com/wayveai",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://wayve.ai/thinking/gaia-4/",
+      "spaces": [
+        "Robotics"
+      ],
+      "mentions": [],
+      "metrics": {
+        "gh": {
+          "value": 614,
+          "url": "https://github.com/wayveai/fiery",
+          "label": "wayveai/fiery"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Co-founder named by company",
+        "names": "Alex Kendall",
+        "source": "https://wayve.ai/company/leadership-team/alex-kendall/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Research report",
+        "example": "GAIA-4 closed-loop driving simulation",
+        "assessment": "Lets the driving model interact with generated scenes instead of scoring only fixed clips. It makes evaluation more interactive. Simulation agreement with road outcomes still needs separate validation.",
+        "source": "https://wayve.ai/thinking/gaia-4/",
+        "comparison": ""
+      },
+      "fit": ""
+    },
+    {
+      "name": "World Labs",
+      "scope": "Acquired lab",
+      "focus": "Trains spatial world models that generate navigable 3D scenes.",
+      "location": "San Francisco, CA",
+      "status": "Acquired by AMD",
+      "year": 2024,
+      "site": "https://worldlabs.ai/",
+      "x": "https://x.com/theworldlabs",
+      "linkedin": "https://www.linkedin.com/company/world-labs",
+      "github": "",
+      "hf": "",
+      "community": "https://youtube.com/@worldlabsai",
+      "size": "",
+      "evidence": "https://worldlabs.ai/about",
+      "spaces": [
+        "World models"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": {
+        "people": "Fei-Fei Li, Justin Johnson, Ben Mildenhall, Christoph Lassner",
+        "background": "The founding team works across computer vision, graphics, and generative AI.",
+        "source": "https://worldlabs.ai/about"
+      },
+      "people": {
+        "role": "Founders",
+        "names": "Fei-Fei Li, Justin Johnson, Ben Mildenhall, Christoph Lassner",
+        "source": "https://worldlabs.ai/about"
+      },
+      "innovation": {
+        "kind": "application",
+        "evidence": "Product release",
+        "example": "Marble generates explorable 3D scenes",
+        "assessment": "Marble makes generated scenes navigable and reusable as 3D assets. It applies existing spatial generation ideas in a working product. Real-world dynamics and long-horizon consistency are separate claims.",
+        "source": "https://worldlabs.ai/about",
+        "comparison": "",
+        "note": "Marble generates a scene that users can move a camera through and export as 3D data. This makes it possible to inspect the same generated scene from several viewpoints."
+      },
+      "fit": ""
+    },
+    {
+      "name": "Xaira Therapeutics",
+      "scope": "Research startup",
+      "focus": "Combines machine learning and experimental science for drug discovery.",
+      "location": "South San Francisco, US",
+      "status": "Research only",
+      "year": 2023,
+      "site": "https://www.xaira.com/",
+      "x": "https://x.com/Xaira_Thera",
+      "linkedin": "https://www.linkedin.com/company/xaira-therapeutics",
+      "github": "",
+      "hf": "",
+      "community": "",
+      "size": "",
+      "evidence": "https://www.xaira.com/",
+      "spaces": [
+        "Life sciences",
+        "Math and reasoning",
+        "AI for science"
+      ],
+      "mentions": [],
+      "metrics": {},
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Marc Tessier-Lavigne, David Baker, Arvind Rajpal, Vikram Bajaj, others",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "unproven",
+        "evidence": "Company research overview",
+        "example": "AI and experimental discovery program",
+        "assessment": "The corporate overview describes the research program. Its contribution to clinical outcomes requires evidence for specific candidates and studies.",
+        "source": "https://www.xaira.com/",
+        "comparison": ""
+      },
+      "fit": "Mostly"
+    },
+    {
+      "name": "Zyphra",
+      "scope": "Research startup",
+      "focus": "Develops Zamba hybrid state-space models, ZAYA reasoning models, and text diffusion models.",
+      "location": "San Francisco, US",
+      "status": "Open model",
+      "year": 2021,
+      "site": "https://zyphra.com/",
+      "x": "https://x.com/ZyphraAI",
+      "linkedin": "https://www.linkedin.com/company/zyphra",
+      "github": "https://github.com/Zyphra",
+      "hf": "https://huggingface.co/Zyphra",
+      "community": "https://discord.com/invite/puMPr32s2t",
+      "size": "",
+      "evidence": "https://zyphra.com/models",
+      "spaces": [
+        "Frontier models"
+      ],
+      "mentions": [],
+      "metrics": {
+        "hf": {
+          "value": 338598,
+          "url": "https://huggingface.co/Zyphra/ZAYA1-VL-8B",
+          "label": "Zyphra/ZAYA1-VL-8B"
+        },
+        "gh": {
+          "value": 7247,
+          "url": "https://github.com/Zyphra/Zonos",
+          "label": "Zyphra/Zonos"
+        }
+      },
+      "team": null,
+      "people": {
+        "role": "Founding team",
+        "names": "Krithik Puthalath, Danny Martinelli, Tomás Figliolia, Beren Millidge",
+        "source": "https://debarghyadas.com/neolabs/"
+      },
+      "innovation": {
+        "kind": "method",
+        "evidence": "Report and weights",
+        "example": "Zamba2-VL hybrid vision-language models",
+        "assessment": "Extends a state-space/attention hybrid to visual inputs. The work tests whether the language backbone’s latency advantages carry over to vision, building on prior state-space architectures.",
+        "source": "https://www.zyphra.com/our-work/zamba2-vl",
+        "comparison": ""
+      },
+      "fit": ""
+    }
+  ]
+}
