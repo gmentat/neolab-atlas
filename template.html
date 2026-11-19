@@ -74,16 +74,16 @@ h2{letter-spacing:-.04em;font-weight:720}
 .viewport{min-width:0}
 table{width:100%;min-width:840px;table-layout:fixed;border-spacing:0;text-align:left}
 col.lab{width:18%}col.space{width:16%}col.people{width:17%}
-col.focus{width:auto}col.signal{width:106px}col.links{width:146px}
+col.focus{width:auto}col.signal{width:106px}col.links{width:58px}
 .innovation-view col.lab{width:17%}.innovation-view col.space{width:15%}
-.innovation-view col.focus{width:25%}.innovation-view col.signal{width:auto}
+.innovation-view col.focus{width:25%}.innovation-view col.signal{width:auto}.innovation-view col.links{width:146px}
 .contribution{display:block;margin-bottom:3px;font-size:.75rem;font-weight:670;color:#3b4963}
 .contribution[data-value="method"]{color:#28457c}
 .contribution[data-value="application"]{color:#58417d}
 .contribution[data-value="unproven"]{color:#6d3d15}
-button.contribution,.scope-tag{border:0;background:none;padding:0;text-align:left}
-button.contribution:hover,.scope-tag:hover,.fit-label:hover{text-decoration:underline;text-underline-offset:.16em}
-button.contribution[aria-pressed="true"],.scope-tag[aria-pressed="true"]{text-decoration:underline;text-underline-offset:.16em}
+button.contribution{border:0;background:none;padding:0;text-align:left}
+button.contribution:hover,.fit-label:hover{text-decoration:underline;text-underline-offset:.16em}
+button.contribution[aria-pressed="true"]{text-decoration:underline;text-underline-offset:.16em}
 .example,.assessment{line-height:1.38}
 .example{font-weight:650}
 .evidence-links{margin-top:4px;font-size:.8rem;line-height:1.35}
@@ -95,18 +95,9 @@ button.contribution[aria-pressed="true"],.scope-tag[aria-pressed="true"]{text-de
 .code-toggle[aria-pressed="true"]{background:var(--selection);color:var(--accent)}
 .innovation-view #metric-header,.innovation-view .assessment-cell{text-align:left}
 .people-cell .founder-text{font-size:.84rem}
-.mobile-people a{color:var(--muted)}
-
 .row-actions{display:flex;align-items:center;gap:6px}
 .row-actions > div{min-width:0}
 .row-actions .evidence-links{overflow-wrap:anywhere}
-.link-cells{display:flex;flex-wrap:wrap;gap:4px 7px;align-items:center;font-size:.78rem;font-weight:630}
-.link-cells a{white-space:nowrap}
-.link-cells a + a{color:var(--muted)}
-.repo-link{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:4px;vertical-align:middle}
-.repo-link:hover{background:var(--selection)}
-.signal-link{text-decoration-color:#a9b9d5}
-.signal-link:hover{text-decoration-color:currentColor}
 .missing{color:var(--muted);font-size:.8rem}
 .mobile-only{display:none}
 .team-size{font-weight:650}
@@ -159,7 +150,6 @@ tbody th{text-align:left}
 .fit-label[aria-pressed="true"]{box-shadow:inset 0 0 0 1px currentColor}
 .founder-text{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#435169;line-height:1.32}
 .numeric{text-align:right;font-variant-numeric:tabular-nums}
-.numeric a{white-space:nowrap}
 .numeric .sub{margin-top:1px}
 .metric-source{overflow-wrap:anywhere}
 .empty,.footnote{padding:12px 15px;color:var(--muted);font-size:.83rem}
@@ -235,9 +225,7 @@ body:has(#profile[open]){overflow:hidden}
   tbody td{vertical-align:top}
   .row-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
   .row-heading-text{min-width:0}
-  .mobile-actions{display:flex;align-items:center;gap:4px;flex:none}
-  .mobile-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;
-    font-size:.8rem;font-weight:630;white-space:nowrap}
+  .row-heading > .mobile-only{flex:none}
   .profile-button{width:36px;height:36px}
   .mobile-focus{margin-top:6px;font-size:.84rem;line-height:1.4}
   .mobile-signal{margin-top:5px;font-size:.78rem;font-weight:630}
@@ -289,7 +277,7 @@ body:has(#profile[open]){overflow:hidden}
       <div class="viewport" id="viewport" tabindex="0" role="region" aria-label="Scrollable results">
         <table>
           <colgroup><col class="lab"><col class="space"><col class="focus"><col class="people" id="founders-width"><col class="signal" id="metric-width"><col class="links"></colgroup>
-          <thead><tr><th class="sticky-name" scope="col" id="lab-header">@@ENTRY_NAME@@</th><th scope="col" class="desktop-cell">Space</th><th id="context-column" class="desktop-cell" scope="col">Research focus</th><th id="founders-header" class="desktop-cell" scope="col">@@PEOPLE_LABEL@@</th><th id="metric-header" class="desktop-cell" scope="col">Signal</th><th id="links-header" class="desktop-cell" scope="col">References</th></tr></thead>
+          <thead><tr><th class="sticky-name" scope="col" id="lab-header">@@ENTRY_NAME@@</th><th scope="col" class="desktop-cell">Space</th><th id="context-column" class="desktop-cell" scope="col">Research focus</th><th id="founders-header" class="desktop-cell" scope="col">@@PEOPLE_LABEL@@</th><th id="metric-header" class="desktop-cell" scope="col">Signal</th><th id="links-header" class="desktop-cell" scope="col">Profile</th></tr></thead>
           <tbody id="labs"></tbody>
         </table>
         <p id="empty" class="empty" hidden>No @@ENTRY_PLURAL@@ match these filters.</p>
@@ -396,7 +384,6 @@ const state = {
   codeOnly:false,
   metric:'research',
   fit:'',
-  scope:'',
   query:''
 };
 let profileTrigger;
@@ -426,9 +413,9 @@ function escape(value) {
     .replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 }
 
-function external(url, label, css = '', aria = '', title = '', content = '') {
+function external(url, label, css = '', aria = '', content = '') {
   if (!/^https?:\/\//i.test(url || '')) return '';
-  return `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer"${css ? ` class="${css}"` : ''}${aria ? ` aria-label="${escape(aria)}"` : ''}${title ? ` title="${escape(title)}"` : ''}>${content || escape(label)}</a>`;
+  return `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer"${css ? ` class="${css}"` : ''}${aria ? ` aria-label="${escape(aria)}"` : ''}>${content || escape(label)}</a>`;
 }
 
 function filterButton(key, value, label, css) {
@@ -467,24 +454,6 @@ function formatMeasure(metric, measure) {
   return measure.value > 0 && measure.value < 0.01 ? '<0.01%' : number.format(measure.value) + '%';
 }
 
-// GitHub icon from Lucide (ISC).
-const githubIcon = `<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4M9 18c-4.51 2-5-2-7-2"/></svg>`;
-
-function researchSource(lab) {
-  const {hostname, pathname} = new URL(lab.evidence);
-  const host = hostname.replace(/^www\./, '');
-  if (host === 'github.com') {
-    return external(lab.evidence, 'GitHub', 'repo-link', `${lab.name} source on GitHub`, 'GitHub', githubIcon);
-  }
-  const labels = {
-    'huggingface.co':'Hugging Face', 'arxiv.org':'Paper', 'ycombinator.com':'YC',
-    'indexventures.com':'Investor post', 'theinformation.com':'Press', 'builtin.com':'Press',
-    'news.bloomberglaw.com':'Press',
-  };
-  const label = labels[host] ?? (pathname === '/' ? 'Website' : 'Source');
-  return external(lab.evidence, label, '', `${lab.name} ${label.toLowerCase()}`);
-}
-
 function teamSize(team) {
   const labels = {
     headcount:'Reported headcount', employee_range:'Reported employee range',
@@ -502,7 +471,7 @@ function contributionLabel(innovation) {
 const outboundIcon = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>';
 
 function profileLink(url, label, aria = '') {
-  return external(url, label, 'profile-link', aria, '', `${escape(label)}${outboundIcon}`);
+  return external(url, label, 'profile-link', aria, `${escape(label)}${outboundIcon}`);
 }
 
 function profileSource(url, label, aria, date) {
@@ -510,7 +479,7 @@ function profileSource(url, label, aria, date) {
   const platforms = {'github.com':'GitHub', 'huggingface.co':'Hugging Face', 'arxiv.org':'arXiv'};
   const destination = platforms[host] ?? host;
   const content = `<span><span class="source-title">${escape(label)}</span><small>${escape(destination)}${date ? ` · ${date}` : ''}</small></span>${outboundIcon}`;
-  return external(url, label, 'profile-source', `${aria} on ${destination}`, '', content);
+  return external(url, label, 'profile-source', `${aria} on ${destination}`, content);
 }
 
 function innovationSources(lab, inProfile = false) {
@@ -530,12 +499,13 @@ function innovationSources(lab, inProfile = false) {
     sources.unshift(sources.find(([, url]) => url === featuredUrl) ?? [item.example, featuredUrl]);
     sources.push([lab.evidence === lab.site ? 'Lab website' : 'Lab reference', lab.evidence]);
   }
+  const website = lab.site?.replace(/\/$/, '');
   const seen = new Set();
   const links = [];
   for (const [label, url] of sources) {
     if (!url) continue;
     const canonical = url.replace(/\/$/, '');
-    if (seen.has(canonical)) continue;
+    if (seen.has(canonical) || (!inProfile && canonical === website)) continue;
     seen.add(canonical);
     const aria = `${lab.name} ${label.toLowerCase()}`;
     links.push(inProfile ? profileSource(url, label, aria, url === featuredUrl ? researchDate(item) : '')
@@ -543,14 +513,14 @@ function innovationSources(lab, inProfile = false) {
     if (!inProfile && links.length >= 3) break;
   }
   const group = inProfile ? ' role="group" aria-label="Research sources"' : '';
-  return `<div class="evidence-links"><div class="evidence-list"${group}>${links.join('')}</div>
+  return `<div class="evidence-links">${links.length ? `<div class="evidence-list"${group}>${links.join('')}</div>` : ''}
     ${inProfile ? '' : `<span class="sub">${escape(item.evidence)}</span>`}</div>`;
 }
 
 function labLabel(lab) {
   const fit = lab.fit && lab.fit !== 'Core' ? filterButton('fit', lab.fit, lab.fit, 'fit-label') : '';
   const founded = lab.year ? ` · Founded ${escape(lab.year)}` : '';
-  return `<span class="sub">${filterButton('scope', lab.scope, lab.scope, 'scope-tag')}${founded}${fit}</span>`;
+  return `<span class="sub">${escape(lab.scope)}${founded}${fit}</span>`;
 }
 
 function profileButton(name) {
@@ -559,18 +529,17 @@ function profileButton(name) {
     aria-label="Open profile for ${label}" title="Open lab profile"></button>`;
 }
 
-function rowHeading(lab, mobileActions) {
+function rowHeading(lab, profile) {
   return `<div class="row-heading">
     <div class="row-heading-text"><span class="lab-name">${escape(lab.name)}</span>${labLabel(lab)}</div>
-    <div class="mobile-only mobile-actions">${mobileActions}</div>
+    <div class="mobile-only">${profile}</div>
   </div>`;
 }
 
 function peopleCell(lab) {
   const people = lab.people;
   if (!people) return '<span class="missing">Not documented</span>';
-  const label = `${lab.name}, ${people.role}, ${people.names}`;
-  return `<span class="founder-text">${external(people.source,people.names,'signal-link',label,people.names)}</span>
+  return `<span class="founder-text">${escape(people.names)}</span>
     ${/^Founders?$/.test(people.role) ? '' : `<span class="sub">${escape(people.role)}</span>`}`;
 }
 
@@ -604,18 +573,15 @@ function entryRow(lab) {
     ? `<span class="sub">${difference > 0 ? '+' : ''}${difference.toFixed(2)} pp vs prior week</span>` : '';
   const exact = formatMeasure(state.metric, measure);
   const visibleValue = state.metric === 'hf' && measure?.value >= 1000 ? compact.format(measure.value) : exact;
-  const signal = hasSignal ? external(measure.url, visibleValue, 'signal-link',
-    lab.name + ' ' + metrics[state.metric][0] + ' ' + exact, exact) +
+  const signal = hasSignal ? `<span title="${escape(exact)}">${escape(visibleValue)}</span>` +
     (measure.label && !metrics[state.metric][2] ? `<span class="sub metric-source">${escape(measure.label)}</span>` : '') + trend
     : measure ? '<span class="sub">Zero recorded</span>' : '<span title="No snapshot value">—</span>';
-  const researchLink = researchSource(lab);
-  const links = researchLink + external(lab.x, 'X', '', `${lab.name} on X`);
   const profile = profileButton(lab.name);
   return `<tr>
-    <th scope="row" class="sticky-name">${rowHeading(lab, researchLink + profile)}
+    <th scope="row" class="sticky-name">${rowHeading(lab, profile)}
       <div class="mobile-only">
         <p class="sub mobile-focus">${escape(lab.focus || 'Not documented')}</p>
-        ${lab.people ? `<div class="sub mobile-people">${peopleCell(lab)}</div>` : ''}
+        ${lab.people ? `<div class="sub">${peopleCell(lab)}</div>` : ''}
         ${Object.hasOwn(metrics, state.metric) ? `<div class="mobile-signal">${signal}</div>` : ''}
         <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
       </div>
@@ -624,7 +590,7 @@ function entryRow(lab) {
     <td class="desktop-cell"><p class="research-focus">${escape(lab.focus || 'Not documented')}</p></td>
     <td class="desktop-cell people-cell">${peopleCell(lab)}</td>
     ${Object.hasOwn(metrics,state.metric) ? `<td class="numeric desktop-cell">${signal}</td>` : ''}
-    <td class="desktop-cell"><div class="row-actions"><div class="link-cells">${links || '—'}</div>${profile}</div></td>
+    <td class="desktop-cell">${profile}</td>
   </tr>`;
 }
 
@@ -705,7 +671,7 @@ const labSearch = new Map(labs.map(lab => [lab.name, Object.entries(lab)
 
 function renderActiveFilters() {
   const filters = [
-    ['space', state.space], ['scope', state.scope], ['fit', state.fit],
+    ['space', state.space], ['fit', state.fit],
     ['contribution', state.view === 'innovations' && contributions[state.contribution]],
     ['query', $('search').hidden && state.query.trim()],
   ].filter(([, label]) => label);
@@ -721,7 +687,7 @@ function renderLabs() {
   const rankByFit = hasFitLabels && (sort === 'research' || sort === 'founded');
   const showMetric = Object.hasOwn(metrics, sort);
   const matching = labs.filter(lab =>
-    (!isInnovation || innovationMatches(lab)) && (!state.scope || lab.scope === state.scope) &&
+    (!isInnovation || innovationMatches(lab)) &&
     (!state.space || lab.spaces.includes(state.space)) &&
     (!state.fit || lab.fit === state.fit) && includesWords(labSearch.get(lab.name), state.query));
   matching.sort((a,b) => (isInnovation ? (a.innovation.kind === 'unproven') - (b.innovation.kind === 'unproven') : 0) ||
@@ -739,7 +705,7 @@ function renderLabs() {
   }
   $('metric-width').hidden = $('metric-header').hidden = !isInnovation && !showMetric;
   $('context-column').textContent = isInnovation ? 'Example' : 'Research focus';
-  $('links-header').textContent = isInnovation ? 'Evidence' : 'References';
+  $('links-header').textContent = isInnovation ? 'Evidence' : 'Profile';
   $('metric-header').textContent = isInnovation ? 'Result or research direction' : state.metric === 'hf' ? 'HF downloads (30 days)' : metrics[state.metric]?.[0] ?? 'Signal';
   $('metric-header').classList.toggle('numeric', !isInnovation);
   const groupedByFit = rankByFit && new Set(matching.map(lab => lab.fit)).size > 1;
@@ -853,7 +819,7 @@ $('code-toggle').addEventListener('click', () => {
   renderLabs();
 });
 $('reset').addEventListener('click', () => {
-  Object.assign(state, {space:'', contribution:'', codeOnly:false, fit:'', scope:'', query:''});
+  Object.assign(state, {space:'', contribution:'', codeOnly:false, fit:'', query:''});
   search.value = '';
   renderLabs();
   (search.hidden ? searchToggle : search).focus();
