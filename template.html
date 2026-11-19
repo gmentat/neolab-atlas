@@ -233,12 +233,17 @@ body:has(#profile[open]){overflow:hidden}
   thead .sticky-name{position:sticky;z-index:2}
   tbody th,tbody td,thead th{padding-inline:8px}
   tbody td{vertical-align:top}
+  .row-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+  .row-heading-text{min-width:0}
+  .mobile-actions{display:flex;align-items:center;gap:4px;flex:none}
+  .mobile-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;
+    font-size:.8rem;font-weight:630;white-space:nowrap}
   .profile-button{width:36px;height:36px}
   .mobile-focus{margin-top:6px;font-size:.84rem;line-height:1.4}
   .mobile-signal{margin-top:5px;font-size:.78rem;font-weight:630}
   .mobile-signal span.sub{white-space:normal}
   .mobile-only .space-tags{margin-top:8px}
-  .mobile-only .evidence-links,.mobile-reference{margin-top:7px;font-size:.8rem}
+  .mobile-only .evidence-links{margin-top:7px;overflow-wrap:anywhere}
   .mobile-only .contribution{margin-top:7px}
   .tag{padding:4px 8px}
   tbody th{padding-block:11px}
@@ -554,6 +559,13 @@ function profileButton(name) {
     aria-label="Open profile for ${label}" title="Open lab profile"></button>`;
 }
 
+function rowHeading(lab, mobileActions) {
+  return `<div class="row-heading">
+    <div class="row-heading-text"><span class="lab-name">${escape(lab.name)}</span>${labLabel(lab)}</div>
+    <div class="mobile-only mobile-actions">${mobileActions}</div>
+  </div>`;
+}
+
 function peopleCell(lab) {
   const people = lab.people;
   if (!people) return '<span class="missing">Not documented</span>';
@@ -564,28 +576,27 @@ function peopleCell(lab) {
 
 function innovationRow(lab) {
   const item = lab.innovation;
-  const name = escape(lab.name);
   const example = `<p class="example">${escape(item.example)} ${researchDate(item)}</p>`;
-  const actions = `<div class="row-actions">${innovationSources(lab)}${profileButton(lab.name)}</div>`;
+  const evidence = innovationSources(lab);
+  const profile = profileButton(lab.name);
   return `<tr>
-    <th scope="row" class="sticky-name"><span class="lab-name">${name}</span>${labLabel(lab)}
+    <th scope="row" class="sticky-name">${rowHeading(lab, profile)}
       <div class="mobile-only">
         ${contributionLabel(item)}
         ${example}
         <p class="sub mobile-focus">${escape(item.assessment)}</p>
         <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
-        ${actions}
+        ${evidence}
       </div>
     </th>
     <td class="desktop-cell"><div class="space-tags">${lab.spaces.map(tag).join('')}</div></td>
     <td class="desktop-cell">${contributionLabel(item)}${example}</td>
     <td class="desktop-cell assessment-cell"><p class="assessment">${escape(item.assessment)}</p></td>
-    <td class="desktop-cell">${actions}</td>
+    <td class="desktop-cell"><div class="row-actions">${evidence}${profile}</div></td>
   </tr>`;
 }
 
 function entryRow(lab) {
-  const name = escape(lab.name);
   const measure = lab.metrics[state.metric];
   const hasSignal = measure?.value > 0;
   const difference = measure?.previous == null ? 0 : measure.value - measure.previous;
@@ -601,13 +612,13 @@ function entryRow(lab) {
   const links = researchLink + external(lab.x, 'X', '', `${lab.name} on X`);
   const profile = profileButton(lab.name);
   return `<tr>
-    <th scope="row" class="sticky-name"><span class="lab-name">${name}</span>${labLabel(lab)}
+    <th scope="row" class="sticky-name">${rowHeading(lab, researchLink + profile)}
       <div class="mobile-only">
-      <p class="sub mobile-focus">${escape(lab.focus || 'Not documented')}</p>
-      ${lab.people ? `<div class="sub mobile-people">${peopleCell(lab)}</div>` : ''}
-      ${Object.hasOwn(metrics, state.metric) ? `<div class="mobile-signal">${signal}</div>` : ''}
-      <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
-      <div class="row-actions mobile-reference">${researchLink}${profile}</div></div>
+        <p class="sub mobile-focus">${escape(lab.focus || 'Not documented')}</p>
+        ${lab.people ? `<div class="sub mobile-people">${peopleCell(lab)}</div>` : ''}
+        ${Object.hasOwn(metrics, state.metric) ? `<div class="mobile-signal">${signal}</div>` : ''}
+        <div class="space-tags">${lab.spaces.map(tag).join('')}</div>
+      </div>
     </th>
     <td class="desktop-cell"><div class="space-tags">${lab.spaces.map(tag).join('')}</div></td>
     <td class="desktop-cell"><p class="research-focus">${escape(lab.focus || 'Not documented')}</p></td>
