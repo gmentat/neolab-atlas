@@ -11,6 +11,11 @@ from shutil import copyfile
 ROOT = Path(__file__).resolve().parent
 HOME_URL = "https://antonfed.com/"
 SITE_URL = HOME_URL + "neolabs/"
+SHARE_IMAGE = "share-preview.png"
+ATLAS_SUMMARY = (
+    "Browse independent AI research labs and solo projects, what they’ve demonstrated, "
+    "and links to their papers, code, and model weights."
+)
 SOLO_SCOPES = {"Solo project", "Solo-led project", "Personal experiment"}
 FIT_LABELS = {"Core", "Mostly", "Borderline"}
 INNOVATION_KINDS = {"method", "application", "artifact", "unproven"}
@@ -72,8 +77,11 @@ def build(output: Path, home_href: str) -> None:
     )
     output.mkdir(parents=True, exist_ok=True)
     copyfile(ROOT / "article-header.css", output / "article-header.css")
+    copyfile(ROOT / SHARE_IMAGE, output / SHARE_IMAGE)
     for route, title, description, entries in views:
         directory_href = "../" if route else "./"
+        share_title = f"{title} · Neolab Atlas" if route else title
+        page_title = share_title if route else f"{title} — Independent AI Research Labs"
         solo_view = route == "solo-projects/"
         entry_name = "project" if solo_view else "lab"
         count_name = "team" if route == "small-teams/" else entry_name
@@ -90,9 +98,12 @@ def build(output: Path, home_href: str) -> None:
         }
         content = {
             "TITLE": escape(title),
-            "PAGE_TITLE": escape(f"{title} · Neolab Atlas" if route else title),
+            "PAGE_TITLE": escape(page_title),
+            "SHARE_TITLE": escape(share_title),
+            "META_DESCRIPTION": escape(description if route else ATLAS_SUMMARY),
             "DESCRIPTION": escape(description, quote=True),
             "CANONICAL": SITE_URL + route,
+            "SHARE_IMAGE_URL": SITE_URL + SHARE_IMAGE,
             "HOME_HREF": escape(home_href, quote=True),
             "UPDATED_DATE": updated.isoformat(),
             "UPDATED_LABEL": f"{updated:%B} {updated.day}, {updated.year}",
