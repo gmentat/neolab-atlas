@@ -3155,7 +3155,7 @@
     {
       "name": "Mantic",
       "scope": "Startup",
-      "focus": "Trains models that assign probabilities to future events.",
+      "focus": "Builds AI forecasters that research world events and estimate their odds.",
       "location": "London, UK",
       "status": "",
       "year": null,
@@ -3186,11 +3186,36 @@
       "innovation": {
         "kind": "method",
         "evidence": "Technical report",
-        "example": "Forecast-specific RL post-training",
-        "assessment": "Mantic gives a base model additional practice on questions with outcomes that can be checked. It wants the model to get better at judging the odds of events. In a technical guest post, Mantic’s researchers report that the adapted model made better forecasts than the base model on their test questions.",
+        "example": "Fine-tuning a model for forecasting",
+        "note": "Research agents gather news and historical evidence available at forecast time. The prediction model weighs several scenarios and their timelines, then combines them into the chance the event happens by the deadline.",
+        "assessment": "With the same research and tools, fine-tuning gpt-oss-120b on about 10,000 resolved questions raised its Metaculus test score from 38.6 to 45.8. In the live Metaculus Cup, Mantic finished fourth in fall 2025 using off-the-shelf models and second overall in summer 2026, ahead of every human entrant.",
         "source": "https://thinkingmachines.ai/news/training-llms-to-predict-world-events/",
         "comparison": "",
-        "date": "2026-03-19"
+        "date": "2026-03-19",
+        "artifacts": [
+          {
+            "kind": "paper",
+            "label": "ICML workshop paper",
+            "url": "https://openreview.net/pdf?id=lbpDR9pj5F"
+          },
+          {
+            "kind": "data",
+            "label": "Metaculus test questions (CSV)",
+            "url": "https://gist.github.com/enjeeneer/86e24a52e6041a3d78e333bcab16984d"
+          },
+          {
+            "kind": "report",
+            "label": "Fall 2025 Metaculus Cup result",
+            "url": "https://www.metaculus.com/questions/39792/manticai-metaculus-cup-fall-2025-rank/",
+            "related": true
+          },
+          {
+            "kind": "report",
+            "label": "Summer 2026 Metaculus Cup results",
+            "url": "https://www.metaculus.com/notebooks/45734/announcing-the-metaculus-cup-summer-2026-winners/",
+            "related": true
+          }
+        ]
       },
       "fit": "Core"
     },
