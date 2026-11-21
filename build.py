@@ -31,7 +31,12 @@ def build(output: Path, home_href: str) -> None:
     names = {lab["name"] for lab in labs}
     if len(names) != len(labs) or small_teams - names:
         raise ValueError("Lab names must be unique and all small-team entries must exist in the directory.")
+    slugs = set()
     for lab in labs:
+        slug = lab.setdefault("slug", re.sub(r"[^a-z0-9]+", "-", lab["name"].lower()).strip("-"))
+        if not isinstance(slug, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in slugs:
+            raise ValueError(f"Profile URL slug must be valid and unique for {lab['name']}.")
+        slugs.add(slug)
         is_solo = lab["scope"] in SOLO_SCOPES
         innovation = lab["innovation"]
         if (innovation.get("kind") not in INNOVATION_KINDS

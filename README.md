@@ -13,6 +13,8 @@ python3 -m http.server 8910 --bind 127.0.0.1 --directory dist
 
 Open the [local Atlas](http://127.0.0.1:8910/), [Small teams](http://127.0.0.1:8910/small-teams/), or [Solo projects](http://127.0.0.1:8910/solo-projects/). All three pages build from the same source data.
 
+Each profile has a direct link, such as [Mantic](https://antonfed.com/neolabs/?lab=mantic). The **Profile link** inside a profile points to its main directory page, even when opened from Small teams or Innovations. Profile URLs default to a slug derived from the entry name. Set an explicit `slug` to retain the existing URL when renaming an entry.
+
 ## Edit an entry
 
 Edit `data/atlas.json`. Give each lab one featured example. Describe what the team built or tested, what the source reports, and which limits matter for that claim. Add direct links in `innovation.artifacts` with a `kind` (`code`, `weights`, `paper`, `data`, or `report`), a short `label`, and a `url`. Use `related: true` for an artifact from a different result that belongs in the profile. Entries with the `Solo project`, `Solo-led project`, or `Personal experiment` scope appear on Solo projects.

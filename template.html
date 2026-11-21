@@ -352,6 +352,9 @@ body:has(#profile[open]){overflow:hidden}
 'use strict';
 const $ = id => document.getElementById(id);
 const {labs, metrics, entryName} = JSON.parse($('data').textContent);
+const labsBySlug = new Map(labs.map(lab => [lab.slug, lab]));
+const atlasRoot = new URL(document.querySelector('.atlas-nav a').href);
+const profilePage = new URL(entryName === 'project' ? 'solo-projects/' : './', atlasRoot);
 const viewLinks = document.querySelectorAll('.atlas-nav [data-view]');
 const sortNames = new Intl.Collator('en', {sensitivity:'base', numeric:true}).compare;
 const number = new Intl.NumberFormat('en', {maximumFractionDigits:2});
@@ -398,6 +401,7 @@ function renderAtlasNav() {
     const view = link.dataset.view;
     const url = new URL(location.href);
     url.hash = '';
+    url.searchParams.delete('lab');
     if (view === 'innovations') url.searchParams.set('view', view);
     else url.searchParams.delete('view');
     if (state.space) url.searchParams.set('space', state.space);
@@ -523,10 +527,13 @@ function labLabel(lab) {
   return `<span class="sub">${escape(lab.scope)}${founded}${fit}</span>`;
 }
 
-function profileButton(name) {
-  const label = escape(name);
-  return `<button type="button" class="profile-button" data-lab="${label}" aria-haspopup="dialog" aria-controls="profile"
-    aria-label="Open profile for ${label}" title="Open lab profile"></button>`;
+function profileHref(lab) {
+  return `${profilePage.href}?lab=${lab.slug}`;
+}
+
+function profileAnchor(lab) {
+  return `<a href="${escape(profileHref(lab))}" class="profile-button" data-lab="${lab.slug}"
+    aria-haspopup="dialog" aria-controls="profile" aria-label="Open profile for ${escape(lab.name)}" title="Open profile"></a>`;
 }
 
 function rowHeading(lab, profile) {
@@ -547,7 +554,7 @@ function innovationRow(lab) {
   const item = lab.innovation;
   const example = `<p class="example">${escape(item.example)} ${researchDate(item)}</p>`;
   const evidence = innovationSources(lab);
-  const profile = profileButton(lab.name);
+  const profile = profileAnchor(lab);
   return `<tr>
     <th scope="row" class="sticky-name">${rowHeading(lab, profile)}
       <div class="mobile-only">
@@ -576,7 +583,7 @@ function entryRow(lab) {
   const signal = hasSignal ? `<span title="${escape(exact)}">${escape(visibleValue)}</span>` +
     (measure.label && !metrics[state.metric][2] ? `<span class="sub metric-source">${escape(measure.label)}</span>` : '') + trend
     : measure ? '<span class="sub">Zero recorded</span>' : '<span title="No snapshot value">—</span>';
-  const profile = profileButton(lab.name);
+  const profile = profileAnchor(lab);
   return `<tr>
     <th scope="row" class="sticky-name">${rowHeading(lab, profile)}
       <div class="mobile-only">
@@ -594,9 +601,7 @@ function entryRow(lab) {
   </tr>`;
 }
 
-function openProfile(name, trigger) {
-  const lab = labsByName.get(name);
-  if (!lab) return;
+function openProfile(lab, trigger) {
   profileTrigger = trigger;
   $('lab-title').textContent = lab.name;
   $('profile-topics').innerHTML = lab.spaces.map(tag).join('');
@@ -650,15 +655,15 @@ function openProfile(name, trigger) {
       ${innovationSources(lab, true)}
     </section>
     ${teamDetails ? `<section class="dialog-section"><h3>Team</h3>${teamDetails}</section>` : ''}
-    ${links ? `<nav class="dialog-section link-list profile-links" aria-label="Lab links">${links}</nav>` : ''}
+    <nav class="dialog-section link-list profile-links" aria-label="Profile links">
+      <a class="profile-link" href="${escape(profileHref(lab))}">Profile link</a>${links}
+    </nav>
     ${signals ? `<div class="dialog-section"><h3>Public signals</h3><ul class="profile-list">${signals}</ul></div>` : ''}
     ${mentions ? `<div class="dialog-section"><h3>Further references</h3><ul class="profile-list">${mentions}</ul></div>` : ''}`;
   const profile = $('profile');
-  profile.showModal();
+  if (!profile.open) profile.showModal();
   $('lab-details').scrollTop = 0;
 }
-
-const labsByName = new Map(labs.map(lab => [lab.name, lab]));
 
 function searchText(value) {
   if (value && typeof value === 'object') return Object.values(value).map(searchText).join(' ');
@@ -813,7 +818,16 @@ for (const link of viewLinks) {
     syncView();
   });
 }
-window.addEventListener('popstate', syncView);
+function syncProfile() {
+  const lab = labsBySlug.get(new URLSearchParams(location.search).get('lab'));
+  if (lab) openProfile(lab);
+  else $('profile').close();
+}
+
+window.addEventListener('popstate', () => {
+  syncView();
+  syncProfile();
+});
 $('code-toggle').addEventListener('click', () => {
   state.codeOnly = !state.codeOnly;
   renderLabs();
@@ -844,7 +858,14 @@ $('labs').addEventListener('click', event => {
   const row = event.target.closest('tr');
   const trigger = control ?? Array.from(row?.querySelectorAll('.profile-button') ?? [])
     .find(button => button.getClientRects().length);
-  if (trigger) openProfile(trigger.dataset.lab, trigger);
+  if (!trigger || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const lab = labsBySlug.get(trigger.dataset.lab);
+  const url = new URL(location.href);
+  url.searchParams.set('lab', lab.slug);
+  url.hash = '';
+  history.pushState({atlasProfile:true}, '', url);
+  openProfile(lab, trigger);
 });
 $('profile-topics').addEventListener('click', event => {
   const button = event.target.closest('[data-filter="space"]');
@@ -855,6 +876,15 @@ $('profile-topics').addEventListener('click', event => {
 $('profile').addEventListener('close', () => {
   if (profileTrigger?.isConnected) profileTrigger.focus({preventScroll:Boolean(profileTrigger.dataset.lab)});
   else searchToggle.focus();
+  profileTrigger = undefined;
+  const url = new URL(location.href);
+  if (!labsBySlug.has(url.searchParams.get('lab'))) return;
+  if (history.state?.atlasProfile) {
+    history.back();
+  } else {
+    url.searchParams.delete('lab');
+    history.replaceState(history.state, '', url);
+  }
 });
 $('profile').addEventListener('click', event => {
   if (event.target === $('profile') && event.clientX < $('profile').getBoundingClientRect().left) $('profile').close();
@@ -865,6 +895,7 @@ $('method').addEventListener('click', event => {
   if (anchor) $(anchor.getAttribute('href').slice(1)).open = true;
 });
 renderLabs();
+syncProfile();
 </script>
 </body>
 </html>
